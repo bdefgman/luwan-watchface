@@ -1,0 +1,6 @@
+<!-- ... 原有资源定义 ... -->
+<Resources>
+    <!-- ... 其他资源（如字符串、颜色） ... -->
+    <Image id="IMAGE_BACKGROUND" src="images/bg_main.png" /> <!-- 添加图片资源声明 -->
+</Resources>
+<!-- ... 原有资源定义 ... -->

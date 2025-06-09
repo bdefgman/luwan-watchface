@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\manifest.xml"/>
+<pcToLineNum>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="1" lineNum="6" parent="globals/TimeUtils/&lt;statics&gt;" pc="268435460" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="1" lineNum="16" parent="globals/TimeUtils/&lt;statics&gt;" pc="268435472" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="2" lineNum="31" parent="globals" pc="268435485" symbol="getApp"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="2" lineNum="32" parent="globals" pc="268435495" symbol="getApp"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watch-faceBackground.mc" id="3" lineNum="6" parent="globals/Background" pc="268435506" symbol="&lt;init&gt;"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435518" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="5" lineNum="10" parent="globals/luwan_watch_faceView" pc="268435538" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="5" lineNum="12" parent="globals/luwan_watch_faceView" pc="268435549" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="5" lineNum="14" parent="globals/luwan_watch_faceView" pc="268435578" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="6" lineNum="5" parent="globals/luwan_watchfaceApp" pc="268435608" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\LineDrawable.mc" id="7" lineNum="7" parent="globals/LineDrawable" pc="268435620" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="8" lineNum="50" parent="globals/TimeUtils" pc="268435632" symbol="getMonthOfYear"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="8" lineNum="51" parent="globals/TimeUtils" pc="268435635" symbol="getMonthOfYear"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="8" lineNum="52" parent="globals/TimeUtils" pc="268435647" symbol="getMonthOfYear"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="8" lineNum="53" parent="globals/TimeUtils" pc="268435664" symbol="getMonthOfYear"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="8" lineNum="54" parent="globals/TimeUtils" pc="268435680" symbol="getMonthOfYear"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="9" lineNum="32" parent="globals/TimeUtils" pc="268435683" symbol="&lt;globals/TimeUtils/&lt;&gt;GetDayAbbreviation&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="9" lineNum="33" parent="globals/TimeUtils" pc="268435685" symbol="&lt;globals/TimeUtils/&lt;&gt;GetDayAbbreviation&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="10" lineNum="37" parent="globals/TimeUtils" pc="268435694" symbol="&lt;globals/TimeUtils/&lt;&gt;GetMonthAbbreviation&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="10" lineNum="38" parent="globals/TimeUtils" pc="268435696" symbol="&lt;globals/TimeUtils/&lt;&gt;GetMonthAbbreviation&gt;"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="11" lineNum="42" parent="globals/TimeUtils" pc="268435705" symbol="getDaysOfWeek"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="11" lineNum="43" parent="globals/TimeUtils" pc="268435708" symbol="getDaysOfWeek"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="11" lineNum="44" parent="globals/TimeUtils" pc="268435720" symbol="getDaysOfWeek"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="11" lineNum="45" parent="globals/TimeUtils" pc="268435737" symbol="getDaysOfWeek"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="11" lineNum="46" parent="globals/TimeUtils" pc="268435753" symbol="getDaysOfWeek"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="12" lineNum="58" parent="globals/TimeUtils" pc="268435761" symbol="getDayOfMonth"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="12" lineNum="59" parent="globals/TimeUtils" pc="268435764" symbol="getDayOfMonth"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="12" lineNum="60" parent="globals/TimeUtils" pc="268435776" symbol="getDayOfMonth"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="12" lineNum="61" parent="globals/TimeUtils" pc="268435793" symbol="getDayOfMonth"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\TimeUtils.mc" id="12" lineNum="62" parent="globals/TimeUtils" pc="268435801" symbol="getDayOfMonth"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\ActivityInfo.mc" id="15" lineNum="6" parent="globals/ActivityInfo" pc="268435809" symbol="getCurStep"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\ActivityInfo.mc" id="15" lineNum="7" parent="globals/ActivityInfo" pc="268435812" symbol="getCurStep"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\utils\\ActivityInfo.mc" id="15" lineNum="8" parent="globals/ActivityInfo" pc="268435829" symbol="getCurStep"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watch-faceBackground.mc" id="16" lineNum="8" parent="globals/Background" pc="268435837" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watch-faceBackground.mc" id="16" lineNum="9" parent="globals/Background" pc="268435840" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watch-faceBackground.mc" id="16" lineNum="13" parent="globals/Background" pc="268435858" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watch-faceBackground.mc" id="17" lineNum="16" parent="globals/Background" pc="268435875" symbol="draw"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watch-faceBackground.mc" id="17" lineNum="18" parent="globals/Background" pc="268435877" symbol="draw"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watch-faceBackground.mc" id="17" lineNum="19" parent="globals/Background" pc="268435908" symbol="draw"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="20" lineNum="21" parent="globals/luwan_watch_faceView" pc="268435917" symbol="onLayout"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="20" lineNum="22" parent="globals/luwan_watch_faceView" pc="268435919" symbol="onLayout"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="22" lineNum="16" parent="globals/luwan_watch_faceView" pc="268435953" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="22" lineNum="17" parent="globals/luwan_watch_faceView" pc="268435955" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="33" parent="globals/luwan_watch_faceView" pc="268435968" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="35" parent="globals/luwan_watch_faceView" pc="268435971" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="36" parent="globals/luwan_watch_faceView" pc="268435978" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="37" parent="globals/luwan_watch_faceView" pc="268435990" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="40" parent="globals/luwan_watch_faceView" pc="268435998" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="42" parent="globals/luwan_watch_faceView" pc="268436045" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="44" parent="globals/luwan_watch_faceView" pc="268436069" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="45" parent="globals/luwan_watch_faceView" pc="268436096" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="48" parent="globals/luwan_watch_faceView" pc="268436108" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="49" parent="globals/luwan_watch_faceView" pc="268436121" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="50" parent="globals/luwan_watch_faceView" pc="268436145" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="51" parent="globals/luwan_watch_faceView" pc="268436172" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="53" parent="globals/luwan_watch_faceView" pc="268436184" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="54" parent="globals/luwan_watch_faceView" pc="268436197" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="55" parent="globals/luwan_watch_faceView" pc="268436221" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="56" parent="globals/luwan_watch_faceView" pc="268436248" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="67" parent="globals/luwan_watch_faceView" pc="268436260" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="68" parent="globals/luwan_watch_faceView" pc="268436284" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="69" parent="globals/luwan_watch_faceView" pc="268436309" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="71" parent="globals/luwan_watch_faceView" pc="268436321" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="72" parent="globals/luwan_watch_faceView" pc="268436338" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceView.mc" id="24" lineNum="74" parent="globals/luwan_watch_faceView" pc="268436359" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="25" lineNum="12" parent="globals/luwan_watchfaceApp" pc="268436380" symbol="onStart"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="26" lineNum="25" parent="globals/luwan_watchfaceApp" pc="268436383" symbol="onSettingsChanged"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="26" lineNum="26" parent="globals/luwan_watchfaceApp" pc="268436385" symbol="onSettingsChanged"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="27" lineNum="20" parent="globals/luwan_watchfaceApp" pc="268436397" symbol="getInitialView"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="27" lineNum="21" parent="globals/luwan_watchfaceApp" pc="268436399" symbol="getInitialView"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="28" lineNum="7" parent="globals/luwan_watchfaceApp" pc="268436429" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="28" lineNum="8" parent="globals/luwan_watchfaceApp" pc="268436431" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\luwan-watchfaceApp.mc" id="29" lineNum="16" parent="globals/luwan_watchfaceApp" pc="268436444" symbol="onStop"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\LineDrawable.mc" id="30" lineNum="11" parent="globals/LineDrawable" pc="268436447" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\LineDrawable.mc" id="30" lineNum="12" parent="globals/LineDrawable" pc="268436449" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\LineDrawable.mc" id="30" lineNum="13" parent="globals/LineDrawable" pc="268436461" symbol="initialize"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\LineDrawable.mc" id="31" lineNum="18" parent="globals/LineDrawable" pc="268436501" symbol="onUpdate"/>
+<entry filename="C:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\source\\LineDrawable.mc" id="31" lineNum="19" parent="globals/LineDrawable" pc="268436503" symbol="onUpdate"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="32" lineNum="12" parent="globals/Rez/Drawables/Smiley" pc="268436520" symbol="&lt;init&gt;"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="33" parent="globals/Rez/Layouts" pc="268436532" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="34" parent="globals/Rez/Layouts" pc="268436543" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="36" parent="globals/Rez/Layouts" pc="268436567" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="37" parent="globals/Rez/Layouts" pc="268436654" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="39" parent="globals/Rez/Layouts" pc="268436696" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="41" parent="globals/Rez/Layouts" pc="268436785" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="43" parent="globals/Rez/Layouts" pc="268436873" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="45" parent="globals/Rez/Layouts" pc="268436962" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="46" parent="globals/Rez/Layouts" pc="268436996" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="47" parent="globals/Rez/Layouts" pc="268437006" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="50" parent="globals/Rez/Layouts" pc="268437022" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="52" parent="globals/Rez/Layouts" pc="268437112" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="33" lineNum="54" parent="globals/Rez/Layouts" pc="268437217" symbol="WatchFace"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="34" lineNum="14" parent="globals/Rez/Drawables/Smiley" pc="268437262" symbol="initialize"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="34" lineNum="15" parent="globals/Rez/Drawables/Smiley" pc="268437264" symbol="initialize"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="35" lineNum="18" parent="globals/Rez/Drawables/Smiley" pc="268437281" symbol="draw"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="35" lineNum="19" parent="globals/Rez/Drawables/Smiley" pc="268437283" symbol="draw"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="35" lineNum="20" parent="globals/Rez/Drawables/Smiley" pc="268437293" symbol="draw"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="35" lineNum="21" parent="globals/Rez/Drawables/Smiley" pc="268437302" symbol="draw"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="35" lineNum="26" parent="globals/Rez/Drawables/Smiley" pc="268437309" symbol="draw"/>
+<entry filename="c:\\Users\\132707\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\luwan\\luwan-watchface\\bin\\gen\\006-B3992-00\\source\\Rez.mcgen" id="35" lineNum="27" parent="globals/Rez/Drawables/Smiley" pc="268437326" symbol="draw"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="8389346" symbol="text"/>
+<entry field="true" id="22" symbol="timeUtils"/>
+<entry id="18" symbol="MONTH_ABBREVIATIONS"/>
+<entry id="17" symbol="DAY_ABBREVIATIONS"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="16" method="true" symbol="getMonthOfYear"/>
+<entry id="8389683" method="true" symbol="onSettingsChanged"/>
+<entry field="true" id="33" symbol="ColorRed"/>
+<entry id="7" object="true" symbol="ActivityInfo"/>
+<entry id="6" module="true" symbol="globals/TimeUtils/&lt;statics&gt;"/>
+<entry field="true" id="36" symbol="MilitaryFormatTitle"/>
+<entry id="12" method="true" symbol="&lt;globals/TimeUtils/&lt;&gt;GetDayAbbreviation&gt;"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="11" object="true" symbol="luwan_watchfaceApp"/>
+<entry field="true" id="30" symbol="ColorBlue"/>
+<entry field="true" id="23" symbol="line"/>
+<entry field="true" id="27" symbol="AppName"/>
+<entry id="9" object="true" symbol="TimeUtils"/>
+<entry id="5" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8389345" symbol="rezId"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry field="true" id="21" symbol="activityInfo"/>
+<entry id="10" object="true" symbol="luwan_watch_faceView"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389348" symbol="font"/>
+<entry id="26" object="true" symbol="Smiley"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry field="true" id="31" symbol="ColorDarkGray"/>
+<entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+<entry field="true" id="8391300" method="true" symbol="isVisible"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389349" symbol="justification"/>
+<entry field="true" id="34" symbol="ColorWhite"/>
+<entry id="13" method="true" symbol="&lt;globals/TimeUtils/&lt;&gt;GetMonthAbbreviation&gt;"/>
+<entry field="true" id="29" symbol="ColorBlack"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="8" object="true" symbol="LineDrawable"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="15" method="true" symbol="getDaysOfWeek"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry field="true" id="24" symbol="Background_Img"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="8389068" method="true" symbol="draw"/>
+<entry field="true" id="25" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry field="true" id="28" symbol="BackgroundColorTitle"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8390146" module="true" object="true" symbol="Background"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="8388641" module="true" symbol="Math"/>
+<entry field="true" id="32" symbol="ColorLightGray"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="8389347" symbol="color"/>
+<entry field="true" id="35" symbol="ForegroundColorTitle"/>
+<entry id="19" method="true" symbol="getCurStep"/>
+<entry id="20" module="true" symbol="Layouts"/>
+<entry field="true" id="8389743" symbol="backgroundColor"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="14" method="true" symbol="getDayOfMonth"/>
+<entry id="8388635" module="true" symbol="Application"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435682" name="now" stackId="1" startPc="268435635"/>
+<entry endPc="268435682" name="date" stackId="2" startPc="268435635"/>
+<entry endPc="268435682" name="month" stackId="3" startPc="268435635"/>
+<entry arg="true" endPc="268435693" name="day" stackId="1" startPc="268435683"/>
+<entry arg="true" endPc="268435704" name="month" stackId="1" startPc="268435694"/>
+<entry endPc="268435760" name="now" stackId="1" startPc="268435708"/>
+<entry endPc="268435760" name="date" stackId="2" startPc="268435708"/>
+<entry endPc="268435760" name="daysOfWeek" stackId="3" startPc="268435708"/>
+<entry endPc="268435808" name="now" stackId="1" startPc="268435764"/>
+<entry endPc="268435808" name="date" stackId="2" startPc="268435764"/>
+<entry endPc="268435808" name="day" stackId="3" startPc="268435764"/>
+<entry endPc="268435836" name="currentStep" stackId="1" startPc="268435812"/>
+<entry endPc="268435873" name="dictionary" stackId="1" startPc="268435840"/>
+<entry arg="true" endPc="268435916" name="dc" stackId="1" startPc="268435875"/>
+<entry arg="true" endPc="268435952" name="dc" stackId="1" startPc="268435917"/>
+<entry arg="true" endPc="268436379" name="dc" stackId="1" startPc="268435968"/>
+<entry endPc="268436378" name="timeFormat" stackId="2" startPc="268435971"/>
+<entry endPc="268436378" name="clockTime" stackId="3" startPc="268435971"/>
+<entry endPc="268436378" name="hours" stackId="4" startPc="268435971"/>
+<entry endPc="268436378" name="timeString" stackId="5" startPc="268435971"/>
+<entry endPc="268436378" name="view" stackId="6" startPc="268435971"/>
+<entry endPc="268436378" name="daysOfWeek" stackId="7" startPc="268435971"/>
+<entry endPc="268436378" name="daysOfWeekView" stackId="8" startPc="268435971"/>
+<entry endPc="268436378" name="day" stackId="9" startPc="268435971"/>
+<entry endPc="268436378" name="dayview" stackId="10" startPc="268435971"/>
+<entry endPc="268436378" name="stepCountView" stackId="11" startPc="268435971"/>
+<entry endPc="268436378" name="curStep" stackId="12" startPc="268435971"/>
+<entry endPc="268436378" name="distance" stackId="13" startPc="268435971"/>
+<entry arg="true" endPc="268436519" name="dc" stackId="1" startPc="268436501"/>
+<entry arg="true" endPc="268437261" name="dc" stackId="1" startPc="268436532"/>
+<entry endPc="268437261" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="2" startPc="268436543"/>
+<entry endPc="268437261" name="rez_cmp_local_bitmap_Background_Img" stackId="3" startPc="268436543"/>
+<entry endPc="268437261" name="rez_cmp_local_text_TimeLabel" stackId="4" startPc="268436543"/>
+<entry endPc="268437261" name="rez_cmp_local_text_DaysOfWeek" stackId="5" startPc="268436543"/>
+<entry endPc="268437261" name="rez_cmp_local_text_Day" stackId="6" startPc="268436543"/>
+<entry endPc="268437261" name="rez_cmp_local_custom_drawable_Smiley" stackId="7" startPc="268436543"/>
+<entry endPc="268437261" name="rez_cmp_local_text_Step" stackId="8" startPc="268436543"/>
+<entry endPc="268437261" name="rez_cmp_local_text_StepCount" stackId="9" startPc="268436543"/>
+<entry arg="true" endPc="268437352" name="dc" stackId="1" startPc="268437281"/>
+</localVars>
+<deviceInfo deviceVersion="0ed082a335bbf00c12e5da810e92d4f89288090c" partNumber="006-B3992-00"/>
+<annotations>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MilitaryFormatTitle"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorRed"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="Background_Img"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGray"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorWhite"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ForegroundColorTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorLightGray"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlue"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlack"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/TimeUtils" offset="170" parentId="globals" symbolId="TimeUtils" type="class"/>
+<dataEntry label="globals/TimeUtils/&lt;statics&gt;" offset="263" parentId="TimeUtils" symbolId="&lt;statics&gt;" type="module"/>
+<dataEntry label="globals/ActivityInfo" offset="303" parentId="globals" symbolId="ActivityInfo" type="class"/>
+<dataEntry label="globals/Background" offset="356" parentId="globals" symbolId="Background" type="class"/>
+<dataEntry label="globals/Rez" offset="409" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/luwan_watch_faceView" offset="462" parentId="globals" symbolId="luwan_watch_faceView" type="class"/>
+<dataEntry label="globals/luwan_watchfaceApp" offset="578" parentId="globals" symbolId="luwan_watchfaceApp" type="class"/>
+<dataEntry label="globals/LineDrawable" offset="658" parentId="globals" symbolId="LineDrawable" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="720" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="773" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="808" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Rez/Drawables/Smiley" offset="924" parentId="Drawables" symbolId="Smiley" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="TimeUtils">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435484" name="&lt;init&gt;" parent="globals/TimeUtils" startPc="268435460">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="ActivityInfo">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435505" name="getApp" startPc="268435485">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435517" name="&lt;init&gt;" parent="Background" startPc="268435506">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435537" name="&lt;init&gt;" parent="Rez" startPc="268435518">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435607" name="&lt;init&gt;" parent="luwan_watch_faceView" startPc="268435538">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435619" name="&lt;init&gt;" parent="luwan_watchfaceApp" startPc="268435608">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435631" name="&lt;init&gt;" parent="LineDrawable" startPc="268435620">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435682" name="getMonthOfYear" parent="TimeUtils" startPc="268435632">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268435693" name="&lt;globals/TimeUtils/&lt;&gt;GetDayAbbreviation&gt;" parent="TimeUtils" startPc="268435683">
+<param id="day"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268435704" name="&lt;globals/TimeUtils/&lt;&gt;GetMonthAbbreviation&gt;" parent="TimeUtils" startPc="268435694">
+<param id="month"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435760" name="getDaysOfWeek" parent="TimeUtils" startPc="268435705">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435808" name="getDayOfMonth" parent="TimeUtils" startPc="268435761">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="TimeUtils">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="ActivityInfo">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435836" name="getCurStep" parent="ActivityInfo" startPc="268435809">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435874" name="initialize" parent="Background" startPc="268435837">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435916" name="draw" parent="Background" startPc="268435875">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onExitSleep" parent="luwan_watch_faceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="luwan_watch_faceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435952" name="onLayout" parent="luwan_watch_faceView" startPc="268435917">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onEnterSleep" parent="luwan_watch_faceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435967" name="initialize" parent="luwan_watch_faceView" startPc="268435953">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="luwan_watch_faceView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436379" name="onUpdate" parent="luwan_watch_faceView" startPc="268435968">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436382" name="onStart" parent="luwan_watchfaceApp" startPc="268436380">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436396" name="onSettingsChanged" parent="luwan_watchfaceApp" startPc="268436383">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436428" name="getInitialView" parent="luwan_watchfaceApp" startPc="268436397">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436443" name="initialize" parent="luwan_watchfaceApp" startPc="268436429">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436446" name="onStop" parent="luwan_watchfaceApp" startPc="268436444">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436500" name="initialize" parent="LineDrawable" startPc="268436447">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436519" name="onUpdate" parent="LineDrawable" startPc="268436501">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436531" name="&lt;init&gt;" parent="Smiley" startPc="268436520">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437261" name="WatchFace" parent="Layouts" startPc="268436532">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437280" name="initialize" parent="Smiley" startPc="268437262">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437352" name="draw" parent="Smiley" startPc="268437281">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>
