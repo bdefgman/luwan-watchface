@@ -1,17 +1,17 @@
-[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 4; @symbol_classdef = [ActivityInfo,4,6,18]; ]
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 4; @symbol_classdef = [ActivityInfo,4,6,18]; ]
 class ActivityInfo {
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 4; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 4; ]
     <init> {
     }
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 4; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 4; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 6; @symbol_functiondef = [getCurStep,6,13,23]; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 6; @symbol_functiondef = [getCurStep,6,13,23]; ]
     function getCurStep() {
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_utils_ActivityInfo_mc_6_26_9_4_start:
-[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\utils\ActivityInfo.mc" 7 8 ]
-        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_utils_ActivityInfo_mc_6_26_9_4_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_utils_ActivityInfo_mc_6_26_9_4_stop" ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_utils_ActivityInfo_mc_6_26_9_4_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\utils\ActivityInfo.mc" 7 8 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_utils_ActivityInfo_mc_6_26_9_4_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_utils_ActivityInfo_mc_6_26_9_4_stop" ]
         %currentStep.1 = local;
         symbol [ currentStep %currentStep.1 7 12 23 ];
         symbol [ ActivityMonitor %tmp.2 7 26 41 ];
@@ -23,16 +23,16 @@ C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchf
         %tmp.5 = getv %tmp.4 :steps;
         lputv %currentStep.1 %tmp.5;
         symbol [ currentStep %currentStep.1 7 12 23 ];
-[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\utils\ActivityInfo.mc" 8 8 ]
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\utils\ActivityInfo.mc" 8 8 ]
         %tmp.6 = lgetv %currentStep.1;
         symbol [ currentStep %tmp.6 8 15 26 ];
         symbol [ toString %tmp.7 8 27 35 ];
         %tmp.7 = getv function %tmp.6 :toString;
         %tmp.8 = invoke %tmp.6 %tmp.7();
         ret %tmp.8;
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_utils_ActivityInfo_mc_6_26_9_4_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_utils_ActivityInfo_mc_6_26_9_4_stop:
     }
 }
-[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 4; ]
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 4; ]
 <init> {
 }

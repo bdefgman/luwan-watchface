@@ -1,9 +1,9 @@
 {
   "settings" : [ {
-    "key" : "BackgroundColor",
+    "key" : "theme_code",
     "valueType" : "number",
     "defaultValue" : 0,
-    "configTitle" : "BackgroundColorTitle",
+    "configTitle" : "theme_code",
     "configPrompt" : null,
     "configType" : "list",
     "configError" : null,
@@ -11,55 +11,1384 @@
     "configReadonly" : false,
     "configRequired" : false,
     "configOptions" : [ {
-      "display" : "ColorBlack",
+      "display" : "theme_dark",
       "value" : 0
     }, {
-      "display" : "ColorDarkGray",
-      "value" : 5592405
+      "display" : "theme_light",
+      "value" : 1
     }, {
-      "display" : "ColorLightGray",
-      "value" : 11184810
+      "display" : "theme_ocean",
+      "value" : 2
     }, {
-      "display" : "ColorWhite",
-      "value" : 16777215
+      "display" : "theme_orange",
+      "value" : 3
+    }, {
+      "display" : "theme_radioactive",
+      "value" : 4
+    }, {
+      "display" : "theme_dark_blue",
+      "value" : 7
+    }, {
+      "display" : "theme_light_blue",
+      "value" : 8
+    }, {
+      "display" : "theme_gray",
+      "value" : 9
+    }, {
+      "display" : "theme_lgray",
+      "value" : 10
+    }, {
+      "display" : "theme_pink",
+      "value" : 11
+    }, {
+      "display" : "theme_deep_ocean",
+      "value" : 12
+    }, {
+      "display" : "theme_dcontrast",
+      "value" : 13
+    }, {
+      "display" : "theme_lcontrast",
+      "value" : 14
+    }, {
+      "display" : "theme_camo",
+      "value" : 15
+    }, {
+      "display" : "theme_solar",
+      "value" : 16
+    }, {
+      "display" : "theme_lime",
+      "value" : 17
     } ],
     "configMin" : null,
     "configMax" : null,
     "configMaxLength" : null
   }, {
-    "key" : "ForegroundColor",
-    "valueType" : "number",
-    "defaultValue" : 16711680,
-    "configTitle" : "ForegroundColorTitle",
-    "configPrompt" : null,
-    "configType" : "list",
-    "configError" : null,
-    "configHelpUrl" : null,
-    "configReadonly" : false,
-    "configRequired" : false,
-    "configOptions" : [ {
-      "display" : "ColorBlack",
-      "value" : 0
-    }, {
-      "display" : "ColorBlue",
-      "value" : 255
-    }, {
-      "display" : "ColorRed",
-      "value" : 16711680
-    }, {
-      "display" : "ColorWhite",
-      "value" : 16777215
-    } ],
-    "configMin" : null,
-    "configMax" : null,
-    "configMaxLength" : null
-  }, {
-    "key" : "UseMilitaryFormat",
+    "key" : "power_save_mode",
     "valueType" : "boolean",
-    "defaultValue" : false,
-    "configTitle" : "MilitaryFormatTitle",
+    "defaultValue" : true,
+    "configTitle" : "power_save_mode",
     "configPrompt" : null,
     "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "sleep_time_behaviour",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "sleep_time_behaviour",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "default_render",
+      "value" : 0
+    }, {
+      "display" : "no_render",
+      "value" : 1
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "always_on_second",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "always_on_second",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "always_on_heart",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "always_on_heart",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "use_analog",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "use_analog",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "digital_style",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "digital_style",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "digital_style_xbig",
+      "value" : 2
+    }, {
+      "display" : "digital_style_big",
+      "value" : 0
+    }, {
+      "display" : "digital_style_medium",
+      "value" : 3
+    }, {
+      "display" : "digital_style_small",
+      "value" : 1
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "zero_leading_digital",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "zero_leading_digital",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "always_on_style",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "always_on_style",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "digital_style_medium",
+      "value" : 1
+    }, {
+      "display" : "digital_style_small",
+      "value" : 0
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "big_number_type",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "big_number_type",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "minute_major",
+      "value" : 0
+    }, {
+      "display" : "hour_major",
+      "value" : 1
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "minimal_data",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "minimal_data",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "big_num_stripes",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "big_num_stripes",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "left_digital_info",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "left_digital_info",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ticks_style",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "ticks_style",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 0
+    }, {
+      "display" : "ticks_style_arc",
+      "value" : 1
+    }, {
+      "display" : "ticks_style_marks",
+      "value" : 2
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "comp12h",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "comp12h",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 9
+    }, {
+      "display" : "date",
+      "value" : 7
+    }, {
+      "display" : "weeknum",
+      "value" : 22
+    }, {
+      "display" : "time",
+      "value" : 8
+    }, {
+      "display" : "time_secondary",
+      "value" : 19
+    }, {
+      "display" : "battery",
+      "value" : 1
+    }, {
+      "display" : "calories",
+      "value" : 2
+    }, {
+      "display" : "heartrate",
+      "value" : 0
+    }, {
+      "display" : "distance",
+      "value" : 3
+    }, {
+      "display" : "distanceweek",
+      "value" : 17
+    }, {
+      "display" : "movebar",
+      "value" : 4
+    }, {
+      "display" : "steps",
+      "value" : 5
+    }, {
+      "display" : "active",
+      "value" : 6
+    }, {
+      "display" : "notification",
+      "value" : 10
+    }, {
+      "display" : "alarm",
+      "value" : 11
+    }, {
+      "display" : "phonestatus",
+      "value" : 20
+    }, {
+      "display" : "groupnoti",
+      "value" : 16
+    }, {
+      "display" : "altitude",
+      "value" : 12
+    }, {
+      "display" : "temperature",
+      "value" : 13
+    }, {
+      "display" : "temperature_out",
+      "value" : 23
+    }, {
+      "display" : "temperature_hl",
+      "value" : 24
+    }, {
+      "display" : "sunriseset",
+      "value" : 14
+    }, {
+      "display" : "floorclimbed",
+      "value" : 15
+    }, {
+      "display" : "barometer",
+      "value" : 18
+    }, {
+      "display" : "countdown",
+      "value" : 21
+    }, {
+      "display" : "weather",
+      "value" : 25
+    }, {
+      "display" : "ampm",
+      "value" : 26
+    }, {
+      "display" : "wind",
+      "value" : 28
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "comp2h",
+    "valueType" : "number",
+    "defaultValue" : 4,
+    "configTitle" : "comp2h",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 9
+    }, {
+      "display" : "date",
+      "value" : 7
+    }, {
+      "display" : "weeknum",
+      "value" : 22
+    }, {
+      "display" : "time",
+      "value" : 8
+    }, {
+      "display" : "time_secondary",
+      "value" : 19
+    }, {
+      "display" : "battery",
+      "value" : 1
+    }, {
+      "display" : "calories",
+      "value" : 2
+    }, {
+      "display" : "heartrate",
+      "value" : 0
+    }, {
+      "display" : "distance",
+      "value" : 3
+    }, {
+      "display" : "distanceweek",
+      "value" : 17
+    }, {
+      "display" : "movebar",
+      "value" : 4
+    }, {
+      "display" : "steps",
+      "value" : 5
+    }, {
+      "display" : "active",
+      "value" : 6
+    }, {
+      "display" : "notification",
+      "value" : 10
+    }, {
+      "display" : "alarm",
+      "value" : 11
+    }, {
+      "display" : "phonestatus",
+      "value" : 20
+    }, {
+      "display" : "groupnoti",
+      "value" : 16
+    }, {
+      "display" : "altitude",
+      "value" : 12
+    }, {
+      "display" : "temperature",
+      "value" : 13
+    }, {
+      "display" : "temperature_out",
+      "value" : 23
+    }, {
+      "display" : "temperature_hl",
+      "value" : 24
+    }, {
+      "display" : "sunriseset",
+      "value" : 14
+    }, {
+      "display" : "floorclimbed",
+      "value" : 15
+    }, {
+      "display" : "barometer",
+      "value" : 18
+    }, {
+      "display" : "countdown",
+      "value" : 21
+    }, {
+      "display" : "weather",
+      "value" : 25
+    }, {
+      "display" : "ampm",
+      "value" : 26
+    }, {
+      "display" : "wind",
+      "value" : 28
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "comp4h",
+    "valueType" : "number",
+    "defaultValue" : 3,
+    "configTitle" : "comp4h",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 9
+    }, {
+      "display" : "date",
+      "value" : 7
+    }, {
+      "display" : "weeknum",
+      "value" : 22
+    }, {
+      "display" : "time",
+      "value" : 8
+    }, {
+      "display" : "time_secondary",
+      "value" : 19
+    }, {
+      "display" : "battery",
+      "value" : 1
+    }, {
+      "display" : "calories",
+      "value" : 2
+    }, {
+      "display" : "heartrate",
+      "value" : 0
+    }, {
+      "display" : "distance",
+      "value" : 3
+    }, {
+      "display" : "distanceweek",
+      "value" : 17
+    }, {
+      "display" : "movebar",
+      "value" : 4
+    }, {
+      "display" : "steps",
+      "value" : 5
+    }, {
+      "display" : "active",
+      "value" : 6
+    }, {
+      "display" : "notification",
+      "value" : 10
+    }, {
+      "display" : "alarm",
+      "value" : 11
+    }, {
+      "display" : "phonestatus",
+      "value" : 20
+    }, {
+      "display" : "groupnoti",
+      "value" : 16
+    }, {
+      "display" : "altitude",
+      "value" : 12
+    }, {
+      "display" : "temperature",
+      "value" : 13
+    }, {
+      "display" : "temperature_out",
+      "value" : 23
+    }, {
+      "display" : "temperature_hl",
+      "value" : 24
+    }, {
+      "display" : "sunriseset",
+      "value" : 14
+    }, {
+      "display" : "floorclimbed",
+      "value" : 15
+    }, {
+      "display" : "barometer",
+      "value" : 18
+    }, {
+      "display" : "countdown",
+      "value" : 21
+    }, {
+      "display" : "weather",
+      "value" : 25
+    }, {
+      "display" : "ampm",
+      "value" : 26
+    }, {
+      "display" : "wind",
+      "value" : 28
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "comp6h",
+    "valueType" : "number",
+    "defaultValue" : 2,
+    "configTitle" : "comp6h",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 9
+    }, {
+      "display" : "date",
+      "value" : 7
+    }, {
+      "display" : "weeknum",
+      "value" : 22
+    }, {
+      "display" : "time",
+      "value" : 8
+    }, {
+      "display" : "time_secondary",
+      "value" : 19
+    }, {
+      "display" : "battery",
+      "value" : 1
+    }, {
+      "display" : "calories",
+      "value" : 2
+    }, {
+      "display" : "heartrate",
+      "value" : 0
+    }, {
+      "display" : "distance",
+      "value" : 3
+    }, {
+      "display" : "distanceweek",
+      "value" : 17
+    }, {
+      "display" : "movebar",
+      "value" : 4
+    }, {
+      "display" : "steps",
+      "value" : 5
+    }, {
+      "display" : "active",
+      "value" : 6
+    }, {
+      "display" : "notification",
+      "value" : 10
+    }, {
+      "display" : "alarm",
+      "value" : 11
+    }, {
+      "display" : "phonestatus",
+      "value" : 20
+    }, {
+      "display" : "groupnoti",
+      "value" : 16
+    }, {
+      "display" : "altitude",
+      "value" : 12
+    }, {
+      "display" : "temperature",
+      "value" : 13
+    }, {
+      "display" : "temperature_out",
+      "value" : 23
+    }, {
+      "display" : "temperature_hl",
+      "value" : 24
+    }, {
+      "display" : "sunriseset",
+      "value" : 14
+    }, {
+      "display" : "floorclimbed",
+      "value" : 15
+    }, {
+      "display" : "barometer",
+      "value" : 18
+    }, {
+      "display" : "countdown",
+      "value" : 21
+    }, {
+      "display" : "weather",
+      "value" : 25
+    }, {
+      "display" : "ampm",
+      "value" : 26
+    }, {
+      "display" : "wind",
+      "value" : 28
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "comp8h",
+    "valueType" : "number",
+    "defaultValue" : 5,
+    "configTitle" : "comp8h",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 9
+    }, {
+      "display" : "date",
+      "value" : 7
+    }, {
+      "display" : "weeknum",
+      "value" : 22
+    }, {
+      "display" : "time",
+      "value" : 8
+    }, {
+      "display" : "time_secondary",
+      "value" : 19
+    }, {
+      "display" : "battery",
+      "value" : 1
+    }, {
+      "display" : "calories",
+      "value" : 2
+    }, {
+      "display" : "heartrate",
+      "value" : 0
+    }, {
+      "display" : "distance",
+      "value" : 3
+    }, {
+      "display" : "distanceweek",
+      "value" : 17
+    }, {
+      "display" : "movebar",
+      "value" : 4
+    }, {
+      "display" : "steps",
+      "value" : 5
+    }, {
+      "display" : "active",
+      "value" : 6
+    }, {
+      "display" : "notification",
+      "value" : 10
+    }, {
+      "display" : "alarm",
+      "value" : 11
+    }, {
+      "display" : "phonestatus",
+      "value" : 20
+    }, {
+      "display" : "groupnoti",
+      "value" : 16
+    }, {
+      "display" : "altitude",
+      "value" : 12
+    }, {
+      "display" : "temperature",
+      "value" : 13
+    }, {
+      "display" : "temperature_out",
+      "value" : 23
+    }, {
+      "display" : "temperature_hl",
+      "value" : 24
+    }, {
+      "display" : "sunriseset",
+      "value" : 14
+    }, {
+      "display" : "floorclimbed",
+      "value" : 15
+    }, {
+      "display" : "barometer",
+      "value" : 18
+    }, {
+      "display" : "countdown",
+      "value" : 21
+    }, {
+      "display" : "weather",
+      "value" : 25
+    }, {
+      "display" : "ampm",
+      "value" : 26
+    }, {
+      "display" : "wind",
+      "value" : 28
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "comp10h",
+    "valueType" : "number",
+    "defaultValue" : 28,
+    "configTitle" : "comp10h",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 9
+    }, {
+      "display" : "date",
+      "value" : 7
+    }, {
+      "display" : "weeknum",
+      "value" : 22
+    }, {
+      "display" : "time",
+      "value" : 8
+    }, {
+      "display" : "time_secondary",
+      "value" : 19
+    }, {
+      "display" : "battery",
+      "value" : 1
+    }, {
+      "display" : "calories",
+      "value" : 2
+    }, {
+      "display" : "heartrate",
+      "value" : 0
+    }, {
+      "display" : "distance",
+      "value" : 3
+    }, {
+      "display" : "distanceweek",
+      "value" : 17
+    }, {
+      "display" : "movebar",
+      "value" : 4
+    }, {
+      "display" : "steps",
+      "value" : 5
+    }, {
+      "display" : "active",
+      "value" : 6
+    }, {
+      "display" : "notification",
+      "value" : 10
+    }, {
+      "display" : "alarm",
+      "value" : 11
+    }, {
+      "display" : "phonestatus",
+      "value" : 20
+    }, {
+      "display" : "groupnoti",
+      "value" : 16
+    }, {
+      "display" : "altitude",
+      "value" : 12
+    }, {
+      "display" : "temperature",
+      "value" : 13
+    }, {
+      "display" : "temperature_out",
+      "value" : 23
+    }, {
+      "display" : "temperature_hl",
+      "value" : 24
+    }, {
+      "display" : "sunriseset",
+      "value" : 14
+    }, {
+      "display" : "floorclimbed",
+      "value" : 15
+    }, {
+      "display" : "barometer",
+      "value" : 18
+    }, {
+      "display" : "countdown",
+      "value" : 21
+    }, {
+      "display" : "weather",
+      "value" : 25
+    }, {
+      "display" : "ampm",
+      "value" : 26
+    }, {
+      "display" : "wind",
+      "value" : 28
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "compbart",
+    "valueType" : "number",
+    "defaultValue" : 9,
+    "configTitle" : "compbart",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 9
+    }, {
+      "display" : "date",
+      "value" : 7
+    }, {
+      "display" : "weeknum",
+      "value" : 22
+    }, {
+      "display" : "time",
+      "value" : 8
+    }, {
+      "display" : "time_secondary",
+      "value" : 19
+    }, {
+      "display" : "battery",
+      "value" : 1
+    }, {
+      "display" : "calories",
+      "value" : 2
+    }, {
+      "display" : "heartrate",
+      "value" : 0
+    }, {
+      "display" : "distance",
+      "value" : 3
+    }, {
+      "display" : "distanceweek",
+      "value" : 17
+    }, {
+      "display" : "movebar",
+      "value" : 4
+    }, {
+      "display" : "steps",
+      "value" : 5
+    }, {
+      "display" : "active",
+      "value" : 6
+    }, {
+      "display" : "notification",
+      "value" : 10
+    }, {
+      "display" : "alarm",
+      "value" : 11
+    }, {
+      "display" : "phonestatus",
+      "value" : 20
+    }, {
+      "display" : "groupnoti",
+      "value" : 16
+    }, {
+      "display" : "altitude",
+      "value" : 12
+    }, {
+      "display" : "temperature",
+      "value" : 13
+    }, {
+      "display" : "temperature_out",
+      "value" : 23
+    }, {
+      "display" : "temperature_hl",
+      "value" : 24
+    }, {
+      "display" : "sunriseset",
+      "value" : 14
+    }, {
+      "display" : "floorclimbed",
+      "value" : 15
+    }, {
+      "display" : "barometer",
+      "value" : 18
+    }, {
+      "display" : "countdown",
+      "value" : 21
+    }, {
+      "display" : "weather",
+      "value" : 25
+    }, {
+      "display" : "ampm",
+      "value" : 26
+    }, {
+      "display" : "ctext",
+      "value" : 27
+    }, {
+      "display" : "wind",
+      "value" : 28
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "compbarb",
+    "valueType" : "number",
+    "defaultValue" : 9,
+    "configTitle" : "compbarb",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 9
+    }, {
+      "display" : "date",
+      "value" : 7
+    }, {
+      "display" : "weeknum",
+      "value" : 22
+    }, {
+      "display" : "time",
+      "value" : 8
+    }, {
+      "display" : "time_secondary",
+      "value" : 19
+    }, {
+      "display" : "battery",
+      "value" : 1
+    }, {
+      "display" : "calories",
+      "value" : 2
+    }, {
+      "display" : "heartrate",
+      "value" : 0
+    }, {
+      "display" : "distance",
+      "value" : 3
+    }, {
+      "display" : "distanceweek",
+      "value" : 17
+    }, {
+      "display" : "movebar",
+      "value" : 4
+    }, {
+      "display" : "steps",
+      "value" : 5
+    }, {
+      "display" : "active",
+      "value" : 6
+    }, {
+      "display" : "notification",
+      "value" : 10
+    }, {
+      "display" : "alarm",
+      "value" : 11
+    }, {
+      "display" : "phonestatus",
+      "value" : 20
+    }, {
+      "display" : "groupnoti",
+      "value" : 16
+    }, {
+      "display" : "altitude",
+      "value" : 12
+    }, {
+      "display" : "temperature",
+      "value" : 13
+    }, {
+      "display" : "temperature_out",
+      "value" : 23
+    }, {
+      "display" : "temperature_hl",
+      "value" : 24
+    }, {
+      "display" : "sunriseset",
+      "value" : 14
+    }, {
+      "display" : "floorclimbed",
+      "value" : 15
+    }, {
+      "display" : "barometer",
+      "value" : 18
+    }, {
+      "display" : "countdown",
+      "value" : 21
+    }, {
+      "display" : "weather",
+      "value" : 25
+    }, {
+      "display" : "ampm",
+      "value" : 26
+    }, {
+      "display" : "ctext",
+      "value" : 27
+    }, {
+      "display" : "wind",
+      "value" : 28
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "compgrapht",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "compgrapht",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 0
+    }, {
+      "display" : "heartrate",
+      "value" : 1
+    }, {
+      "display" : "altitude",
+      "value" : 2
+    }, {
+      "display" : "barometer",
+      "value" : 3
+    }, {
+      "display" : "temperature",
+      "value" : 4
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "compgraphb",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "compgraphb",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "empty",
+      "value" : 0
+    }, {
+      "display" : "heartrate",
+      "value" : 1
+    }, {
+      "display" : "altitude",
+      "value" : 2
+    }, {
+      "display" : "barometer",
+      "value" : 3
+    }, {
+      "display" : "temperature",
+      "value" : 4
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "utc_timezone",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "utc_timezone",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "utc0",
+      "value" : 0
+    }, {
+      "display" : "utc1",
+      "value" : 1
+    }, {
+      "display" : "utc2",
+      "value" : 2
+    }, {
+      "display" : "utc3",
+      "value" : 3
+    }, {
+      "display" : "utc4",
+      "value" : 4
+    }, {
+      "display" : "utc5",
+      "value" : 5
+    }, {
+      "display" : "utc6",
+      "value" : 6
+    }, {
+      "display" : "utc7",
+      "value" : 7
+    }, {
+      "display" : "utc8",
+      "value" : 8
+    }, {
+      "display" : "utc9",
+      "value" : 9
+    }, {
+      "display" : "utc10",
+      "value" : 10
+    }, {
+      "display" : "utc11",
+      "value" : 11
+    }, {
+      "display" : "utc12",
+      "value" : 12
+    }, {
+      "display" : "utc1m",
+      "value" : -1
+    }, {
+      "display" : "utc2m",
+      "value" : -2
+    }, {
+      "display" : "utc3m",
+      "value" : -3
+    }, {
+      "display" : "utc4m",
+      "value" : -4
+    }, {
+      "display" : "utc5m",
+      "value" : -5
+    }, {
+      "display" : "utc6m",
+      "value" : -6
+    }, {
+      "display" : "utc7m",
+      "value" : -7
+    }, {
+      "display" : "utc8m",
+      "value" : -8
+    }, {
+      "display" : "utc9m",
+      "value" : -9
+    }, {
+      "display" : "utc10m",
+      "value" : -10
+    }, {
+      "display" : "utc11m",
+      "value" : -11
+    }, {
+      "display" : "utc12m",
+      "value" : -12
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "utc_shift",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "utc_shift",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "date_format",
+    "valueType" : "number",
+    "defaultValue" : 5,
+    "configTitle" : "date_format",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "datef1",
+      "value" : 0
+    }, {
+      "display" : "datef2",
+      "value" : 1
+    }, {
+      "display" : "datef21",
+      "value" : 2
+    }, {
+      "display" : "datef3",
+      "value" : 3
+    }, {
+      "display" : "datef31",
+      "value" : 4
+    }, {
+      "display" : "datef4",
+      "value" : 5
+    }, {
+      "display" : "datef41",
+      "value" : 6
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "force_date_english",
+    "valueType" : "boolean",
+    "defaultValue" : true,
+    "configTitle" : "force_date_english",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "battery_format",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "battery_format",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "battery_format_1",
+      "value" : 0
+    }, {
+      "display" : "battery_format_2",
+      "value" : 1
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "countdown_date",
+    "valueType" : "number",
+    "defaultValue" : 1546300800,
+    "configTitle" : "countdown_date",
+    "configPrompt" : null,
+    "configType" : "date",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "barometer_unit",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "barometer_unit",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "barometer_unit_0",
+      "value" : 0
+    }, {
+      "display" : "barometer_unit_1",
+      "value" : 1
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "openweathermap_api",
+    "valueType" : "string",
+    "defaultValue" : "8c87819e23c9df22296aa2b3b0c2417b",
+    "configTitle" : "openweathermap_api",
+    "configPrompt" : null,
+    "configType" : "alphaNumeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ctext_input",
+    "valueType" : "string",
+    "defaultValue" : "",
+    "configTitle" : "ctext",
+    "configPrompt" : null,
+    "configType" : "alphaNumeric",
     "configError" : null,
     "configHelpUrl" : null,
     "configReadonly" : false,
@@ -72,16 +1401,134 @@
   "supportsLiveValidation" : false,
   "languages" : {
     "valyrian" : {
-      "ColorLightGray" : "Light Gray",
-      "ColorBlue" : "Blue",
-      "ColorRed" : "Red",
-      "ForegroundColorTitle" : "Foreground Color",
-      "BackgroundColorTitle" : "Background Color",
-      "ColorDarkGray" : "Dark Gray",
-      "MilitaryFormatTitle" : "Military Format for 24 Hour Time",
-      "ColorBlack" : "Black",
-      "ColorWhite" : "White",
-      "AppName" : "luwan-watch-face"
+      "theme_deep_ocean" : "Deep ocean",
+      "ampm" : "AM/PM indicator",
+      "compbart" : "Top bar complication",
+      "sunriseset" : "Sun time",
+      "no_render" : "Off screen to save power",
+      "theme_lcontrast" : "High contrast (Light)",
+      "phonestatus" : "Phone connection status",
+      "theme_code" : "Theme color",
+      "weather" : "Weather",
+      "theme_solar" : "Solar",
+      "comp10h" : "10h angle complication",
+      "utc7m" : "UTC -7",
+      "theme_light_blue" : "Light blue",
+      "utc11m" : "UTC -11",
+      "always_on_style" : "Always-on number style",
+      "left_digital_info" : "Move right digital info to left",
+      "time_secondary" : "Digital time (Secondary timezone)",
+      "utc8" : "UTC +8",
+      "utc9" : "UTC +9",
+      "big_number_type" : "Center number",
+      "utc6" : "UTC +6",
+      "utc7" : "UTC +7",
+      "heartrate" : "Heart rate",
+      "utc4" : "UTC +4",
+      "utc5" : "UTC +5",
+      "barometer_unit_1" : "Inches of Mercury (inHg)",
+      "barometer_unit_0" : "Hector Pascal (Pa)",
+      "active" : "Active minutes",
+      "openweathermap_api" : "OpenWeatherMap API key, read FAQs section for more info",
+      "countdown_date" : "Date for countdown",
+      "weeknum" : "Week of year",
+      "theme_lime" : "Lime",
+      "battery_format" : "Battery format",
+      "theme_dcontrast" : "High contrast (Dark)",
+      "utc2" : "UTC +2",
+      "utc3" : "UTC +3",
+      "render_arc_line" : "Render arc line with curved complication",
+      "utc0" : "UTC 0",
+      "utc1" : "UTC +1",
+      "comp4h" : "4h angle complication",
+      "utc6m" : "UTC -6",
+      "utc10m" : "UTC -10",
+      "wind" : "Wind (Kmph or Mph)",
+      "comp8h" : "8h angle complication",
+      "distanceweek" : "Distance (week)",
+      "compgraphb" : "Bottom graph complication",
+      "theme_light" : "Light",
+      "battery" : "Battery",
+      "compgrapht" : "Top graph complication",
+      "groupnoti" : "Group notification",
+      "temperature" : "Temperature (on device sensor)",
+      "power_save_mode" : "Reduce refresh rate to 1 per minute to save power",
+      "comp12h" : "12h angle complication",
+      "utc9m" : "UTC -9",
+      "digital_style_small" : "Small style",
+      "utc11" : "UTC +11",
+      "utc12" : "UTC +12",
+      "theme_dark_blue" : "Dark blue",
+      "utc10" : "UTC +10",
+      "digital_style_medium" : "Medium style",
+      "minimal_data" : "Full number instead of reduced (K)",
+      "digital_style_big" : "Big center style",
+      "ticks_style_marks" : "Mark style",
+      "digital_style_xbig" : "Extra Big center style",
+      "date_format" : "Date format",
+      "comp6h" : "6h angle complication",
+      "compbarb" : "Bottom bar complication",
+      "utc8m" : "UTC -8",
+      "utc12m" : "UTC -12",
+      "date" : "Date",
+      "digital_style" : "Digital number style",
+      "theme_camo" : "Camo",
+      "datef1" : "ddd d (TUE 2)",
+      "datef3" : "dd.mm.yy (2.9.19)",
+      "datef2" : "dd.mm (2.9)",
+      "datef4" : "dd mmm (2 OCT)",
+      "empty" : "Empty",
+      "notification" : "Notification count",
+      "theme_pink" : "Pink",
+      "utc3m" : "UTC -3",
+      "theme_dark" : "Dark",
+      "theme_ocean" : "Ocean",
+      "hour_major" : "Hour",
+      "default_render" : "Default (still render screen)",
+      "minute_major" : "Minute",
+      "utc1m" : "UTC -1",
+      "countdown" : "Countdown to event",
+      "theme_flashlight" : "Flash light",
+      "steps" : "Steps",
+      "theme_gray" : "Gray",
+      "datef21" : "mm.dd (9.2)",
+      "force_date_english" : "Force date to English (prevent rectangle on unsupported chars)",
+      "theme_lgray" : "Light gray",
+      "big_num_stripes" : "Render stripes on big number",
+      "temperature_hl" : "Temperature (high/low)",
+      "ctext" : "Custom text",
+      "utc2m" : "UTC -2",
+      "sleep_time_behaviour" : "Sleep time behaviour (Currently disabled)",
+      "movebar" : "Move bar",
+      "ticks_style" : "Ticks style",
+      "altitude" : "Altitude",
+      "distance" : "Distance (day)",
+      "always_on_second" : "Always-on second (for digital)",
+      "theme_orange" : "Orange",
+      "AppName" : "Huwaii",
+      "white_background" : "Use white background",
+      "datef31" : "mm.dd.yy (9.2.19)",
+      "temperature_out" : "Temperature (outsite)",
+      "floorclimbed" : "Floor climbed",
+      "theme_radioactive" : "Radioactive",
+      "ticks_style_arc" : "Arc style",
+      "alarm" : "Alarm count",
+      "barometer_unit" : "Barometer Unit",
+      "utc5m" : "UTC -5",
+      "utc_shift" : "Shift timezone for +30min",
+      "zero_leading_digital" : "Zero leading digital style",
+      "utc_timezone" : "Secondary timezone",
+      "barometer" : "Barometer",
+      "always_on_heart" : "Always-on heart rate (for digital)",
+      "theme_dusk" : "Dusk",
+      "calories" : "Calories total-active (Experimental)",
+      "datef41" : "mmm dd (OCT 2)",
+      "battery_format_1" : "Percent",
+      "comp2h" : "2h angle complication",
+      "time" : "Digital time",
+      "utc4m" : "UTC -4",
+      "use_analog" : "Analog watch face",
+      "battery_format_2" : "Days left (need at least 1 hour to work)"
     }
   }
 }

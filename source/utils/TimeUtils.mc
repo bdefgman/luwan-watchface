@@ -29,12 +29,12 @@ class TimeUtils {
     };
     
     // OutPut -> MON
-    private function GetDayAbbreviation(day) {
+    public function getDayAbbreviation(day) {
         return DAY_ABBREVIATIONS[day];
     }
     
     // OutPut -> JAN
-    private function GetMonthAbbreviation(month) {
+    public function getMonthAbbreviation(month) {
         return MONTH_ABBREVIATIONS[month];
     }
 
@@ -42,7 +42,7 @@ class TimeUtils {
     public function getDaysOfWeek() {
         var now = Time.now();
         var date = Date.info(now, Time.FORMAT_SHORT);
-        var daysOfWeek = GetDayAbbreviation(date.day_of_week);
+        var daysOfWeek = getDayAbbreviation(date.day_of_week);
         return daysOfWeek.toString();        
     }
 
@@ -50,8 +50,8 @@ class TimeUtils {
     public function getMonthOfYear() {
         var now = Time.now();
         var date = Date.info(now, Time.FORMAT_SHORT);
-        var month = GetMonthAbbreviation(date.month);
-        return month;
+        var month = getMonthAbbreviation(date.month);
+        return month.toString();
     }
 
     // OutPut -> 30

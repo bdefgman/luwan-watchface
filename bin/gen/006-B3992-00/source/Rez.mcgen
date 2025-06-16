@@ -6,66 +6,281 @@ using Toybox.Graphics as Gfx;
 
 module Rez {
     module Drawables {
-        (:initialized) var Background_Img as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
-
-        class Smiley extends WatchUi.Drawable {
-
-            function initialize() {
-                Drawable.initialize({});
-            }
-
-            function draw(dc as Graphics.Dc) as Void {
-                if (self has :isVisible) {
-                    if (!self.isVisible) {
-                        return;
-                    }
-                }
-
-
-                dc.setColor(0xfb7906, Graphics.COLOR_TRANSPARENT);
-                dc.fillRectangle(((0 + 0) + (((260 - 0) / 2) - (((260 - 0) * (100 / 100.0)) / 2))) + 0, ((0 + 0) + ((260 - 0) * (75 / 100.0))) + 0, ((260 - 0) * (100 / 100.0)) - (2 * 0), ((260 - 0) * (2 / 100.0)) - (2 * 0));
-            }
-        }
     } // Drawables
+
+    module Fonts {
+        (:initialized) var weather as ResourceId;
+        (:initialized) var hour_1 as ResourceId;
+        (:initialized) var hour_2 as ResourceId;
+        (:initialized) var hour_3 as ResourceId;
+        (:initialized) var hour_4 as ResourceId;
+        (:initialized) var hour_5 as ResourceId;
+        (:initialized) var hour_6 as ResourceId;
+        (:initialized) var minu_1 as ResourceId;
+        (:initialized) var minu_2 as ResourceId;
+        (:initialized) var minu_3 as ResourceId;
+        (:initialized) var minu_4 as ResourceId;
+        (:initialized) var minu_5 as ResourceId;
+        (:initialized) var minu_6 as ResourceId;
+        (:initialized) var smadigi as ResourceId;
+        (:initialized) var secodigi as ResourceId;
+        (:initialized) var xsecodigi as ResourceId;
+        (:initialized) var middigi as ResourceId;
+        (:initialized) var bigdigi as ResourceId;
+        (:initialized) var xbigdigi as ResourceId;
+        (:initialized) var midbold as ResourceId;
+        (:initialized) var midsemi as ResourceId;
+        (:initialized) var xmidbold as ResourceId;
+        (:initialized) var xmidsemi as ResourceId;
+        (:initialized) var cur_bo as ResourceId;
+        (:initialized) var cur_up as ResourceId;
+        (:initialized) var arr_bo as ResourceId;
+        (:initialized) var arr_up as ResourceId;
+        (:initialized) var e0 as ResourceId;
+        (:initialized) var e1 as ResourceId;
+        (:initialized) var e2 as ResourceId;
+        (:initialized) var e3 as ResourceId;
+        (:initialized) var e4 as ResourceId;
+        (:initialized) var e5 as ResourceId;
+        (:initialized) var e6 as ResourceId;
+        (:initialized) var e7 as ResourceId;
+        (:initialized) var e8 as ResourceId;
+        (:initialized) var e9 as ResourceId;
+        (:initialized) var e10 as ResourceId;
+        (:initialized) var e11 as ResourceId;
+        (:initialized) var e12 as ResourceId;
+        (:initialized) var e13 as ResourceId;
+        (:initialized) var e14 as ResourceId;
+        (:initialized) var e15 as ResourceId;
+        (:initialized) var e16 as ResourceId;
+        (:initialized) var e17 as ResourceId;
+        (:initialized) var e18 as ResourceId;
+        (:initialized) var e19 as ResourceId;
+        (:initialized) var e20 as ResourceId;
+        (:initialized) var e21 as ResourceId;
+        (:initialized) var e22 as ResourceId;
+        (:initialized) var e23 as ResourceId;
+        (:initialized) var e24 as ResourceId;
+        (:initialized) var e25 as ResourceId;
+        (:initialized) var e26 as ResourceId;
+        (:initialized) var e27 as ResourceId;
+        (:initialized) var e28 as ResourceId;
+        (:initialized) var e29 as ResourceId;
+        (:initialized) var e30 as ResourceId;
+        (:initialized) var e31 as ResourceId;
+        (:initialized) var e32 as ResourceId;
+        (:initialized) var e33 as ResourceId;
+        (:initialized) var e34 as ResourceId;
+        (:initialized) var e35 as ResourceId;
+        (:initialized) var e36 as ResourceId;
+        (:initialized) var e37 as ResourceId;
+        (:initialized) var e38 as ResourceId;
+        (:initialized) var e39 as ResourceId;
+        (:initialized) var e40 as ResourceId;
+        (:initialized) var e41 as ResourceId;
+        (:initialized) var e42 as ResourceId;
+        (:initialized) var e43 as ResourceId;
+        (:initialized) var e44 as ResourceId;
+        (:initialized) var e45 as ResourceId;
+        (:initialized) var e46 as ResourceId;
+        (:initialized) var e47 as ResourceId;
+        (:initialized) var e48 as ResourceId;
+        (:initialized) var e49 as ResourceId;
+        (:initialized) var e50 as ResourceId;
+        (:initialized) var e51 as ResourceId;
+        (:initialized) var e52 as ResourceId;
+        (:initialized) var e53 as ResourceId;
+        (:initialized) var e54 as ResourceId;
+        (:initialized) var e55 as ResourceId;
+        (:initialized) var e56 as ResourceId;
+        (:initialized) var e57 as ResourceId;
+        (:initialized) var e58 as ResourceId;
+        (:initialized) var e59 as ResourceId;
+        (:initialized) var e60 as ResourceId;
+    } // Fonts
+
+    module JsonData {
+        (:initialized) var hour_1_data as ResourceId;
+        (:initialized) var hour_2_data as ResourceId;
+        (:initialized) var hour_3_data as ResourceId;
+        (:initialized) var hour_4_data as ResourceId;
+        (:initialized) var hour_5_data as ResourceId;
+        (:initialized) var hour_6_data as ResourceId;
+        (:initialized) var minu_1_data as ResourceId;
+        (:initialized) var minu_2_data as ResourceId;
+        (:initialized) var minu_3_data as ResourceId;
+        (:initialized) var minu_4_data as ResourceId;
+        (:initialized) var minu_5_data as ResourceId;
+        (:initialized) var minu_6_data as ResourceId;
+        (:initialized) var bar_font_bottom as ResourceId;
+        (:initialized) var bar_pos_bottom as ResourceId;
+        (:initialized) var bar_font_top as ResourceId;
+        (:initialized) var bar_pos_top as ResourceId;
+        (:initialized) var theme_pallete as ResourceId;
+    } // JsonData
 
     module Layouts {
         function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_custom_drawable_11939594661139614796 = new Background();
+            var rez_cmp_local_custom_drawable_background = new BackgroundView({:identifier=>"background"});
 
-            var rez_cmp_local_bitmap_Background_Img = new WatchUi.Bitmap({:identifier=>"Background_Img", :rezId=>$.Rez.Drawables.Background_Img, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
-            rez_cmp_local_bitmap_Background_Img.setLocation(((260 - rez_cmp_local_bitmap_Background_Img.width) * 0.5), ((260 - rez_cmp_local_bitmap_Background_Img.height) * 0.5));
+            var rez_cmp_local_custom_drawable_aBarDisplay = new Complication({:identifier=>"aBarDisplay", :angle=>12, :text=>"BATT 90", :field_type=>1, :base=>270});
 
-            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (35 / 100.0)), :locY=>(260 * (45 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_HOT});
+            var rez_cmp_local_custom_drawable_bBarDisplay = new Complication({:identifier=>"bBarDisplay", :angle=>10, :text=>"STEP 9K", :field_type=>2, :base=>210});
 
-            var rez_cmp_local_text_DaysOfWeek = new WatchUi.Text({:identifier=>"DaysOfWeek", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (74 / 100.0)), :locY=>(260 * (50 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+            var rez_cmp_local_custom_drawable_cBarDisplay = new Complication({:identifier=>"cBarDisplay", :angle=>2, :text=>"HR 72", :field_type=>9, :base=>330});
 
-            var rez_cmp_local_text_Day = new WatchUi.Text({:identifier=>"Day", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (75 / 100.0)), :locY=>(260 * (54 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_MILD});
+            var rez_cmp_local_custom_drawable_dBarDisplay = new Complication({:identifier=>"dBarDisplay", :angle=>4, :text=>"STEP 9K", :field_type=>3, :base=>30});
 
-            var rez_cmp_local_custom_drawable_Smiley = new $.Rez.Drawables.Smiley();
-            if (rez_cmp_local_custom_drawable_Smiley.identifier == null) {
-                rez_cmp_local_custom_drawable_Smiley.identifier = "Smiley";
-            }
+            var rez_cmp_local_custom_drawable_eBarDisplay = new Complication({:identifier=>"eBarDisplay", :angle=>6, :text=>"BATT 90", :field_type=>4, :base=>90});
 
-            var rez_cmp_local_text_Step = new WatchUi.Text({:identifier=>"Step", :color=>0x42e049, :locX=>(260 * (35 / 100.0)), :locY=>(260 * (80 / 100.0)), :text=>"STEP", :font=>Graphics.FONT_XTINY});
+            var rez_cmp_local_custom_drawable_fBarDisplay = new Complication({:identifier=>"fBarDisplay", :angle=>8, :text=>"HR 72", :field_type=>5, :base=>150});
 
-            var rez_cmp_local_text_StepCount = new WatchUi.Text({:identifier=>"StepCount", :backgroundColor=>0x42e049, :color=>Graphics.COLOR_BLACK, :locX=>(260 * (80 / 100.0)), :locY=>(260 * (80 / 100.0)), :text=>"  30000                       ", :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
+            var rez_cmp_local_custom_drawable_bUBarDisplay = new BarDataComplication({:identifier=>"bUBarDisplay", :position=>1, :field_type=>6});
 
-            return [rez_cmp_local_custom_drawable_11939594661139614796, rez_cmp_local_bitmap_Background_Img, rez_cmp_local_text_TimeLabel, rez_cmp_local_text_DaysOfWeek, rez_cmp_local_text_Day, rez_cmp_local_custom_drawable_Smiley, rez_cmp_local_text_Step, rez_cmp_local_text_StepCount] as Array<WatchUi.Drawable>;
+            var rez_cmp_local_custom_drawable_tUBarDisplay = new BarDataComplication({:identifier=>"tUBarDisplay", :position=>0, :field_type=>5});
+
+            var rez_cmp_local_custom_drawable_bGraphDisplay = new GraphComplication({:identifier=>"bGraphDisplay", :position=>1});
+
+            var rez_cmp_local_custom_drawable_tGraphDisplay = new GraphComplication({:identifier=>"tGraphDisplay", :position=>0});
+
+            var rez_cmp_local_custom_drawable_digital = new MainDialHand({:identifier=>"digital"});
+
+            var rez_cmp_local_custom_drawable_analog = new AnalogDial({:identifier=>"analog"});
+
+            return [rez_cmp_local_custom_drawable_background, rez_cmp_local_custom_drawable_aBarDisplay, rez_cmp_local_custom_drawable_bBarDisplay, rez_cmp_local_custom_drawable_cBarDisplay, rez_cmp_local_custom_drawable_dBarDisplay, rez_cmp_local_custom_drawable_eBarDisplay, rez_cmp_local_custom_drawable_fBarDisplay, rez_cmp_local_custom_drawable_bUBarDisplay, rez_cmp_local_custom_drawable_tUBarDisplay, rez_cmp_local_custom_drawable_bGraphDisplay, rez_cmp_local_custom_drawable_tGraphDisplay, rez_cmp_local_custom_drawable_digital, rez_cmp_local_custom_drawable_analog] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 
     module Strings {
-        (:initialized) var ColorLightGray as ResourceId;
-        (:initialized) var ColorBlue as ResourceId;
-        (:initialized) var ColorRed as ResourceId;
-        (:initialized) var ForegroundColorTitle as ResourceId;
-        (:initialized) var BackgroundColorTitle as ResourceId;
-        (:initialized) var ColorDarkGray as ResourceId;
-        (:initialized) var MilitaryFormatTitle as ResourceId;
-        (:initialized) var ColorBlack as ResourceId;
-        (:initialized) var ColorWhite as ResourceId;
+        (:initialized) var theme_deep_ocean as ResourceId;
+        (:initialized) var ampm as ResourceId;
+        (:initialized) var compbart as ResourceId;
+        (:initialized) var sunriseset as ResourceId;
+        (:initialized) var no_render as ResourceId;
+        (:initialized) var theme_lcontrast as ResourceId;
+        (:initialized) var phonestatus as ResourceId;
+        (:initialized) var theme_code as ResourceId;
+        (:initialized) var weather as ResourceId;
+        (:initialized) var theme_solar as ResourceId;
+        (:initialized) var comp10h as ResourceId;
+        (:initialized) var utc7m as ResourceId;
+        (:initialized) var theme_light_blue as ResourceId;
+        (:initialized) var utc11m as ResourceId;
+        (:initialized) var always_on_style as ResourceId;
+        (:initialized) var left_digital_info as ResourceId;
+        (:initialized) var time_secondary as ResourceId;
+        (:initialized) var utc8 as ResourceId;
+        (:initialized) var utc9 as ResourceId;
+        (:initialized) var big_number_type as ResourceId;
+        (:initialized) var utc6 as ResourceId;
+        (:initialized) var utc7 as ResourceId;
+        (:initialized) var heartrate as ResourceId;
+        (:initialized) var utc4 as ResourceId;
+        (:initialized) var utc5 as ResourceId;
+        (:initialized) var barometer_unit_1 as ResourceId;
+        (:initialized) var barometer_unit_0 as ResourceId;
+        (:initialized) var active as ResourceId;
+        (:initialized) var openweathermap_api as ResourceId;
+        (:initialized) var countdown_date as ResourceId;
+        (:initialized) var weeknum as ResourceId;
+        (:initialized) var theme_lime as ResourceId;
+        (:initialized) var battery_format as ResourceId;
+        (:initialized) var theme_dcontrast as ResourceId;
+        (:initialized) var utc2 as ResourceId;
+        (:initialized) var utc3 as ResourceId;
+        (:initialized) var render_arc_line as ResourceId;
+        (:initialized) var utc0 as ResourceId;
+        (:initialized) var utc1 as ResourceId;
+        (:initialized) var comp4h as ResourceId;
+        (:initialized) var utc6m as ResourceId;
+        (:initialized) var utc10m as ResourceId;
+        (:initialized) var wind as ResourceId;
+        (:initialized) var comp8h as ResourceId;
+        (:initialized) var distanceweek as ResourceId;
+        (:initialized) var compgraphb as ResourceId;
+        (:initialized) var theme_light as ResourceId;
+        (:initialized) var battery as ResourceId;
+        (:initialized) var compgrapht as ResourceId;
+        (:initialized) var groupnoti as ResourceId;
+        (:initialized) var temperature as ResourceId;
+        (:initialized) var power_save_mode as ResourceId;
+        (:initialized) var comp12h as ResourceId;
+        (:initialized) var utc9m as ResourceId;
+        (:initialized) var digital_style_small as ResourceId;
+        (:initialized) var utc11 as ResourceId;
+        (:initialized) var utc12 as ResourceId;
+        (:initialized) var theme_dark_blue as ResourceId;
+        (:initialized) var utc10 as ResourceId;
+        (:initialized) var digital_style_medium as ResourceId;
+        (:initialized) var minimal_data as ResourceId;
+        (:initialized) var digital_style_big as ResourceId;
+        (:initialized) var ticks_style_marks as ResourceId;
+        (:initialized) var digital_style_xbig as ResourceId;
+        (:initialized) var date_format as ResourceId;
+        (:initialized) var comp6h as ResourceId;
+        (:initialized) var compbarb as ResourceId;
+        (:initialized) var utc8m as ResourceId;
+        (:initialized) var utc12m as ResourceId;
+        (:initialized) var date as ResourceId;
+        (:initialized) var digital_style as ResourceId;
+        (:initialized) var theme_camo as ResourceId;
+        (:initialized) var datef1 as ResourceId;
+        (:initialized) var datef3 as ResourceId;
+        (:initialized) var datef2 as ResourceId;
+        (:initialized) var datef4 as ResourceId;
+        (:initialized) var empty as ResourceId;
+        (:initialized) var notification as ResourceId;
+        (:initialized) var theme_pink as ResourceId;
+        (:initialized) var utc3m as ResourceId;
+        (:initialized) var theme_dark as ResourceId;
+        (:initialized) var theme_ocean as ResourceId;
+        (:initialized) var hour_major as ResourceId;
+        (:initialized) var default_render as ResourceId;
+        (:initialized) var minute_major as ResourceId;
+        (:initialized) var utc1m as ResourceId;
+        (:initialized) var countdown as ResourceId;
+        (:initialized) var theme_flashlight as ResourceId;
+        (:initialized) var steps as ResourceId;
+        (:initialized) var theme_gray as ResourceId;
+        (:initialized) var datef21 as ResourceId;
+        (:initialized) var force_date_english as ResourceId;
+        (:initialized) var theme_lgray as ResourceId;
+        (:initialized) var big_num_stripes as ResourceId;
+        (:initialized) var temperature_hl as ResourceId;
+        (:initialized) var ctext as ResourceId;
+        (:initialized) var utc2m as ResourceId;
+        (:initialized) var sleep_time_behaviour as ResourceId;
+        (:initialized) var movebar as ResourceId;
+        (:initialized) var ticks_style as ResourceId;
+        (:initialized) var altitude as ResourceId;
+        (:initialized) var distance as ResourceId;
+        (:initialized) var always_on_second as ResourceId;
+        (:initialized) var theme_orange as ResourceId;
         (:initialized) var AppName as ResourceId;
+        (:initialized) var white_background as ResourceId;
+        (:initialized) var datef31 as ResourceId;
+        (:initialized) var temperature_out as ResourceId;
+        (:initialized) var floorclimbed as ResourceId;
+        (:initialized) var theme_radioactive as ResourceId;
+        (:initialized) var ticks_style_arc as ResourceId;
+        (:initialized) var alarm as ResourceId;
+        (:initialized) var barometer_unit as ResourceId;
+        (:initialized) var utc5m as ResourceId;
+        (:initialized) var utc_shift as ResourceId;
+        (:initialized) var zero_leading_digital as ResourceId;
+        (:initialized) var utc_timezone as ResourceId;
+        (:initialized) var barometer as ResourceId;
+        (:initialized) var always_on_heart as ResourceId;
+        (:initialized) var theme_dusk as ResourceId;
+        (:initialized) var calories as ResourceId;
+        (:initialized) var datef41 as ResourceId;
+        (:initialized) var battery_format_1 as ResourceId;
+        (:initialized) var comp2h as ResourceId;
+        (:initialized) var time as ResourceId;
+        (:initialized) var utc4m as ResourceId;
+        (:initialized) var use_analog as ResourceId;
+        (:initialized) var battery_format_2 as ResourceId;
     } // Strings
 
     module Styles {

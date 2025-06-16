@@ -1,74 +1,1638 @@
-[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
 import Toybox.Application;
-[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
 import Toybox.Lang;
-[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 5; @symbol_classdef = [luwan_watchfaceApp,5,6,24]; @symbol_extends<0> = [Application,5,33,44]; @symbol_extends<1> = [AppBase,5,45,52]; ]
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Application,5,13,24]; ]
+using Toybox.Application;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Activity,6,13,21]; @symbol_usingAlias = [Activity,6,25,33]; ]
+using Toybox.Activity as :Activity;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [System,7,13,19]; @symbol_usingAlias = [Sys,7,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 8; @symbol_usingdef<0> = [Toybox,8,6,12]; @symbol_usingdef<1> = [Background,8,13,23]; @symbol_usingAlias = [Bg,8,27,29]; ]
+using Toybox.Background as :Bg;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 9; @symbol_usingdef<0> = [Toybox,9,6,12]; @symbol_usingdef<1> = [WatchUi,9,13,20]; @symbol_usingAlias = [Ui,9,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 10; @symbol_usingdef<0> = [Toybox,10,6,12]; @symbol_usingdef<1> = [Time,10,13,17]; ]
+using Toybox.Time;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 11; @symbol_usingdef<0> = [Toybox,11,6,12]; @symbol_usingdef<1> = [Math,11,13,17]; ]
+using Toybox.Math;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 12; @symbol_usingdef<0> = [Toybox,12,6,12]; @symbol_usingdef<1> = [Time,12,13,17]; @symbol_usingdef<2> = [Gregorian,12,18,27]; @symbol_usingAlias = [Date,12,31,35]; ]
+using Toybox.Time.Gregorian as :Date;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 19; @position = 4; @symbol_vardef = [gLocationLat,19,4,16]; ]
+var gLocationLat = null;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 20; @position = 4; @symbol_vardef = [gLocationLng,20,4,16]; ]
+var gLocationLng = null;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 22; @position = 4; @symbol_vardef = [centerX,22,4,11]; ]
+var centerX;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 23; @position = 4; @symbol_vardef = [centerY,23,4,11]; ]
+var centerY;
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 25; @symbol_functiondef = [degreesToRadians,25,9,25]; @symbol_param<0> = [degrees,25,26,33]; ]
+function degreesToRadians(degrees) {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_25_35_27_0_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 26 1 ]
+    %tmp.1 = lgetv %degrees;
+    symbol [ degrees %tmp.1 26 8 15 ];
+    symbol [ Math %tmp.2 26 18 22 ];
+    %tmp.2 = getm $.Toybox.Math;
+    symbol [ PI %tmp.3 26 23 25 ];
+    %tmp.3 = getv %tmp.2 :PI;
+    %tmp.4 = mul %tmp.1 %tmp.3;
+    %tmp.5 = 180;
+    %tmp.6 = div %tmp.4 %tmp.5;
+    ret %tmp.6;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_25_35_27_0_stop:
+}
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 29; @symbol_functiondef = [radiansToDegrees,29,9,25]; @symbol_param<0> = [radians,29,26,33]; ]
+function radiansToDegrees(radians) {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_29_35_31_0_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 30 1 ]
+    %tmp.1 = lgetv %radians;
+    symbol [ radians %tmp.1 30 8 15 ];
+    %tmp.2 = 180;
+    %tmp.3 = mul %tmp.1 %tmp.2;
+    symbol [ Math %tmp.4 30 24 28 ];
+    %tmp.4 = getm $.Toybox.Math;
+    symbol [ PI %tmp.5 30 29 31 ];
+    %tmp.5 = getv %tmp.4 :PI;
+    %tmp.6 = div %tmp.3 %tmp.5;
+    ret %tmp.6;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_29_35_31_0_stop:
+}
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 33; @symbol_functiondef = [convertCoorX,33,9,21]; @symbol_param<0> = [radians,33,22,29]; @symbol_param<1> = [radius,33,31,37]; ]
+function convertCoorX(radians, radius) {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_33_39_35_0_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 34 1 ]
+    symbol [ centerX %tmp.2 34 8 15 ];
+    %tmp.2 = getv ? :centerX;
+    %tmp.3 = lgetv %radius;
+    symbol [ radius %tmp.3 34 18 24 ];
+    symbol [ Math %tmp.4 34 25 29 ];
+    %tmp.4 = getm $.Toybox.Math;
+    symbol [ cos %tmp.5 34 30 33 ];
+    %tmp.5 = getv function %tmp.4 :cos;
+    %tmp.6 = lgetv %radians;
+    symbol [ radians %tmp.6 34 34 41 ];
+    %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+    %tmp.8 = mul %tmp.3 %tmp.7;
+    %tmp.9 = add %tmp.2 %tmp.8;
+    ret %tmp.9;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_33_39_35_0_stop:
+}
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 37; @symbol_functiondef = [convertCoorY,37,9,21]; @symbol_param<0> = [radians,37,22,29]; @symbol_param<1> = [radius,37,31,37]; ]
+function convertCoorY(radians, radius) {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_37_39_39_0_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 38 1 ]
+    symbol [ centerY %tmp.2 38 8 15 ];
+    %tmp.2 = getv ? :centerY;
+    %tmp.3 = lgetv %radius;
+    symbol [ radius %tmp.3 38 18 24 ];
+    symbol [ Math %tmp.4 38 25 29 ];
+    %tmp.4 = getm $.Toybox.Math;
+    symbol [ sin %tmp.5 38 30 33 ];
+    %tmp.5 = getv function %tmp.4 :sin;
+    %tmp.6 = lgetv %radians;
+    symbol [ radians %tmp.6 38 34 41 ];
+    %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+    %tmp.8 = mul %tmp.3 %tmp.7;
+    %tmp.9 = add %tmp.2 %tmp.8;
+    ret %tmp.9;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_37_39_39_0_stop:
+}
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 42; @symbol_classdef = [luwan_watchfaceApp,42,6,24]; @symbol_extends<0> = [Application,42,33,44]; @symbol_extends<1> = [AppBase,42,45,52]; ]
 class luwan_watchfaceApp extends Application.AppBase {
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 5; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 42; ]
     <init> {
     }
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 5; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 42; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 44; @position = 5; @symbol_vardef = [mView,44,5,10]; ]
+    var mView;
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 45; @position = 5; @symbol_vardef = [days,45,5,9]; ]
+    var days;
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 46; @position = 5; @symbol_vardef = [months,46,5,11]; ]
+    var months;
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 48; @symbol_functiondef = [initialize,48,13,23]; ]
     function initialize() as Void {
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_luwan_watchfaceApp_mc_7_26_9_4_start:
-[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc" 8 8 ]
-        symbol [ AppBase %tmp.2 8 8 15 ];
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_48_26_69_1_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 49 8 ]
+        symbol [ AppBase %tmp.2 49 8 15 ];
         %tmp.2 = getv ? :AppBase;
-        symbol [ initialize %tmp.3 8 16 26 ];
+        symbol [ initialize %tmp.3 49 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_luwan_watchfaceApp_mc_7_26_9_4_stop:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 50 2 ]
+        %tmp.4 = newd 7;
+        symbol [ Date %tmp.5 50 10 14 ];
+        %tmp.5 = getm $.Toybox.Time.Gregorian;
+        symbol [ DAY_MONDAY %tmp.6 50 15 25 ];
+        %tmp.6 = getv %tmp.5 :DAY_MONDAY;
+        %tmp.7 = "MON";
+        %tmp.8 = dup %tmp.4;
+        %tmp.9 = aputv %tmp.8 %tmp.6 %tmp.7;
+        symbol [ Date %tmp.10 51 4 8 ];
+        %tmp.10 = getm $.Toybox.Time.Gregorian;
+        symbol [ DAY_TUESDAY %tmp.11 51 9 20 ];
+        %tmp.11 = getv %tmp.10 :DAY_TUESDAY;
+        %tmp.12 = "TUE";
+        %tmp.13 = dup %tmp.9;
+        %tmp.14 = aputv %tmp.13 %tmp.11 %tmp.12;
+        symbol [ Date %tmp.15 52 4 8 ];
+        %tmp.15 = getm $.Toybox.Time.Gregorian;
+        symbol [ DAY_WEDNESDAY %tmp.16 52 9 22 ];
+        %tmp.16 = getv %tmp.15 :DAY_WEDNESDAY;
+        %tmp.17 = "WED";
+        %tmp.18 = dup %tmp.14;
+        %tmp.19 = aputv %tmp.18 %tmp.16 %tmp.17;
+        symbol [ Date %tmp.20 53 4 8 ];
+        %tmp.20 = getm $.Toybox.Time.Gregorian;
+        symbol [ DAY_THURSDAY %tmp.21 53 9 21 ];
+        %tmp.21 = getv %tmp.20 :DAY_THURSDAY;
+        %tmp.22 = "THU";
+        %tmp.23 = dup %tmp.19;
+        %tmp.24 = aputv %tmp.23 %tmp.21 %tmp.22;
+        symbol [ Date %tmp.25 54 4 8 ];
+        %tmp.25 = getm $.Toybox.Time.Gregorian;
+        symbol [ DAY_FRIDAY %tmp.26 54 9 19 ];
+        %tmp.26 = getv %tmp.25 :DAY_FRIDAY;
+        %tmp.27 = "FRI";
+        %tmp.28 = dup %tmp.24;
+        %tmp.29 = aputv %tmp.28 %tmp.26 %tmp.27;
+        symbol [ Date %tmp.30 55 4 8 ];
+        %tmp.30 = getm $.Toybox.Time.Gregorian;
+        symbol [ DAY_SATURDAY %tmp.31 55 9 21 ];
+        %tmp.31 = getv %tmp.30 :DAY_SATURDAY;
+        %tmp.32 = "SAT";
+        %tmp.33 = dup %tmp.29;
+        %tmp.34 = aputv %tmp.33 %tmp.31 %tmp.32;
+        symbol [ Date %tmp.35 56 4 8 ];
+        %tmp.35 = getm $.Toybox.Time.Gregorian;
+        symbol [ DAY_SUNDAY %tmp.36 56 9 19 ];
+        %tmp.36 = getv %tmp.35 :DAY_SUNDAY;
+        %tmp.37 = "SUN";
+        %tmp.38 = dup %tmp.34;
+        %tmp.39 = aputv %tmp.38 %tmp.36 %tmp.37;
+        symbol [ days ? 50 2 6 ];
+        putv self :days %tmp.39;
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 57 2 ]
+        %tmp.40 = newd 12;
+        symbol [ Date %tmp.41 57 12 16 ];
+        %tmp.41 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_JANUARY %tmp.42 57 17 30 ];
+        %tmp.42 = getv %tmp.41 :MONTH_JANUARY;
+        %tmp.43 = "JAN";
+        %tmp.44 = dup %tmp.40;
+        %tmp.45 = aputv %tmp.44 %tmp.42 %tmp.43;
+        symbol [ Date %tmp.46 58 4 8 ];
+        %tmp.46 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_FEBRUARY %tmp.47 58 9 23 ];
+        %tmp.47 = getv %tmp.46 :MONTH_FEBRUARY;
+        %tmp.48 = "FEB";
+        %tmp.49 = dup %tmp.45;
+        %tmp.50 = aputv %tmp.49 %tmp.47 %tmp.48;
+        symbol [ Date %tmp.51 59 4 8 ];
+        %tmp.51 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_MARCH %tmp.52 59 9 20 ];
+        %tmp.52 = getv %tmp.51 :MONTH_MARCH;
+        %tmp.53 = "MAR";
+        %tmp.54 = dup %tmp.50;
+        %tmp.55 = aputv %tmp.54 %tmp.52 %tmp.53;
+        symbol [ Date %tmp.56 60 4 8 ];
+        %tmp.56 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_APRIL %tmp.57 60 9 20 ];
+        %tmp.57 = getv %tmp.56 :MONTH_APRIL;
+        %tmp.58 = "APR";
+        %tmp.59 = dup %tmp.55;
+        %tmp.60 = aputv %tmp.59 %tmp.57 %tmp.58;
+        symbol [ Date %tmp.61 61 4 8 ];
+        %tmp.61 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_MAY %tmp.62 61 9 18 ];
+        %tmp.62 = getv %tmp.61 :MONTH_MAY;
+        %tmp.63 = "MAY";
+        %tmp.64 = dup %tmp.60;
+        %tmp.65 = aputv %tmp.64 %tmp.62 %tmp.63;
+        symbol [ Date %tmp.66 62 4 8 ];
+        %tmp.66 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_JUNE %tmp.67 62 9 19 ];
+        %tmp.67 = getv %tmp.66 :MONTH_JUNE;
+        %tmp.68 = "JUN";
+        %tmp.69 = dup %tmp.65;
+        %tmp.70 = aputv %tmp.69 %tmp.67 %tmp.68;
+        symbol [ Date %tmp.71 63 4 8 ];
+        %tmp.71 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_JULY %tmp.72 63 9 19 ];
+        %tmp.72 = getv %tmp.71 :MONTH_JULY;
+        %tmp.73 = "JUL";
+        %tmp.74 = dup %tmp.70;
+        %tmp.75 = aputv %tmp.74 %tmp.72 %tmp.73;
+        symbol [ Date %tmp.76 64 4 8 ];
+        %tmp.76 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_AUGUST %tmp.77 64 9 21 ];
+        %tmp.77 = getv %tmp.76 :MONTH_AUGUST;
+        %tmp.78 = "AUG";
+        %tmp.79 = dup %tmp.75;
+        %tmp.80 = aputv %tmp.79 %tmp.77 %tmp.78;
+        symbol [ Date %tmp.81 65 4 8 ];
+        %tmp.81 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_SEPTEMBER %tmp.82 65 9 24 ];
+        %tmp.82 = getv %tmp.81 :MONTH_SEPTEMBER;
+        %tmp.83 = "SEP";
+        %tmp.84 = dup %tmp.80;
+        %tmp.85 = aputv %tmp.84 %tmp.82 %tmp.83;
+        symbol [ Date %tmp.86 66 4 8 ];
+        %tmp.86 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_OCTOBER %tmp.87 66 9 22 ];
+        %tmp.87 = getv %tmp.86 :MONTH_OCTOBER;
+        %tmp.88 = "OCT";
+        %tmp.89 = dup %tmp.85;
+        %tmp.90 = aputv %tmp.89 %tmp.87 %tmp.88;
+        symbol [ Date %tmp.91 67 4 8 ];
+        %tmp.91 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_NOVEMBER %tmp.92 67 9 23 ];
+        %tmp.92 = getv %tmp.91 :MONTH_NOVEMBER;
+        %tmp.93 = "NOV";
+        %tmp.94 = dup %tmp.90;
+        %tmp.95 = aputv %tmp.94 %tmp.92 %tmp.93;
+        symbol [ Date %tmp.96 68 4 8 ];
+        %tmp.96 = getm $.Toybox.Time.Gregorian;
+        symbol [ MONTH_DECEMBER %tmp.97 68 9 23 ];
+        %tmp.97 = getv %tmp.96 :MONTH_DECEMBER;
+        %tmp.98 = "DEC";
+        %tmp.99 = dup %tmp.95;
+        %tmp.100 = aputv %tmp.99 %tmp.97 %tmp.98;
+        symbol [ months ? 57 2 8 ];
+        putv self :months %tmp.100;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_48_26_69_1_stop:
     }
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 12; @symbol_functiondef = [onStart,12,13,20]; @symbol_param<0> = [state,12,21,26]; @symbol_param<0>_type<0> = [Dictionary,12,30,40]; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 72; @symbol_functiondef = [onStart,72,13,20]; @symbol_param<0> = [state,72,21,26]; @symbol_param<0>_type<0> = [Dictionary,72,30,40]; ]
     function onStart(state as Dictionary or Null) as Void {
     }
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 16; @symbol_functiondef = [onStop,16,13,19]; @symbol_param<0> = [state,16,20,25]; @symbol_param<0>_type<0> = [Dictionary,16,29,39]; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 76; @symbol_functiondef = [onStop,76,13,19]; @symbol_param<0> = [state,76,20,25]; @symbol_param<0>_type<0> = [Dictionary,76,29,39]; ]
     function onStop(state as Dictionary or Null) as Void {
     }
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 20; @symbol_functiondef = [getInitialView,20,13,27]; @symbol_return<0> = [Views,20,34,39]; @symbol_return<1> = [Views,20,45,50]; @symbol_return<2> = [InputDelegates,20,52,66]; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 80; @symbol_functiondef = [getInitialView,80,13,27]; @symbol_return<0> = [Views,80,34,39]; @symbol_return<1> = [Views,80,45,50]; @symbol_return<2> = [InputDelegates,80,52,66]; ]
     function getInitialView() as [Views] or [Views, InputDelegates] {
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_luwan_watchfaceApp_mc_20_68_22_4_start:
-[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc" 21 8 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_80_68_82_4_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 81 8 ]
         %tmp.1 = newa 1;
-        symbol [ luwan_watch_faceView %tmp.5 21 21 41 ];
-        %tmp.5 = getv ? :luwan_watch_faceView;
+        symbol [ luwan_watchfaceView %tmp.5 81 21 40 ];
+        %tmp.5 = getv ? :luwan_watchfaceView;
         %tmp.2 = newc %tmp.5 ();
         %tmp.6 = dup %tmp.1;
         %tmp.7 = aputv %tmp.6 0 %tmp.2;
         ret %tmp.7;
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_luwan_watchfaceApp_mc_20_68_22_4_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_80_68_82_4_stop:
     }
-    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 25; @symbol_functiondef = [onSettingsChanged,25,13,30]; ]
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 85; @symbol_functiondef = [onSettingsChanged,85,13,30]; ]
     function onSettingsChanged() as Void {
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_luwan_watchfaceApp_mc_25_41_27_4_start:
-[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc" 26 8 ]
-        symbol [ WatchUi %tmp.1 26 8 15 ];
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_85_41_92_4_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 91 8 ]
+        symbol [ WatchUi %tmp.1 91 8 15 ];
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.2 26 16 29 ];
+        symbol [ requestUpdate %tmp.2 91 16 29 ];
         %tmp.2 = getv function %tmp.1 :requestUpdate;
         invoke %tmp.1 %tmp.2();
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_luwan_watchfaceApp_mc_25_41_27_4_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_85_41_92_4_stop:
+    }
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 181; background_method = true; @symbol_functiondef = [getServiceDelegate,181,10,28]; ]
+    function getServiceDelegate() {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_181_31_183_1_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 182 2 ]
+        %tmp.1 = newa 1;
+        symbol [ BackgroundService %tmp.5 182 14 31 ];
+        %tmp.5 = getv ? :BackgroundService;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_181_31_183_1_stop:
+    }
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 190; background_method = true; @symbol_functiondef = [onBackgroundData,190,10,26]; @symbol_param<0> = [data,190,27,31]; ]
+    function onBackgroundData(data) {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 191 2 ]
+        symbol [ Sys %tmp.1 191 2 5 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 191 6 13 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "onBackgroundData() called";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 193 2 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_stop" ]
+        %pendingWebRequests.1 = local;
+        symbol [ pendingWebRequests %pendingWebRequests.1 193 6 24 ];
+        %tmp.4 = self;
+        symbol [ getProperty %tmp.5 193 27 38 ];
+        %tmp.5 = getv function %tmp.4 :getProperty;
+        %tmp.6 = "PendingWebRequests";
+        %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+        lputv %pendingWebRequests.1 %tmp.7;
+        symbol [ pendingWebRequests %pendingWebRequests.1 193 6 24 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 194 2 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_194_2_197_2_if_stmt:
+        %tmp.8 = lgetv %pendingWebRequests.1;
+        symbol [ pendingWebRequests %tmp.8 194 6 24 ];
+        %tmp.9 = null;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        bf %tmp.10 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_194_2_197_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_194_2_197_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_194_34_197_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 196 3 ]
+        %tmp.11 = newd 0;
+        lputv %pendingWebRequests.1 %tmp.11;
+        symbol [ pendingWebRequests %pendingWebRequests.1 196 3 21 ];
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_194_34_197_2_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_194_2_197_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_194_2_197_2_if_end:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 199 2 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_stop" ]
+        %type.2 = local;
+        symbol [ type %type.2 199 6 10 ];
+        %tmp.12 = lgetv %data;
+        symbol [ data %tmp.12 199 13 17 ];
+        symbol [ keys %tmp.13 199 18 22 ];
+        %tmp.13 = getv function %tmp.12 :keys;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = 0;
+        %tmp.16 = agetv %tmp.14 %tmp.15;
+        lputv %type.2 %tmp.16;
+        symbol [ type %type.2 199 6 10 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 200 2 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_stop" ]
+        %storedData.3 = local;
+        symbol [ storedData %storedData.3 200 6 16 ];
+        %tmp.17 = self;
+        symbol [ getProperty %tmp.18 200 19 30 ];
+        %tmp.18 = getv function %tmp.17 :getProperty;
+        %tmp.19 = lgetv %type.2;
+        symbol [ type %tmp.19 200 31 35 ];
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        lputv %storedData.3 %tmp.20;
+        symbol [ storedData %storedData.3 200 6 16 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 201 2 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_stop" ]
+        %receivedData.4 = local;
+        symbol [ receivedData %receivedData.4 201 6 18 ];
+        %tmp.21 = lgetv %data;
+        symbol [ data %tmp.21 201 21 25 ];
+        %tmp.22 = lgetv %type.2;
+        symbol [ type %tmp.22 201 26 30 ];
+        %tmp.23 = agetv %tmp.21 %tmp.22;
+        lputv %receivedData.4 %tmp.23;
+        symbol [ receivedData %receivedData.4 201 6 18 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 205 2 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_205_2_207_2_if_stmt:
+        %tmp.24 = lgetv %receivedData.4;
+        symbol [ receivedData %tmp.24 205 6 18 ];
+        %tmp.25 = "httpError";
+        %tmp.26 = agetv %tmp.24 %tmp.25;
+        bf %tmp.26 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_205_2_207_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_205_2_207_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_205_33_207_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 206 3 ]
+        ret ?;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_205_33_207_2_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_205_2_207_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_205_2_207_2_if_end:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 210 2 ]
+        %tmp.27 = lgetv %receivedData.4;
+        symbol [ receivedData %tmp.27 210 15 27 ];
+        lputv %storedData.3 %tmp.27;
+        symbol [ storedData %storedData.3 210 2 12 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 211 2 ]
+        %tmp.28 = lgetv %pendingWebRequests.1;
+        symbol [ pendingWebRequests %tmp.28 211 2 20 ];
+        symbol [ remove %tmp.29 211 21 27 ];
+        %tmp.29 = getv function %tmp.28 :remove;
+        %tmp.30 = lgetv %type.2;
+        symbol [ type %tmp.30 211 28 32 ];
+        invoke %tmp.28 %tmp.29(%tmp.30);
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 212 2 ]
+        %tmp.31 = self;
+        symbol [ setProperty %tmp.32 212 2 13 ];
+        %tmp.32 = getv function %tmp.31 :setProperty;
+        %tmp.33 = "PendingWebRequests";
+        %tmp.34 = lgetv %pendingWebRequests.1;
+        symbol [ pendingWebRequests %tmp.34 212 36 54 ];
+        invoke %tmp.31 %tmp.32(%tmp.33, %tmp.34);
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 213 2 ]
+        %tmp.35 = self;
+        symbol [ setProperty %tmp.36 213 2 13 ];
+        %tmp.36 = getv function %tmp.35 :setProperty;
+        %tmp.37 = lgetv %type.2;
+        symbol [ type %tmp.37 213 14 18 ];
+        %tmp.38 = lgetv %storedData.3;
+        symbol [ storedData %tmp.38 213 20 30 ];
+        invoke %tmp.35 %tmp.36(%tmp.37, %tmp.38);
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 215 2 ]
+        symbol [ Ui %tmp.39 215 2 4 ];
+        %tmp.39 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.40 215 5 18 ];
+        %tmp.40 = getv function %tmp.39 :requestUpdate;
+        invoke %tmp.39 %tmp.40();
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_190_33_216_1_stop:
+    }
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 218; @symbol_functiondef = [getFormatedDate,218,10,25]; ]
+    function getFormatedDate() {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_218_28_270_1_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 219 2 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_218_28_270_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_218_28_270_1_stop" ]
+        %now.1 = local;
+        symbol [ now %now.1 219 6 9 ];
+        symbol [ Time %tmp.1 219 12 16 ];
+        %tmp.1 = getm $.Toybox.Time;
+        symbol [ now %tmp.2 219 17 20 ];
+        %tmp.2 = getv function %tmp.1 :now;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %now.1 %tmp.3;
+        symbol [ now %now.1 219 6 9 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 220 2 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_218_28_270_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_218_28_270_1_stop" ]
+        %date.2 = local;
+        symbol [ date %date.2 220 6 10 ];
+        symbol [ Date %tmp.4 220 13 17 ];
+        %tmp.4 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.5 220 18 22 ];
+        %tmp.5 = getv function %tmp.4 :info;
+        %tmp.6 = lgetv %now.1;
+        symbol [ now %tmp.6 220 23 26 ];
+        symbol [ Time %tmp.7 220 28 32 ];
+        %tmp.7 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.8 220 33 45 ];
+        %tmp.8 = getv %tmp.7 :FORMAT_SHORT;
+        %tmp.9 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.8);
+        lputv %date.2 %tmp.9;
+        symbol [ date %date.2 220 6 10 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 221 2 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_218_28_270_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_218_28_270_1_stop" ]
+        %date_formater.3 = local;
+        symbol [ date_formater %date_formater.3 221 6 19 ];
+        symbol [ Application %tmp.10 221 22 33 ];
+        %tmp.10 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.11 221 34 40 ];
+        %tmp.11 = getv function %tmp.10 :getApp;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        symbol [ getProperty %tmp.13 221 43 54 ];
+        %tmp.13 = getv function %tmp.12 :getProperty;
+        %tmp.14 = "date_format";
+        %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+        lputv %date_formater.3 %tmp.15;
+        symbol [ date_formater %date_formater.3 221 6 19 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 222 2 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_222_2_268_2_if_stmt:
+        %tmp.16 = lgetv %date_formater.3;
+        symbol [ date_formater %tmp.16 222 6 19 ];
+        %tmp.17 = 0;
+        %tmp.18 = eq %tmp.16 %tmp.17;
+        bf %tmp.18 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_222_2_268_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_222_2_268_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_222_26_232_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 223 3 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_3_231_3_if_stmt:
+        symbol [ Application %tmp.19 223 7 18 ];
+        %tmp.19 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.20 223 19 25 ];
+        %tmp.20 = getv function %tmp.19 :getApp;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        symbol [ getProperty %tmp.22 223 28 39 ];
+        %tmp.22 = getv function %tmp.21 :getProperty;
+        %tmp.23 = "force_date_english";
+        %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+        bf %tmp.24 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_3_231_3_if_else_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_3_231_3_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_63_226_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 224 4 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_63_226_3_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_63_226_3_stop" ]
+        %day_of_weak.4 = local;
+        symbol [ day_of_weak %day_of_weak.4 224 8 19 ];
+        %tmp.25 = lgetv %date.2;
+        symbol [ date %tmp.25 224 22 26 ];
+        symbol [ day_of_week %tmp.26 224 27 38 ];
+        %tmp.26 = getv %tmp.25 :day_of_week;
+        lputv %day_of_weak.4 %tmp.26;
+        symbol [ day_of_weak %day_of_weak.4 224 8 19 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 225 4 ]
+        symbol [ Lang %tmp.27 225 11 15 ];
+        %tmp.27 = getm $.Toybox.Lang;
+        symbol [ format %tmp.28 225 16 22 ];
+        %tmp.28 = getv function %tmp.27 :format;
+        %tmp.29 = "$1$ $2$";
+        %tmp.30 = newa 2;
+        symbol [ days %tmp.32 225 34 38 ];
+        %tmp.32 = getv ? :days;
+        %tmp.33 = lgetv %day_of_weak.4;
+        symbol [ day_of_weak %tmp.33 225 39 50 ];
+        %tmp.34 = agetv %tmp.32 %tmp.33;
+        %tmp.35 = dup %tmp.30;
+        %tmp.36 = aputv %tmp.35 0 %tmp.34;
+        %tmp.37 = lgetv %date.2;
+        symbol [ date %tmp.37 225 53 57 ];
+        symbol [ day %tmp.38 225 58 61 ];
+        %tmp.38 = getv %tmp.37 :day;
+        symbol [ format %tmp.39 225 62 68 ];
+        %tmp.39 = getv function %tmp.38 :format;
+        %tmp.40 = "%d";
+        %tmp.41 = invoke %tmp.38 %tmp.39(%tmp.40);
+        %tmp.42 = dup %tmp.36;
+        %tmp.43 = aputv %tmp.42 1 %tmp.41;
+        %tmp.44 = invoke %tmp.27 %tmp.28(%tmp.29, %tmp.43);
+        ret %tmp.44;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_63_226_3_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_3_231_3_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_3_231_3_if_else_false:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_226_10_231_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 228 4 ]
+        symbol [ Date %tmp.45 228 11 15 ];
+        %tmp.45 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.46 228 16 20 ];
+        %tmp.46 = getv function %tmp.45 :info;
+        %tmp.47 = lgetv %now.1;
+        symbol [ now %tmp.47 228 21 24 ];
+        symbol [ Time %tmp.48 228 26 30 ];
+        %tmp.48 = getm $.Toybox.Time;
+        symbol [ FORMAT_LONG %tmp.49 228 31 42 ];
+        %tmp.49 = getv %tmp.48 :FORMAT_LONG;
+        %tmp.50 = invoke %tmp.45 %tmp.46(%tmp.47, %tmp.49);
+        lputv %date.2 %tmp.50;
+        symbol [ date %date.2 228 4 8 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 229 4 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_226_10_231_3_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_226_10_231_3_stop" ]
+        %day_of_weak.5 = local;
+        symbol [ day_of_weak %day_of_weak.5 229 8 19 ];
+        %tmp.51 = lgetv %date.2;
+        symbol [ date %tmp.51 229 22 26 ];
+        symbol [ day_of_week %tmp.52 229 27 38 ];
+        %tmp.52 = getv %tmp.51 :day_of_week;
+        lputv %day_of_weak.5 %tmp.52;
+        symbol [ day_of_weak %day_of_weak.5 229 8 19 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 230 4 ]
+        symbol [ Lang %tmp.53 230 11 15 ];
+        %tmp.53 = getm $.Toybox.Lang;
+        symbol [ format %tmp.54 230 16 22 ];
+        %tmp.54 = getv function %tmp.53 :format;
+        %tmp.55 = "$1$ $2$";
+        %tmp.56 = newa 2;
+        %tmp.57 = lgetv %day_of_weak.5;
+        symbol [ day_of_weak %tmp.57 230 34 45 ];
+        symbol [ toUpper %tmp.58 230 46 53 ];
+        %tmp.58 = getv function %tmp.57 :toUpper;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        %tmp.60 = dup %tmp.56;
+        %tmp.61 = aputv %tmp.60 0 %tmp.59;
+        %tmp.62 = lgetv %date.2;
+        symbol [ date %tmp.62 230 57 61 ];
+        symbol [ day %tmp.63 230 62 65 ];
+        %tmp.63 = getv %tmp.62 :day;
+        symbol [ format %tmp.64 230 66 72 ];
+        %tmp.64 = getv function %tmp.63 :format;
+        %tmp.65 = "%d";
+        %tmp.66 = invoke %tmp.63 %tmp.64(%tmp.65);
+        %tmp.67 = dup %tmp.61;
+        %tmp.68 = aputv %tmp.67 1 %tmp.66;
+        %tmp.69 = invoke %tmp.53 %tmp.54(%tmp.55, %tmp.68);
+        ret %tmp.69;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_226_10_231_3_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_223_3_231_3_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_222_26_232_2_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_222_2_268_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_222_2_268_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 232 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_232_9_268_2_if_stmt:
+        %tmp.70 = lgetv %date_formater.3;
+        symbol [ date_formater %tmp.70 232 13 26 ];
+        %tmp.71 = 1;
+        %tmp.72 = eq %tmp.70 %tmp.71;
+        bf %tmp.72 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_232_9_268_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_232_9_268_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_232_33_235_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 234 3 ]
+        symbol [ Lang %tmp.73 234 10 14 ];
+        %tmp.73 = getm $.Toybox.Lang;
+        symbol [ format %tmp.74 234 15 21 ];
+        %tmp.74 = getv function %tmp.73 :format;
+        %tmp.75 = "$1$.$2$";
+        %tmp.76 = newa 2;
+        %tmp.77 = lgetv %date.2;
+        symbol [ date %tmp.77 234 33 37 ];
+        symbol [ day %tmp.78 234 38 41 ];
+        %tmp.78 = getv %tmp.77 :day;
+        symbol [ format %tmp.79 234 42 48 ];
+        %tmp.79 = getv function %tmp.78 :format;
+        %tmp.80 = "%d";
+        %tmp.81 = invoke %tmp.78 %tmp.79(%tmp.80);
+        %tmp.82 = dup %tmp.76;
+        %tmp.83 = aputv %tmp.82 0 %tmp.81;
+        %tmp.84 = lgetv %date.2;
+        symbol [ date %tmp.84 234 56 60 ];
+        symbol [ month %tmp.85 234 61 66 ];
+        %tmp.85 = getv %tmp.84 :month;
+        symbol [ format %tmp.86 234 67 73 ];
+        %tmp.86 = getv function %tmp.85 :format;
+        %tmp.87 = "%d";
+        %tmp.88 = invoke %tmp.85 %tmp.86(%tmp.87);
+        %tmp.89 = dup %tmp.83;
+        %tmp.90 = aputv %tmp.89 1 %tmp.88;
+        %tmp.91 = invoke %tmp.73 %tmp.74(%tmp.75, %tmp.90);
+        ret %tmp.91;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_232_33_235_2_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_232_9_268_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_232_9_268_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 235 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_235_9_268_2_if_stmt:
+        %tmp.92 = lgetv %date_formater.3;
+        symbol [ date_formater %tmp.92 235 13 26 ];
+        %tmp.93 = 2;
+        %tmp.94 = eq %tmp.92 %tmp.93;
+        bf %tmp.94 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_235_9_268_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_235_9_268_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_235_33_238_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 237 3 ]
+        symbol [ Lang %tmp.95 237 10 14 ];
+        %tmp.95 = getm $.Toybox.Lang;
+        symbol [ format %tmp.96 237 15 21 ];
+        %tmp.96 = getv function %tmp.95 :format;
+        %tmp.97 = "$1$.$2$";
+        %tmp.98 = newa 2;
+        %tmp.99 = lgetv %date.2;
+        symbol [ date %tmp.99 237 33 37 ];
+        symbol [ month %tmp.100 237 38 43 ];
+        %tmp.100 = getv %tmp.99 :month;
+        symbol [ format %tmp.101 237 44 50 ];
+        %tmp.101 = getv function %tmp.100 :format;
+        %tmp.102 = "%d";
+        %tmp.103 = invoke %tmp.100 %tmp.101(%tmp.102);
+        %tmp.104 = dup %tmp.98;
+        %tmp.105 = aputv %tmp.104 0 %tmp.103;
+        %tmp.106 = lgetv %date.2;
+        symbol [ date %tmp.106 237 58 62 ];
+        symbol [ day %tmp.107 237 63 66 ];
+        %tmp.107 = getv %tmp.106 :day;
+        symbol [ format %tmp.108 237 67 73 ];
+        %tmp.108 = getv function %tmp.107 :format;
+        %tmp.109 = "%d";
+        %tmp.110 = invoke %tmp.107 %tmp.108(%tmp.109);
+        %tmp.111 = dup %tmp.105;
+        %tmp.112 = aputv %tmp.111 1 %tmp.110;
+        %tmp.113 = invoke %tmp.95 %tmp.96(%tmp.97, %tmp.112);
+        ret %tmp.113;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_235_33_238_2_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_235_9_268_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_235_9_268_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 238 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_9_268_2_if_stmt:
+        %tmp.114 = lgetv %date_formater.3;
+        symbol [ date_formater %tmp.114 238 13 26 ];
+        %tmp.115 = 3;
+        %tmp.116 = eq %tmp.114 %tmp.115;
+        bf %tmp.116 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_9_268_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_9_268_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_33_244_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 240 3 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_33_244_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_33_244_2_stop" ]
+        %year.6 = local;
+        symbol [ year %year.6 240 7 11 ];
+        %tmp.117 = lgetv %date.2;
+        symbol [ date %tmp.117 240 14 18 ];
+        symbol [ year %tmp.118 240 19 23 ];
+        %tmp.118 = getv %tmp.117 :year;
+        lputv %year.6 %tmp.118;
+        symbol [ year %year.6 240 7 11 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 241 3 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_33_244_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_33_244_2_stop" ]
+        %yy.7 = local;
+        symbol [ yy %yy.7 241 7 9 ];
+        %tmp.119 = lgetv %year.6;
+        symbol [ year %tmp.119 241 12 16 ];
+        %tmp.120 = 100.0;
+        %tmp.121 = div %tmp.119 %tmp.120;
+        lputv %yy.7 %tmp.121;
+        symbol [ yy %yy.7 241 7 9 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 242 3 ]
+        symbol [ Math %tmp.122 242 8 12 ];
+        %tmp.122 = getm $.Toybox.Math;
+        symbol [ round %tmp.123 242 13 18 ];
+        %tmp.123 = getv function %tmp.122 :round;
+        %tmp.124 = lgetv %yy.7;
+        symbol [ yy %tmp.124 242 20 22 ];
+        %tmp.125 = lgetv %yy.7;
+        symbol [ yy %tmp.125 242 23 25 ];
+        symbol [ toNumber %tmp.126 242 26 34 ];
+        %tmp.126 = getv function %tmp.125 :toNumber;
+        %tmp.127 = invoke %tmp.125 %tmp.126();
+        %tmp.128 = sub %tmp.124 %tmp.127;
+        %tmp.129 = 100.0;
+        %tmp.130 = mul %tmp.128 %tmp.129;
+        %tmp.131 = invoke %tmp.122 %tmp.123(%tmp.130);
+        lputv %yy.7 %tmp.131;
+        symbol [ yy %yy.7 242 3 5 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 243 3 ]
+        symbol [ Lang %tmp.132 243 10 14 ];
+        %tmp.132 = getm $.Toybox.Lang;
+        symbol [ format %tmp.133 243 15 21 ];
+        %tmp.133 = getv function %tmp.132 :format;
+        %tmp.134 = "$1$.$2$.$3$";
+        %tmp.135 = newa 3;
+        %tmp.136 = lgetv %date.2;
+        symbol [ date %tmp.136 243 37 41 ];
+        symbol [ day %tmp.137 243 42 45 ];
+        %tmp.137 = getv %tmp.136 :day;
+        symbol [ format %tmp.138 243 46 52 ];
+        %tmp.138 = getv function %tmp.137 :format;
+        %tmp.139 = "%d";
+        %tmp.140 = invoke %tmp.137 %tmp.138(%tmp.139);
+        %tmp.141 = dup %tmp.135;
+        %tmp.142 = aputv %tmp.141 0 %tmp.140;
+        %tmp.143 = lgetv %date.2;
+        symbol [ date %tmp.143 243 60 64 ];
+        symbol [ month %tmp.144 243 65 70 ];
+        %tmp.144 = getv %tmp.143 :month;
+        symbol [ format %tmp.145 243 71 77 ];
+        %tmp.145 = getv function %tmp.144 :format;
+        %tmp.146 = "%d";
+        %tmp.147 = invoke %tmp.144 %tmp.145(%tmp.146);
+        %tmp.148 = dup %tmp.142;
+        %tmp.149 = aputv %tmp.148 1 %tmp.147;
+        %tmp.150 = lgetv %yy.7;
+        symbol [ yy %tmp.150 243 85 87 ];
+        symbol [ format %tmp.151 243 88 94 ];
+        %tmp.151 = getv function %tmp.150 :format;
+        %tmp.152 = "%d";
+        %tmp.153 = invoke %tmp.150 %tmp.151(%tmp.152);
+        %tmp.154 = dup %tmp.149;
+        %tmp.155 = aputv %tmp.154 2 %tmp.153;
+        %tmp.156 = invoke %tmp.132 %tmp.133(%tmp.134, %tmp.155);
+        ret %tmp.156;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_33_244_2_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_9_268_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_9_268_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 244 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_9_268_2_if_stmt:
+        %tmp.157 = lgetv %date_formater.3;
+        symbol [ date_formater %tmp.157 244 13 26 ];
+        %tmp.158 = 4;
+        %tmp.159 = eq %tmp.157 %tmp.158;
+        bf %tmp.159 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_9_268_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_9_268_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_33_250_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 246 3 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_33_250_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_33_250_2_stop" ]
+        %year.8 = local;
+        symbol [ year %year.8 246 7 11 ];
+        %tmp.160 = lgetv %date.2;
+        symbol [ date %tmp.160 246 14 18 ];
+        symbol [ year %tmp.161 246 19 23 ];
+        %tmp.161 = getv %tmp.160 :year;
+        lputv %year.8 %tmp.161;
+        symbol [ year %year.8 246 7 11 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 247 3 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_33_250_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_33_250_2_stop" ]
+        %yy.9 = local;
+        symbol [ yy %yy.9 247 7 9 ];
+        %tmp.162 = lgetv %year.8;
+        symbol [ year %tmp.162 247 12 16 ];
+        %tmp.163 = 100.0;
+        %tmp.164 = div %tmp.162 %tmp.163;
+        lputv %yy.9 %tmp.164;
+        symbol [ yy %yy.9 247 7 9 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 248 3 ]
+        symbol [ Math %tmp.165 248 8 12 ];
+        %tmp.165 = getm $.Toybox.Math;
+        symbol [ round %tmp.166 248 13 18 ];
+        %tmp.166 = getv function %tmp.165 :round;
+        %tmp.167 = lgetv %yy.9;
+        symbol [ yy %tmp.167 248 20 22 ];
+        %tmp.168 = lgetv %yy.9;
+        symbol [ yy %tmp.168 248 23 25 ];
+        symbol [ toNumber %tmp.169 248 26 34 ];
+        %tmp.169 = getv function %tmp.168 :toNumber;
+        %tmp.170 = invoke %tmp.168 %tmp.169();
+        %tmp.171 = sub %tmp.167 %tmp.170;
+        %tmp.172 = 100.0;
+        %tmp.173 = mul %tmp.171 %tmp.172;
+        %tmp.174 = invoke %tmp.165 %tmp.166(%tmp.173);
+        lputv %yy.9 %tmp.174;
+        symbol [ yy %yy.9 248 3 5 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 249 3 ]
+        symbol [ Lang %tmp.175 249 10 14 ];
+        %tmp.175 = getm $.Toybox.Lang;
+        symbol [ format %tmp.176 249 15 21 ];
+        %tmp.176 = getv function %tmp.175 :format;
+        %tmp.177 = "$1$.$2$.$3$";
+        %tmp.178 = newa 3;
+        %tmp.179 = lgetv %date.2;
+        symbol [ date %tmp.179 249 37 41 ];
+        symbol [ month %tmp.180 249 42 47 ];
+        %tmp.180 = getv %tmp.179 :month;
+        symbol [ format %tmp.181 249 48 54 ];
+        %tmp.181 = getv function %tmp.180 :format;
+        %tmp.182 = "%d";
+        %tmp.183 = invoke %tmp.180 %tmp.181(%tmp.182);
+        %tmp.184 = dup %tmp.178;
+        %tmp.185 = aputv %tmp.184 0 %tmp.183;
+        %tmp.186 = lgetv %date.2;
+        symbol [ date %tmp.186 249 62 66 ];
+        symbol [ day %tmp.187 249 67 70 ];
+        %tmp.187 = getv %tmp.186 :day;
+        symbol [ format %tmp.188 249 71 77 ];
+        %tmp.188 = getv function %tmp.187 :format;
+        %tmp.189 = "%d";
+        %tmp.190 = invoke %tmp.187 %tmp.188(%tmp.189);
+        %tmp.191 = dup %tmp.185;
+        %tmp.192 = aputv %tmp.191 1 %tmp.190;
+        %tmp.193 = lgetv %yy.9;
+        symbol [ yy %tmp.193 249 85 87 ];
+        symbol [ format %tmp.194 249 88 94 ];
+        %tmp.194 = getv function %tmp.193 :format;
+        %tmp.195 = "%d";
+        %tmp.196 = invoke %tmp.193 %tmp.194(%tmp.195);
+        %tmp.197 = dup %tmp.192;
+        %tmp.198 = aputv %tmp.197 2 %tmp.196;
+        %tmp.199 = invoke %tmp.175 %tmp.176(%tmp.177, %tmp.198);
+        ret %tmp.199;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_33_250_2_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_9_268_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_9_268_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 250 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_9_268_2_if_stmt:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_13_250_52_begin:
+        %tmp.200 = lgetv %date_formater.3;
+        symbol [ date_formater %tmp.200 250 13 26 ];
+        %tmp.201 = 5;
+        %tmp.202 = eq %tmp.200 %tmp.201;
+        bt %tmp.202 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_9_268_2_if_true;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_35_250_52_false:
+        %tmp.203 = lgetv %date_formater.3;
+        symbol [ date_formater %tmp.203 250 35 48 ];
+        %tmp.204 = 6;
+        %tmp.205 = eq %tmp.203 %tmp.204;
+        push %tmp.205;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_35_250_52_end:
+        %tmp.206 = phi [%tmp.202 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_13_250_52_begin] [%tmp.205 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_35_250_52_false] [%tmp.206 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_35_250_52_end];
+        bf %tmp.206 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_9_268_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_9_268_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_55_268_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 252 3 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_55_268_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_55_268_2_stop" ]
+        %day.10 = local;
+        symbol [ day %day.10 252 7 10 ];
+        %tmp.207 = null;
+        lputv %day.10 %tmp.207;
+        symbol [ day %day.10 252 7 10 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 253 3 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_55_268_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_55_268_2_stop" ]
+        %month.11 = local;
+        symbol [ month %month.11 253 7 12 ];
+        %tmp.208 = null;
+        lputv %month.11 %tmp.208;
+        symbol [ month %month.11 253 7 12 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 254 3 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_254_3_262_3_if_stmt:
+        symbol [ Application %tmp.209 254 7 18 ];
+        %tmp.209 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.210 254 19 25 ];
+        %tmp.210 = getv function %tmp.209 :getApp;
+        %tmp.211 = invoke %tmp.209 %tmp.210();
+        symbol [ getProperty %tmp.212 254 28 39 ];
+        %tmp.212 = getv function %tmp.211 :getProperty;
+        %tmp.213 = "force_date_english";
+        %tmp.214 = invoke %tmp.211 %tmp.212(%tmp.213);
+        bf %tmp.214 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_254_3_262_3_if_else_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_254_3_262_3_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_254_63_257_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 255 4 ]
+        %tmp.215 = lgetv %date.2;
+        symbol [ date %tmp.215 255 10 14 ];
+        symbol [ day %tmp.216 255 15 18 ];
+        %tmp.216 = getv %tmp.215 :day;
+        lputv %day.10 %tmp.216;
+        symbol [ day %day.10 255 4 7 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 256 4 ]
+        symbol [ months %tmp.218 256 12 18 ];
+        %tmp.218 = getv ? :months;
+        %tmp.219 = lgetv %date.2;
+        symbol [ date %tmp.219 256 19 23 ];
+        symbol [ month %tmp.220 256 24 29 ];
+        %tmp.220 = getv %tmp.219 :month;
+        %tmp.221 = agetv %tmp.218 %tmp.220;
+        lputv %month.11 %tmp.221;
+        symbol [ month %month.11 256 4 9 ];
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_254_63_257_3_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_254_3_262_3_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_254_3_262_3_if_else_false:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_257_10_262_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 259 4 ]
+        symbol [ Date %tmp.222 259 11 15 ];
+        %tmp.222 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.223 259 16 20 ];
+        %tmp.223 = getv function %tmp.222 :info;
+        %tmp.224 = lgetv %now.1;
+        symbol [ now %tmp.224 259 21 24 ];
+        symbol [ Time %tmp.225 259 26 30 ];
+        %tmp.225 = getm $.Toybox.Time;
+        symbol [ FORMAT_MEDIUM %tmp.226 259 31 44 ];
+        %tmp.226 = getv %tmp.225 :FORMAT_MEDIUM;
+        %tmp.227 = invoke %tmp.222 %tmp.223(%tmp.224, %tmp.226);
+        lputv %date.2 %tmp.227;
+        symbol [ date %date.2 259 4 8 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 260 4 ]
+        %tmp.228 = lgetv %date.2;
+        symbol [ date %tmp.228 260 10 14 ];
+        symbol [ day %tmp.229 260 15 18 ];
+        %tmp.229 = getv %tmp.228 :day;
+        lputv %day.10 %tmp.229;
+        symbol [ day %day.10 260 4 7 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 261 4 ]
+        symbol [ months %tmp.231 261 12 18 ];
+        %tmp.231 = getv ? :months;
+        %tmp.232 = lgetv %date.2;
+        symbol [ date %tmp.232 261 19 23 ];
+        symbol [ month %tmp.233 261 24 29 ];
+        %tmp.233 = getv %tmp.232 :month;
+        %tmp.234 = agetv %tmp.231 %tmp.233;
+        lputv %month.11 %tmp.234;
+        symbol [ month %month.11 261 4 9 ];
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_257_10_262_3_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_254_3_262_3_if_end:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 263 3 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_263_3_267_3_if_stmt:
+        %tmp.235 = lgetv %date_formater.3;
+        symbol [ date_formater %tmp.235 263 7 20 ];
+        %tmp.236 = 5;
+        %tmp.237 = eq %tmp.235 %tmp.236;
+        bf %tmp.237 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_263_3_267_3_if_else_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_263_3_267_3_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_263_27_265_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 264 4 ]
+        symbol [ Lang %tmp.238 264 11 15 ];
+        %tmp.238 = getm $.Toybox.Lang;
+        symbol [ format %tmp.239 264 16 22 ];
+        %tmp.239 = getv function %tmp.238 :format;
+        %tmp.240 = "$1$ $2$";
+        %tmp.241 = newa 2;
+        %tmp.242 = lgetv %day.10;
+        symbol [ day %tmp.242 264 34 37 ];
+        symbol [ format %tmp.243 264 38 44 ];
+        %tmp.243 = getv function %tmp.242 :format;
+        %tmp.244 = "%d";
+        %tmp.245 = invoke %tmp.242 %tmp.243(%tmp.244);
+        %tmp.246 = dup %tmp.241;
+        %tmp.247 = aputv %tmp.246 0 %tmp.245;
+        %tmp.248 = lgetv %month.11;
+        symbol [ month %tmp.248 264 52 57 ];
+        %tmp.249 = dup %tmp.247;
+        %tmp.250 = aputv %tmp.249 1 %tmp.248;
+        %tmp.251 = invoke %tmp.238 %tmp.239(%tmp.240, %tmp.250);
+        ret %tmp.251;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_263_27_265_3_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_263_3_267_3_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_263_3_267_3_if_else_false:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_265_10_267_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 266 4 ]
+        symbol [ Lang %tmp.252 266 11 15 ];
+        %tmp.252 = getm $.Toybox.Lang;
+        symbol [ format %tmp.253 266 16 22 ];
+        %tmp.253 = getv function %tmp.252 :format;
+        %tmp.254 = "$1$ $2$";
+        %tmp.255 = newa 2;
+        %tmp.256 = lgetv %month.11;
+        symbol [ month %tmp.256 266 34 39 ];
+        %tmp.257 = dup %tmp.255;
+        %tmp.258 = aputv %tmp.257 0 %tmp.256;
+        %tmp.259 = lgetv %day.10;
+        symbol [ day %tmp.259 266 41 44 ];
+        symbol [ format %tmp.260 266 45 51 ];
+        %tmp.260 = getv function %tmp.259 :format;
+        %tmp.261 = "%d";
+        %tmp.262 = invoke %tmp.259 %tmp.260(%tmp.261);
+        %tmp.263 = dup %tmp.258;
+        %tmp.264 = aputv %tmp.263 1 %tmp.262;
+        %tmp.265 = invoke %tmp.252 %tmp.253(%tmp.254, %tmp.264);
+        ret %tmp.265;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_265_10_267_3_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_263_3_267_3_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_55_268_2_stop:
+        goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_9_268_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_250_9_268_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_244_9_268_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_238_9_268_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_235_9_268_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_232_9_268_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_222_2_268_2_if_end:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 269 2 ]
+        %tmp.266 = null;
+        ret %tmp.266;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_218_28_270_1_stop:
+    }
+    [ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 272; @symbol_functiondef = [toKValue,272,10,18]; @symbol_param<0> = [value,272,19,24]; ]
+    function toKValue(value) {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_272_26_275_1_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 273 2 ]
+        [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_272_26_275_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_272_26_275_1_stop" ]
+        %valK.1 = local;
+        symbol [ valK %valK.1 273 6 10 ];
+        %tmp.1 = lgetv %value;
+        symbol [ value %tmp.1 273 13 18 ];
+        %tmp.2 = 1000.0;
+        %tmp.3 = div %tmp.1 %tmp.2;
+        lputv %valK.1 %tmp.3;
+        symbol [ valK %valK.1 273 6 10 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 274 2 ]
+        %tmp.4 = lgetv %valK.1;
+        symbol [ valK %tmp.4 274 9 13 ];
+        symbol [ format %tmp.5 274 14 20 ];
+        %tmp.5 = getv function %tmp.4 :format;
+        %tmp.6 = "%0.1f";
+        %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+        ret %tmp.7;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_272_26_275_1_stop:
     }
 }
-[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 31; @symbol_functiondef = [getApp,31,9,15]; @symbol_return<0> = [luwan_watchfaceApp,31,21,39]; ]
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 280; @symbol_functiondef = [getFormatedDate,280,10,25]; ]
+function getFormatedDate() {
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_280_28_330_1_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 281 2 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_280_28_330_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_280_28_330_1_stop" ]
+    %now.1 = local;
+    symbol [ now %now.1 281 6 9 ];
+    symbol [ Time %tmp.1 281 12 16 ];
+    %tmp.1 = getm $.Toybox.Time;
+    symbol [ now %tmp.2 281 17 20 ];
+    %tmp.2 = getv function %tmp.1 :now;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    lputv %now.1 %tmp.3;
+    symbol [ now %now.1 281 6 9 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 282 2 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_280_28_330_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_280_28_330_1_stop" ]
+    %date.2 = local;
+    symbol [ date %date.2 282 6 10 ];
+    symbol [ Date %tmp.4 282 13 17 ];
+    %tmp.4 = getm $.Toybox.Time.Gregorian;
+    symbol [ info %tmp.5 282 18 22 ];
+    %tmp.5 = getv function %tmp.4 :info;
+    %tmp.6 = lgetv %now.1;
+    symbol [ now %tmp.6 282 23 26 ];
+    symbol [ Time %tmp.7 282 28 32 ];
+    %tmp.7 = getm $.Toybox.Time;
+    symbol [ FORMAT_SHORT %tmp.8 282 33 45 ];
+    %tmp.8 = getv %tmp.7 :FORMAT_SHORT;
+    %tmp.9 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.8);
+    lputv %date.2 %tmp.9;
+    symbol [ date %date.2 282 6 10 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 283 2 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_280_28_330_1_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_280_28_330_1_stop" ]
+    %date_formater.3 = local;
+    symbol [ date_formater %date_formater.3 283 6 19 ];
+    symbol [ Application %tmp.10 283 22 33 ];
+    %tmp.10 = getm $.Toybox.Application;
+    symbol [ getApp %tmp.11 283 34 40 ];
+    %tmp.11 = getv function %tmp.10 :getApp;
+    %tmp.12 = invoke %tmp.10 %tmp.11();
+    symbol [ getProperty %tmp.13 283 43 54 ];
+    %tmp.13 = getv function %tmp.12 :getProperty;
+    %tmp.14 = "date_format";
+    %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+    lputv %date_formater.3 %tmp.15;
+    symbol [ date_formater %date_formater.3 283 6 19 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 284 2 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_284_2_328_2_if_stmt:
+    %tmp.16 = lgetv %date_formater.3;
+    symbol [ date_formater %tmp.16 284 6 19 ];
+    %tmp.17 = 0;
+    %tmp.18 = eq %tmp.16 %tmp.17;
+    bf %tmp.18 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_284_2_328_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_284_2_328_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_284_26_293_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 285 3 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_3_292_3_if_stmt:
+    symbol [ Application %tmp.19 285 7 18 ];
+    %tmp.19 = getm $.Toybox.Application;
+    symbol [ getApp %tmp.20 285 19 25 ];
+    %tmp.20 = getv function %tmp.19 :getApp;
+    %tmp.21 = invoke %tmp.19 %tmp.20();
+    symbol [ getProperty %tmp.22 285 28 39 ];
+    %tmp.22 = getv function %tmp.21 :getProperty;
+    %tmp.23 = "force_date_english";
+    %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
+    bf %tmp.24 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_3_292_3_if_else_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_3_292_3_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_63_288_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 286 4 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_63_288_3_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_63_288_3_stop" ]
+    %day_of_weak.4 = local;
+    symbol [ day_of_weak %day_of_weak.4 286 8 19 ];
+    %tmp.25 = lgetv %date.2;
+    symbol [ date %tmp.25 286 22 26 ];
+    symbol [ day_of_week %tmp.26 286 27 38 ];
+    %tmp.26 = getv %tmp.25 :day_of_week;
+    lputv %day_of_weak.4 %tmp.26;
+    symbol [ day_of_weak %day_of_weak.4 286 8 19 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 287 4 ]
+    symbol [ Lang %tmp.27 287 11 15 ];
+    %tmp.27 = getm $.Toybox.Lang;
+    symbol [ format %tmp.28 287 16 22 ];
+    %tmp.28 = getv function %tmp.27 :format;
+    %tmp.29 = "$1$ $2$";
+    %tmp.30 = newa 2;
+    symbol [ TimeUtils %tmp.32 287 34 43 ];
+    %tmp.32 = getv ? :TimeUtils;
+    symbol [ DAY_ABBREVIATIONS %tmp.33 287 44 61 ];
+    %tmp.33 = getv %tmp.32 :DAY_ABBREVIATIONS;
+    %tmp.34 = lgetv %day_of_weak.4;
+    symbol [ day_of_weak %tmp.34 287 62 73 ];
+    %tmp.35 = agetv %tmp.33 %tmp.34;
+    %tmp.36 = dup %tmp.30;
+    %tmp.37 = aputv %tmp.36 0 %tmp.35;
+    %tmp.38 = lgetv %date.2;
+    symbol [ date %tmp.38 287 76 80 ];
+    symbol [ day %tmp.39 287 81 84 ];
+    %tmp.39 = getv %tmp.38 :day;
+    symbol [ format %tmp.40 287 85 91 ];
+    %tmp.40 = getv function %tmp.39 :format;
+    %tmp.41 = "%d";
+    %tmp.42 = invoke %tmp.39 %tmp.40(%tmp.41);
+    %tmp.43 = dup %tmp.37;
+    %tmp.44 = aputv %tmp.43 1 %tmp.42;
+    %tmp.45 = invoke %tmp.27 %tmp.28(%tmp.29, %tmp.44);
+    ret %tmp.45;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_63_288_3_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_3_292_3_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_3_292_3_if_else_false:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_288_10_292_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 290 4 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_288_10_292_3_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_288_10_292_3_stop" ]
+    %day_of_weak.5 = local;
+    symbol [ day_of_weak %day_of_weak.5 290 8 19 ];
+    %tmp.46 = lgetv %date.2;
+    symbol [ date %tmp.46 290 22 26 ];
+    symbol [ day_of_week %tmp.47 290 27 38 ];
+    %tmp.47 = getv %tmp.46 :day_of_week;
+    lputv %day_of_weak.5 %tmp.47;
+    symbol [ day_of_weak %day_of_weak.5 290 8 19 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 291 4 ]
+    symbol [ Lang %tmp.48 291 11 15 ];
+    %tmp.48 = getm $.Toybox.Lang;
+    symbol [ format %tmp.49 291 16 22 ];
+    %tmp.49 = getv function %tmp.48 :format;
+    %tmp.50 = "$1$ $2$";
+    %tmp.51 = newa 2;
+    %tmp.52 = lgetv %day_of_weak.5;
+    symbol [ day_of_weak %tmp.52 291 34 45 ];
+    symbol [ toUpper %tmp.53 291 46 53 ];
+    %tmp.53 = getv function %tmp.52 :toUpper;
+    %tmp.54 = invoke %tmp.52 %tmp.53();
+    %tmp.55 = dup %tmp.51;
+    %tmp.56 = aputv %tmp.55 0 %tmp.54;
+    %tmp.57 = lgetv %date.2;
+    symbol [ date %tmp.57 291 57 61 ];
+    symbol [ day %tmp.58 291 62 65 ];
+    %tmp.58 = getv %tmp.57 :day;
+    symbol [ format %tmp.59 291 66 72 ];
+    %tmp.59 = getv function %tmp.58 :format;
+    %tmp.60 = "%d";
+    %tmp.61 = invoke %tmp.58 %tmp.59(%tmp.60);
+    %tmp.62 = dup %tmp.56;
+    %tmp.63 = aputv %tmp.62 1 %tmp.61;
+    %tmp.64 = invoke %tmp.48 %tmp.49(%tmp.50, %tmp.63);
+    ret %tmp.64;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_288_10_292_3_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_285_3_292_3_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_284_26_293_2_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_284_2_328_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_284_2_328_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 293 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_293_9_328_2_if_stmt:
+    %tmp.65 = lgetv %date_formater.3;
+    symbol [ date_formater %tmp.65 293 13 26 ];
+    %tmp.66 = 1;
+    %tmp.67 = eq %tmp.65 %tmp.66;
+    bf %tmp.67 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_293_9_328_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_293_9_328_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_293_33_296_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 295 3 ]
+    symbol [ Lang %tmp.68 295 10 14 ];
+    %tmp.68 = getm $.Toybox.Lang;
+    symbol [ format %tmp.69 295 15 21 ];
+    %tmp.69 = getv function %tmp.68 :format;
+    %tmp.70 = "$1$.$2$";
+    %tmp.71 = newa 2;
+    %tmp.72 = lgetv %date.2;
+    symbol [ date %tmp.72 295 33 37 ];
+    symbol [ day %tmp.73 295 38 41 ];
+    %tmp.73 = getv %tmp.72 :day;
+    symbol [ format %tmp.74 295 42 48 ];
+    %tmp.74 = getv function %tmp.73 :format;
+    %tmp.75 = "%d";
+    %tmp.76 = invoke %tmp.73 %tmp.74(%tmp.75);
+    %tmp.77 = dup %tmp.71;
+    %tmp.78 = aputv %tmp.77 0 %tmp.76;
+    %tmp.79 = lgetv %date.2;
+    symbol [ date %tmp.79 295 56 60 ];
+    symbol [ month %tmp.80 295 61 66 ];
+    %tmp.80 = getv %tmp.79 :month;
+    symbol [ format %tmp.81 295 67 73 ];
+    %tmp.81 = getv function %tmp.80 :format;
+    %tmp.82 = "%d";
+    %tmp.83 = invoke %tmp.80 %tmp.81(%tmp.82);
+    %tmp.84 = dup %tmp.78;
+    %tmp.85 = aputv %tmp.84 1 %tmp.83;
+    %tmp.86 = invoke %tmp.68 %tmp.69(%tmp.70, %tmp.85);
+    ret %tmp.86;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_293_33_296_2_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_293_9_328_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_293_9_328_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 296 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_296_9_328_2_if_stmt:
+    %tmp.87 = lgetv %date_formater.3;
+    symbol [ date_formater %tmp.87 296 13 26 ];
+    %tmp.88 = 2;
+    %tmp.89 = eq %tmp.87 %tmp.88;
+    bf %tmp.89 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_296_9_328_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_296_9_328_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_296_33_299_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 298 3 ]
+    symbol [ Lang %tmp.90 298 10 14 ];
+    %tmp.90 = getm $.Toybox.Lang;
+    symbol [ format %tmp.91 298 15 21 ];
+    %tmp.91 = getv function %tmp.90 :format;
+    %tmp.92 = "$1$.$2$";
+    %tmp.93 = newa 2;
+    %tmp.94 = lgetv %date.2;
+    symbol [ date %tmp.94 298 33 37 ];
+    symbol [ month %tmp.95 298 38 43 ];
+    %tmp.95 = getv %tmp.94 :month;
+    symbol [ format %tmp.96 298 44 50 ];
+    %tmp.96 = getv function %tmp.95 :format;
+    %tmp.97 = "%d";
+    %tmp.98 = invoke %tmp.95 %tmp.96(%tmp.97);
+    %tmp.99 = dup %tmp.93;
+    %tmp.100 = aputv %tmp.99 0 %tmp.98;
+    %tmp.101 = lgetv %date.2;
+    symbol [ date %tmp.101 298 58 62 ];
+    symbol [ day %tmp.102 298 63 66 ];
+    %tmp.102 = getv %tmp.101 :day;
+    symbol [ format %tmp.103 298 67 73 ];
+    %tmp.103 = getv function %tmp.102 :format;
+    %tmp.104 = "%d";
+    %tmp.105 = invoke %tmp.102 %tmp.103(%tmp.104);
+    %tmp.106 = dup %tmp.100;
+    %tmp.107 = aputv %tmp.106 1 %tmp.105;
+    %tmp.108 = invoke %tmp.90 %tmp.91(%tmp.92, %tmp.107);
+    ret %tmp.108;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_296_33_299_2_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_296_9_328_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_296_9_328_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 299 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_9_328_2_if_stmt:
+    %tmp.109 = lgetv %date_formater.3;
+    symbol [ date_formater %tmp.109 299 13 26 ];
+    %tmp.110 = 3;
+    %tmp.111 = eq %tmp.109 %tmp.110;
+    bf %tmp.111 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_9_328_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_9_328_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_33_305_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 301 3 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_33_305_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_33_305_2_stop" ]
+    %year.6 = local;
+    symbol [ year %year.6 301 7 11 ];
+    %tmp.112 = lgetv %date.2;
+    symbol [ date %tmp.112 301 14 18 ];
+    symbol [ year %tmp.113 301 19 23 ];
+    %tmp.113 = getv %tmp.112 :year;
+    lputv %year.6 %tmp.113;
+    symbol [ year %year.6 301 7 11 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 302 3 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_33_305_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_33_305_2_stop" ]
+    %yy.7 = local;
+    symbol [ yy %yy.7 302 7 9 ];
+    %tmp.114 = lgetv %year.6;
+    symbol [ year %tmp.114 302 12 16 ];
+    %tmp.115 = 100.0;
+    %tmp.116 = div %tmp.114 %tmp.115;
+    lputv %yy.7 %tmp.116;
+    symbol [ yy %yy.7 302 7 9 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 303 3 ]
+    symbol [ Math %tmp.117 303 8 12 ];
+    %tmp.117 = getm $.Toybox.Math;
+    symbol [ round %tmp.118 303 13 18 ];
+    %tmp.118 = getv function %tmp.117 :round;
+    %tmp.119 = lgetv %yy.7;
+    symbol [ yy %tmp.119 303 20 22 ];
+    %tmp.120 = lgetv %yy.7;
+    symbol [ yy %tmp.120 303 23 25 ];
+    symbol [ toNumber %tmp.121 303 26 34 ];
+    %tmp.121 = getv function %tmp.120 :toNumber;
+    %tmp.122 = invoke %tmp.120 %tmp.121();
+    %tmp.123 = sub %tmp.119 %tmp.122;
+    %tmp.124 = 100.0;
+    %tmp.125 = mul %tmp.123 %tmp.124;
+    %tmp.126 = invoke %tmp.117 %tmp.118(%tmp.125);
+    lputv %yy.7 %tmp.126;
+    symbol [ yy %yy.7 303 3 5 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 304 3 ]
+    symbol [ Lang %tmp.127 304 10 14 ];
+    %tmp.127 = getm $.Toybox.Lang;
+    symbol [ format %tmp.128 304 15 21 ];
+    %tmp.128 = getv function %tmp.127 :format;
+    %tmp.129 = "$1$.$2$.$3$";
+    %tmp.130 = newa 3;
+    %tmp.131 = lgetv %date.2;
+    symbol [ date %tmp.131 304 37 41 ];
+    symbol [ day %tmp.132 304 42 45 ];
+    %tmp.132 = getv %tmp.131 :day;
+    symbol [ format %tmp.133 304 46 52 ];
+    %tmp.133 = getv function %tmp.132 :format;
+    %tmp.134 = "%d";
+    %tmp.135 = invoke %tmp.132 %tmp.133(%tmp.134);
+    %tmp.136 = dup %tmp.130;
+    %tmp.137 = aputv %tmp.136 0 %tmp.135;
+    %tmp.138 = lgetv %date.2;
+    symbol [ date %tmp.138 304 60 64 ];
+    symbol [ month %tmp.139 304 65 70 ];
+    %tmp.139 = getv %tmp.138 :month;
+    symbol [ format %tmp.140 304 71 77 ];
+    %tmp.140 = getv function %tmp.139 :format;
+    %tmp.141 = "%d";
+    %tmp.142 = invoke %tmp.139 %tmp.140(%tmp.141);
+    %tmp.143 = dup %tmp.137;
+    %tmp.144 = aputv %tmp.143 1 %tmp.142;
+    %tmp.145 = lgetv %yy.7;
+    symbol [ yy %tmp.145 304 85 87 ];
+    symbol [ format %tmp.146 304 88 94 ];
+    %tmp.146 = getv function %tmp.145 :format;
+    %tmp.147 = "%d";
+    %tmp.148 = invoke %tmp.145 %tmp.146(%tmp.147);
+    %tmp.149 = dup %tmp.144;
+    %tmp.150 = aputv %tmp.149 2 %tmp.148;
+    %tmp.151 = invoke %tmp.127 %tmp.128(%tmp.129, %tmp.150);
+    ret %tmp.151;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_33_305_2_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_9_328_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_9_328_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 305 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_9_328_2_if_stmt:
+    %tmp.152 = lgetv %date_formater.3;
+    symbol [ date_formater %tmp.152 305 13 26 ];
+    %tmp.153 = 4;
+    %tmp.154 = eq %tmp.152 %tmp.153;
+    bf %tmp.154 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_9_328_2_if_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_9_328_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_33_311_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 307 3 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_33_311_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_33_311_2_stop" ]
+    %year.8 = local;
+    symbol [ year %year.8 307 7 11 ];
+    %tmp.155 = lgetv %date.2;
+    symbol [ date %tmp.155 307 14 18 ];
+    symbol [ year %tmp.156 307 19 23 ];
+    %tmp.156 = getv %tmp.155 :year;
+    lputv %year.8 %tmp.156;
+    symbol [ year %year.8 307 7 11 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 308 3 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_33_311_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_33_311_2_stop" ]
+    %yy.9 = local;
+    symbol [ yy %yy.9 308 7 9 ];
+    %tmp.157 = lgetv %year.8;
+    symbol [ year %tmp.157 308 12 16 ];
+    %tmp.158 = 100.0;
+    %tmp.159 = div %tmp.157 %tmp.158;
+    lputv %yy.9 %tmp.159;
+    symbol [ yy %yy.9 308 7 9 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 309 3 ]
+    symbol [ Math %tmp.160 309 8 12 ];
+    %tmp.160 = getm $.Toybox.Math;
+    symbol [ round %tmp.161 309 13 18 ];
+    %tmp.161 = getv function %tmp.160 :round;
+    %tmp.162 = lgetv %yy.9;
+    symbol [ yy %tmp.162 309 20 22 ];
+    %tmp.163 = lgetv %yy.9;
+    symbol [ yy %tmp.163 309 23 25 ];
+    symbol [ toNumber %tmp.164 309 26 34 ];
+    %tmp.164 = getv function %tmp.163 :toNumber;
+    %tmp.165 = invoke %tmp.163 %tmp.164();
+    %tmp.166 = sub %tmp.162 %tmp.165;
+    %tmp.167 = 100.0;
+    %tmp.168 = mul %tmp.166 %tmp.167;
+    %tmp.169 = invoke %tmp.160 %tmp.161(%tmp.168);
+    lputv %yy.9 %tmp.169;
+    symbol [ yy %yy.9 309 3 5 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 310 3 ]
+    symbol [ Lang %tmp.170 310 10 14 ];
+    %tmp.170 = getm $.Toybox.Lang;
+    symbol [ format %tmp.171 310 15 21 ];
+    %tmp.171 = getv function %tmp.170 :format;
+    %tmp.172 = "$1$.$2$.$3$";
+    %tmp.173 = newa 3;
+    %tmp.174 = lgetv %date.2;
+    symbol [ date %tmp.174 310 37 41 ];
+    symbol [ month %tmp.175 310 42 47 ];
+    %tmp.175 = getv %tmp.174 :month;
+    symbol [ format %tmp.176 310 48 54 ];
+    %tmp.176 = getv function %tmp.175 :format;
+    %tmp.177 = "%d";
+    %tmp.178 = invoke %tmp.175 %tmp.176(%tmp.177);
+    %tmp.179 = dup %tmp.173;
+    %tmp.180 = aputv %tmp.179 0 %tmp.178;
+    %tmp.181 = lgetv %date.2;
+    symbol [ date %tmp.181 310 62 66 ];
+    symbol [ day %tmp.182 310 67 70 ];
+    %tmp.182 = getv %tmp.181 :day;
+    symbol [ format %tmp.183 310 71 77 ];
+    %tmp.183 = getv function %tmp.182 :format;
+    %tmp.184 = "%d";
+    %tmp.185 = invoke %tmp.182 %tmp.183(%tmp.184);
+    %tmp.186 = dup %tmp.180;
+    %tmp.187 = aputv %tmp.186 1 %tmp.185;
+    %tmp.188 = lgetv %yy.9;
+    symbol [ yy %tmp.188 310 85 87 ];
+    symbol [ format %tmp.189 310 88 94 ];
+    %tmp.189 = getv function %tmp.188 :format;
+    %tmp.190 = "%d";
+    %tmp.191 = invoke %tmp.188 %tmp.189(%tmp.190);
+    %tmp.192 = dup %tmp.187;
+    %tmp.193 = aputv %tmp.192 2 %tmp.191;
+    %tmp.194 = invoke %tmp.170 %tmp.171(%tmp.172, %tmp.193);
+    ret %tmp.194;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_33_311_2_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_9_328_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_9_328_2_if_false:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 311 9 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_9_328_2_if_stmt:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_13_311_52_begin:
+    %tmp.195 = lgetv %date_formater.3;
+    symbol [ date_formater %tmp.195 311 13 26 ];
+    %tmp.196 = 5;
+    %tmp.197 = eq %tmp.195 %tmp.196;
+    bt %tmp.197 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_9_328_2_if_true;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_35_311_52_false:
+    %tmp.198 = lgetv %date_formater.3;
+    symbol [ date_formater %tmp.198 311 35 48 ];
+    %tmp.199 = 6;
+    %tmp.200 = eq %tmp.198 %tmp.199;
+    push %tmp.200;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_35_311_52_end:
+    %tmp.201 = phi [%tmp.197 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_13_311_52_begin] [%tmp.200 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_35_311_52_false] [%tmp.201 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_35_311_52_end];
+    bf %tmp.201 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_9_328_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_9_328_2_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_55_328_2_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 313 3 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_55_328_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_55_328_2_stop" ]
+    %day.10 = local;
+    symbol [ day %day.10 313 7 10 ];
+    %tmp.202 = null;
+    lputv %day.10 %tmp.202;
+    symbol [ day %day.10 313 7 10 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 314 3 ]
+    [ "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_55_328_2_start" "C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_55_328_2_stop" ]
+    %month.11 = local;
+    symbol [ month %month.11 314 7 12 ];
+    %tmp.203 = null;
+    lputv %month.11 %tmp.203;
+    symbol [ month %month.11 314 7 12 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 315 3 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_315_3_322_3_if_stmt:
+    symbol [ Application %tmp.204 315 7 18 ];
+    %tmp.204 = getm $.Toybox.Application;
+    symbol [ getApp %tmp.205 315 19 25 ];
+    %tmp.205 = getv function %tmp.204 :getApp;
+    %tmp.206 = invoke %tmp.204 %tmp.205();
+    symbol [ getProperty %tmp.207 315 28 39 ];
+    %tmp.207 = getv function %tmp.206 :getProperty;
+    %tmp.208 = "force_date_english";
+    %tmp.209 = invoke %tmp.206 %tmp.207(%tmp.208);
+    bf %tmp.209 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_315_3_322_3_if_else_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_315_3_322_3_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_315_63_318_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 316 4 ]
+    %tmp.210 = lgetv %date.2;
+    symbol [ date %tmp.210 316 10 14 ];
+    symbol [ day %tmp.211 316 15 18 ];
+    %tmp.211 = getv %tmp.210 :day;
+    lputv %day.10 %tmp.211;
+    symbol [ day %day.10 316 4 7 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 317 4 ]
+    symbol [ TimeUtils %tmp.213 317 12 21 ];
+    %tmp.213 = getv ? :TimeUtils;
+    symbol [ MONTH_ABBREVIATIONS %tmp.214 317 22 41 ];
+    %tmp.214 = getv %tmp.213 :MONTH_ABBREVIATIONS;
+    %tmp.215 = lgetv %date.2;
+    symbol [ date %tmp.215 317 42 46 ];
+    symbol [ month %tmp.216 317 47 52 ];
+    %tmp.216 = getv %tmp.215 :month;
+    %tmp.217 = agetv %tmp.214 %tmp.216;
+    lputv %month.11 %tmp.217;
+    symbol [ month %month.11 317 4 9 ];
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_315_63_318_3_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_315_3_322_3_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_315_3_322_3_if_else_false:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_318_10_322_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 320 4 ]
+    %tmp.218 = lgetv %date.2;
+    symbol [ date %tmp.218 320 10 14 ];
+    symbol [ day %tmp.219 320 15 18 ];
+    %tmp.219 = getv %tmp.218 :day;
+    lputv %day.10 %tmp.219;
+    symbol [ day %day.10 320 4 7 ];
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 321 4 ]
+    symbol [ TimeUtils %tmp.221 321 12 21 ];
+    %tmp.221 = getv ? :TimeUtils;
+    symbol [ MONTH_ABBREVIATIONS %tmp.222 321 22 41 ];
+    %tmp.222 = getv %tmp.221 :MONTH_ABBREVIATIONS;
+    %tmp.223 = lgetv %date.2;
+    symbol [ date %tmp.223 321 42 46 ];
+    symbol [ month %tmp.224 321 47 52 ];
+    %tmp.224 = getv %tmp.223 :month;
+    %tmp.225 = agetv %tmp.222 %tmp.224;
+    lputv %month.11 %tmp.225;
+    symbol [ month %month.11 321 4 9 ];
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_318_10_322_3_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_315_3_322_3_if_end:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 323 3 ]
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_323_3_327_3_if_stmt:
+    %tmp.226 = lgetv %date_formater.3;
+    symbol [ date_formater %tmp.226 323 7 20 ];
+    %tmp.227 = 5;
+    %tmp.228 = eq %tmp.226 %tmp.227;
+    bf %tmp.228 @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_323_3_327_3_if_else_false;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_323_3_327_3_if_true:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_323_27_325_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 324 4 ]
+    symbol [ Lang %tmp.229 324 11 15 ];
+    %tmp.229 = getm $.Toybox.Lang;
+    symbol [ format %tmp.230 324 16 22 ];
+    %tmp.230 = getv function %tmp.229 :format;
+    %tmp.231 = "$1$ $2$";
+    %tmp.232 = newa 2;
+    %tmp.233 = lgetv %day.10;
+    symbol [ day %tmp.233 324 34 37 ];
+    symbol [ format %tmp.234 324 38 44 ];
+    %tmp.234 = getv function %tmp.233 :format;
+    %tmp.235 = "%d";
+    %tmp.236 = invoke %tmp.233 %tmp.234(%tmp.235);
+    %tmp.237 = dup %tmp.232;
+    %tmp.238 = aputv %tmp.237 0 %tmp.236;
+    %tmp.239 = lgetv %month.11;
+    symbol [ month %tmp.239 324 52 57 ];
+    %tmp.240 = dup %tmp.238;
+    %tmp.241 = aputv %tmp.240 1 %tmp.239;
+    %tmp.242 = invoke %tmp.229 %tmp.230(%tmp.231, %tmp.241);
+    ret %tmp.242;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_323_27_325_3_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_323_3_327_3_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_323_3_327_3_if_else_false:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_325_10_327_3_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 326 4 ]
+    symbol [ Lang %tmp.243 326 11 15 ];
+    %tmp.243 = getm $.Toybox.Lang;
+    symbol [ format %tmp.244 326 16 22 ];
+    %tmp.244 = getv function %tmp.243 :format;
+    %tmp.245 = "$1$ $2$";
+    %tmp.246 = newa 2;
+    %tmp.247 = lgetv %month.11;
+    symbol [ month %tmp.247 326 34 39 ];
+    %tmp.248 = dup %tmp.246;
+    %tmp.249 = aputv %tmp.248 0 %tmp.247;
+    %tmp.250 = lgetv %day.10;
+    symbol [ day %tmp.250 326 41 44 ];
+    symbol [ format %tmp.251 326 45 51 ];
+    %tmp.251 = getv function %tmp.250 :format;
+    %tmp.252 = "%d";
+    %tmp.253 = invoke %tmp.250 %tmp.251(%tmp.252);
+    %tmp.254 = dup %tmp.249;
+    %tmp.255 = aputv %tmp.254 1 %tmp.253;
+    %tmp.256 = invoke %tmp.243 %tmp.244(%tmp.245, %tmp.255);
+    ret %tmp.256;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_325_10_327_3_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_323_3_327_3_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_55_328_2_stop:
+    goto @C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_9_328_2_if_end;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_311_9_328_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_305_9_328_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_299_9_328_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_296_9_328_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_293_9_328_2_if_end:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_284_2_328_2_if_end:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 329 2 ]
+    %tmp.257 = null;
+    ret %tmp.257;
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_280_28_330_1_stop:
+}
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 333; @symbol_functiondef = [getApp,333,9,15]; @symbol_return<0> = [luwan_watchfaceApp,333,21,39]; ]
 function getApp() as luwan_watchfaceApp {
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_luwan_watchfaceApp_mc_31_40_33_0_start:
-[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc" 32 4 ]
-    symbol [ Application %tmp.1 32 11 22 ];
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_333_40_335_0_start:
+[ "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc" 334 4 ]
+    symbol [ Application %tmp.1 334 11 22 ];
     %tmp.1 = getm $.Toybox.Application;
-    symbol [ getApp %tmp.2 32 23 29 ];
+    symbol [ getApp %tmp.2 334 23 29 ];
     %tmp.2 = getv function %tmp.1 :getApp;
     %tmp.3 = invoke %tmp.1 %tmp.2();
     %tmp.4 = as %tmp.3 luwan_watchfaceApp;
-    symbol [ luwan_watchfaceApp %tmp.4 32 35 53 ];
+    symbol [ luwan_watchfaceApp %tmp.4 334 35 53 ];
     ret %tmp.4;
-C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_fr255_luwan_luwan_watchface_source_luwan_watchfaceApp_mc_31_40_33_0_stop:
+C_Users_132707_AppData_Roaming_Garmin_ConnectIQ_Devices_luwan_watchface_source_luwan_watchfaceApp_mc_333_40_335_0_stop:
 }
-[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\fr255\luwan\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 1; ]
+[ @file = "C:\Users\132707\AppData\Roaming\Garmin\ConnectIQ\Devices\luwan-watchface\source\luwan-watchfaceApp.mc"; @line = 1; ]
 <init> {
 }

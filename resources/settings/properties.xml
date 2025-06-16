@@ -1,8 +1,53 @@
-<properties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+<properties>
+    <property id="theme_code" type="number">0</property>
+	<property id="power_save_mode" type="boolean">true</property>
+    <property id="sleep_time_behaviour" type="number">0</property>
+	
+    <property id="white_background" type="boolean">false</property>
+    <property id="always_on_second" type="boolean">false</property>
+    <property id="always_on_heart" type="boolean">false</property>
+    <property id="use_analog" type="boolean">false</property>
+    <property id="digital_style" type="number">0</property>
+    <property id="zero_leading_digital" type="boolean">true</property>
+    <property id="always_on_style" type="number">0</property>
+    <property id="minimal_data" type="boolean">false</property>
+    <property id="big_num_stripes" type="boolean">true</property>
+    <property id="left_digital_info" type="boolean">false</property>
+    <property id="force_date_english" type="boolean">true</property>
+    <property id="big_number_type" type="number">0</property>
 
-    <property id="BackgroundColor" type="number">0x000000</property>
-    <property id="TimeLableColor" type="number">0xFFFFFF</property>
-    <property id="ForegroundColor" type="number">0xFF0000</property>
-    <property id="UseMilitaryFormat" type="boolean">false</property>
+    <property id="ticks_style" type="number">0</property>
+    <property id="render_arc_line" type="boolean">true</property>
+    
+    <property id="comp12h" type="number">1</property>
+    <property id="comp2h" type="number">4</property>
+    <property id="comp4h" type="number">3</property>
+    <property id="comp6h" type="number">2</property>
+    <property id="comp8h" type="number">5</property>
+    <!-- <property id="comp10h" type="number">6</property> -->
+    <property id="comp10h" type="number">28</property>
+    <property id="compbart" type="number">9</property>
+    <property id="compbarb" type="number">9</property>
+    
+    <property id="compgrapht" type="number">0</property>
+    <property id="compgraphb" type="number">0</property>
+    
+    <property id="baro_period" type="number">3</property>
+    
+    <property id="utc_timezone" type="number">0</property>
+    <property id="utc_shift" type="boolean">false</property>
+    <!-- <property id="date_format" type="number">0</property> -->
+    <property id="date_format" type="number">5</property>
+    
+    <property id="battery_format" type="number">0</property>
+    
+    <property id="countdown_date" type="number">1546300800</property>
+    <property id="enable_buffering" type="boolean">false</property>
+    
+    <property id="barometer_unit" type="number">0</property>
+    
+    <property id="openweathermap_api" type="string">8c87819e23c9df22296aa2b3b0c2417b</property>
+    
+    <property id="ctext_input" type="string"></property>
 
 </properties>

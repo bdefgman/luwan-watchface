@@ -1,20 +1,60 @@
-<layout id="WatchFace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
-    <drawable class="Background" />
-    <bitmap id="Background_Img" x="center" y="center" filename ="luwan_black_green_255_y40.png" />
-    <!-- <label id="windAndRain" text="风里雨里" x="30%" y="75%"  color="0x42e049" /> -->
-    <!-- <label id="luwanWaitYou" text="卢湾等你" x="70%" y="75%"  color="0x42e049" /> -->
-    <label id="TimeLabel" x="35%" y="45%" font="Graphics.FONT_NUMBER_HOT" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="DaysOfWeek" x="74%" y="50%" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="Day"  x="75%" y="54%" font="Graphics.FONT_NUMBER_MILD" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-
-    <!-- <drawable id="aBarDisplay" class="Complication">	             
-        <param name="line">123123</param>
-    </drawable> -->
-    <!-- <drawable-list id="shapes" background="Graphics.COLOR_TRANSPARENT">
-        <shape type="circle" x="78" y="160" radius="8" color="Graphics.COLOR_RED" />
-        <shape type="rectangle" x="51" y="137" width="76" height="20" color="Graphics.COLOR_BLUE" />
-    </drawable-list> -->
-    <drawable id="Smiley"/>
-    <label id="Step" text="STEP" x="35%" y="80%"  font="Graphics.FONT_XTINY"  color="0x42e049"/>
-    <label id="StepCount" text="  30000                       " x="80%" y="80%" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" background="0x42e049"/>
+<layout id="WatchFace">
+	<drawable id="background" class="BackgroundView"></drawable>
+	
+	<drawable id="aBarDisplay" class="Complication">	             
+        <param name="base">270</param>	             
+        <param name="angle">12</param>
+        <param name="text">"BATT 90"</param>
+        <param name="field_type">1</param>
+    </drawable>
+    <drawable id="bBarDisplay" class="Complication">	             
+        <param name="base">210</param>
+        <param name="angle">10</param>
+        <param name="text">"STEP 9K"</param>
+        <param name="field_type">2</param>
+    </drawable>
+    <drawable id="cBarDisplay" class="Complication">	             
+        <param name="base">330</param>
+        <param name="angle">2</param>
+        <param name="text">"HR 72"</param>
+        <param name="field_type">9</param>
+    </drawable>
+    <drawable id="dBarDisplay" class="Complication">	             
+        <param name="base">30</param>
+        <param name="angle">4</param>
+        <param name="text">"STEP 9K"</param>
+        <param name="field_type">3</param>
+    </drawable>
+    <drawable id="eBarDisplay" class="Complication">	             
+        <param name="base">90</param>
+        <param name="angle">6</param>
+        <param name="text">"BATT 90"</param>
+        <param name="field_type">4</param>
+    </drawable>
+    <drawable id="fBarDisplay" class="Complication">	             
+        <param name="base">150</param>
+        <param name="angle">8</param>
+        <param name="text">"HR 72"</param>
+        <param name="field_type">5</param>
+    </drawable>
+    
+    <drawable id="bUBarDisplay" class="BarDataComplication">	             
+        <param name="position">1</param>
+        <param name="field_type">6</param>
+    </drawable>
+    <drawable id="tUBarDisplay" class="BarDataComplication">	             
+        <param name="position">0</param>
+        <param name="field_type">5</param>
+    </drawable>
+    
+    <drawable id="bGraphDisplay" class="GraphComplication">	             
+        <param name="position">1</param>
+    </drawable>
+    <drawable id="tGraphDisplay" class="GraphComplication">	             
+        <param name="position">0</param>
+    </drawable>
+    
+    <drawable id="digital" class="MainDialHand"></drawable>
+    <drawable id="analog" class="AnalogDial"></drawable>
+    
 </layout>
