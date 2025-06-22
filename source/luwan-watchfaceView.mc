@@ -41,10 +41,15 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
 
         // drawLine(dc);
         // drawArc(dc);
+        drawLine(dc);
+        drawCicle(dc);
+        
+        dc.setColor(Graphics.COLOR_DK_GRAY,Graphics.COLOR_TRANSPARENT);
+        dc.drawLine(0, centerY, dc.getWidth()*0.2, centerY); // 水平线
 
         // 画图 还没画好
-        var luwanPic = WatchUi.loadResource(Rez.Drawables.luwan);
-        dc.drawBitmap(centerX,centerY,luwanPic);
+        var luwanPic = WatchUi.loadResource(Rez.Drawables.luwanJPG);
+        dc.drawBitmap(centerX-50,centerY-50,luwanPic);
 
         
 
@@ -62,7 +67,7 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
     }
 
     public function drawCicle(dc as Dc) as Void {
-        dc.drawCircle(centerX,centerY,10);
+        dc.drawCircle(centerX,centerY,70);
     }
 
     public function drawRadialText(dc as Dc) as Void {
