@@ -9,9 +9,6 @@ using Toybox.Time.Gregorian as Date;
 
 class luwan_watch_faceView extends WatchUi.WatchFace {
 
-    var timeUtils = new TimeUtils();
-
-    var activityInfo = new ActivityInfo();
 
     function initialize() {
         WatchFace.initialize();
@@ -27,52 +24,96 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
     // loading resources into memory.
     function onShow() as Void {
     }
-
+    
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
 
-        var timeFormat = "$1$:$2$";
-        var clockTime = System.getClockTime();
-        var hours = clockTime.hour;
+        dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+        
+        // 取x与y的中心点
+        centerX = dc.getWidth() / 2;
+        centerY = dc.getHeight() / 2;
+        System.println("centerX:" + centerX);
+        System.println("centerY:" + centerY);
+        dc.setPenWidth(1);
+
+
+        // drawLine(dc);
+        // drawArc(dc);
+
+        // 画图 还没画好
+        var luwanPic = WatchUi.loadResource(Rez.Drawables.luwan);
+        dc.drawBitmap(centerX,centerY,luwanPic);
+
         
 
-        var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
-
-        var view = View.findDrawableById("TimeLabel") as Text;
-        // view.setSize();
-        view.setColor(Application.Properties.getValue("TimeLableColor") as Number);
-        view.setText(timeString);
-
-
-        var daysOfWeek = timeUtils.getDaysOfWeek();
-        var daysOfWeekView = View.findDrawableById("DaysOfWeek") as Text;
-        daysOfWeekView.setColor(Application.Properties.getValue("TimeLableColor") as Number);
-        daysOfWeekView.setText(daysOfWeek);
-
-        var day = timeUtils.getDayOfMonth();
-        var dayview = View.findDrawableById("Day") as Text;
-        dayview.setColor(Application.Properties.getValue("TimeLableColor") as Number);
-        dayview.setText(day);
-
-        // var windAndRain = View.findDrawableById("windAndRain") as Text;
-        // windAndRain.setFont(Toybox.Graphics.FONT_TINY);
-        // windAndRain.setJustification(Graphics.TEXT_JUSTIFY_CENTER);
-
-        // var luwanWaitYou = View.findDrawableById("luwanWaitYou") as Text;
-        // luwanWaitYou.setFont(Toybox.Graphics.FONT_TINY);
-        // luwanWaitYou.setJustification(Graphics.TEXT_JUSTIFY_CENTER);
-
-
-        var stepCountView = View.findDrawableById("StepCount") as Text;
-        var curStep = "  " + activityInfo.getCurStep() + "                       ";
-        stepCountView.setText(curStep);
-
-        var distance = ActivityMonitor.getInfo().distance;
-        Sys.print("distance :"+distance);
-
-        View.onUpdate(dc);
     }
+
+    public function drawLine(dc as Dc) as Void {
+        // 绘制圆弧
+        // 绘制十字线标记中心
+        dc.drawLine(0, centerY, dc.getWidth(), centerY); // 水平线
+        dc.drawLine(centerX, 0, centerX, dc.getHeight()); // 垂直线
+    }
+
+    public function drawArc(dc as Dc) as Void {
+        dc.drawArc(centerX,centerY,0.8*centerX,Graphics.ARC_COUNTER_CLOCKWISE,0,360);
+    }
+
+    public function drawCicle(dc as Dc) as Void {
+        dc.drawCircle(centerX,centerY,10);
+    }
+
+    public function drawRadialText(dc as Dc) as Void {
+        var font = Graphics.getVectorFont({
+                :face => ["RobotoCondensedBold"],
+                :size => 26.0
+        });
+        // dc.drawRadialText(centerX,centerY,font,"test",Graphics.TEXT_JUSTIFY_LEFT,30,0.8*centerX,Graphics.RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE); // 反方向
+        dc.drawRadialText(centerX,centerY,font,"test",Graphics.TEXT_JUSTIFY_CENTER,90,0.8*centerX,Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE);  // 正方向
+
+    }
+
+    public function drawText(dc as Dc) as Void {
+        var smallDigitalFont = WatchUi.loadResource(Rez.Fonts.smadigi);
+        dc.drawText(centerX,centerY,smallDigitalFont,"QWER",Graphics.TEXT_JUSTIFY_CENTER);
+
+    }
+
+    public function dtrawIcon(dc as Dc) {
+        var weatherFont = WatchUi.loadResource(Rez.Fonts.weather);
+        var icon = "";
+        dc.drawText(centerX, centerY+50, weatherFont,icon, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+    		
+    }
+
+    public function drawBitMap2(dc as Dc) {
+                // var ico_charge = WatchUi.loadResource(Rez.Drawables.id_charge);
+        // // 1. 正确创建缓冲位图（示例：100x100像素）
+        // // var tickBuffer = Graphics.createBufferedBitmap({:bitmapX=>0, :bitmapY=>0,});
+
+        // // 2. 定义变换矩阵（示例：旋转10度）
+        // // var transformMatrix = new Graphics.AffineTransform();
+        // var redShiftColor = 0xAA0000;
+        // // 3. 绘制位图并补充必要参数
+        // dc.drawBitmap2(
+        //     centerX,                // 目标绘制位置的左上角x坐标
+        //     centerY,                // 目标绘制位置的左上角y坐标
+        //     ico_charge,             // 位图对象
+        //     {
+        //         // :bitmapX => 0,       // 源位图区域左上角x坐标（默认0）
+        //         // :bitmapY => 0,        // 源位图区域左上角y坐标（默认0）
+        //         // :bitmapWidth => 100, // 源位图区域宽度（默认位图实际宽度）
+        //         // :bitmapHeight => 100,// 源位图区域高度（默认位图实际高度）
+        //         // :tintColor => Graphics.COLOR_WHITE, // 可选：位图着色
+        //         // :filterMode => Graphics.FILTER_MODE_BILINEAR, // 双线性滤波
+        //         // :transform => transformMatrix // 变换矩阵
+        //         :tintColor => redShiftColor
+        //     }
+        // );
+    }
+
 
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from

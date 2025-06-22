@@ -2,6 +2,10 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
+
+var centerX = 0;
+var centerY = 0;
+
 class luwan_watchfaceApp extends Application.AppBase {
 
     function initialize() {

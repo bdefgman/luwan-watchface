@@ -1,6 +1,5 @@
 <resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="http://developer.garmin.com/downloads/connect-iq/resources.xsd">
-    <drawable-list id="Smiley">
-        <shape type="rectangle" width="100%" height="2%" x="center" y="75%" radius="5" color="0xfb7906" />
-    </drawable-list>
+    <bitmap id="id_charge" filename="charging_icon.png" />
+
 </resources>
