@@ -10,6 +10,8 @@ using Toybox.Time.Gregorian as Date;
 class luwan_watch_faceView extends WatchUi.WatchFace {
 
 
+    var luwan_draw;
+
     function initialize() {
         WatchFace.initialize();
     }
@@ -28,26 +30,29 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-
-        dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
-        
         // 取x与y的中心点
         centerX = dc.getWidth() / 2;
         centerY = dc.getHeight() / 2;
+        r = 0.95*centerX;
+
+
+        // 画下四周的圆弧
+        drawArcPenWidth(dc);
+        
+
         System.println("centerX:" + centerX);
         System.println("centerY:" + centerY);
-        dc.setPenWidth(1);
 
 
         // drawLine(dc);
         // drawArc(dc);
         drawLine(dc);
-        drawCicle(dc);
+        // drawCicle(dc);
         
-        dc.setColor(Graphics.COLOR_DK_GRAY,Graphics.COLOR_TRANSPARENT);
-        dc.drawLine(0, centerY, dc.getWidth()*0.2, centerY); // 水平线
+        // dc.drawLine(0, centerY, dc.getWidth()*0.2, centerY); // 水平线
 
-        // 画图 还没画好
+        dc.drawLine(centerX-55,arcPendWidth,centerX-55,dc.getHeight()-arcPendWidth);
+
         var luwanPic = WatchUi.loadResource(Rez.Drawables.luwanJPG);
         dc.drawBitmap(centerX-50,centerY-50,luwanPic);
 
@@ -55,11 +60,62 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
 
     }
 
+
+    public function drawArcPenWidth(dc as Dc) {
+        dc.setColor(Graphics.COLOR_DK_GRAY,Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(arcPendWidth);
+        dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,arcSpacing + arcSpacingOffset,90 + arcSpacing - arcSpacingOffset);
+        dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,90 + arcSpacing + arcSpacingOffset,180 + arcSpacing - arcSpacingOffset);
+        dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,180 + arcSpacing + arcSpacingOffset,270 + arcSpacing - arcSpacingOffset);
+        dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,270 + arcSpacing + arcSpacingOffset,360 + arcSpacing - arcSpacingOffset);
+    
+        // var radians = Math.toRadians(arcSpacing);
+        // Sys.println("radians:"+radians);
+        // var high = Math.sin(radians) * r;
+        // var smallDigitalFont = WatchUi.loadResource(Rez.Fonts.smadigi);
+        // dc.drawText(centerX + r - fontPending,centerY+high/2,smallDigitalFont,"0",Graphics.TEXT_JUSTIFY_CENTER);
+        // dc.drawText(0,0,smallDigitalFont,"100",Graphics.TEXT_JUSTIFY_CENTER);
+
+    }
+
+
     public function drawLine(dc as Dc) as Void {
+        dc.setPenWidth(2);
+
+        var lineDegress = -(arcSpacing+arcSpacingOffset);
+        var line1Degress = lineDegress - 180;
+        var radiansUtils = new RadiansUtils();
+        var topLineCoorOneX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(lineDegress),r);
+        var topLineCoorOney = radiansUtils.convertCoorY(radiansUtils.degreesToRadians(lineDegress),r);
+        var topLineCoorTwoX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(line1Degress),r);
+        dc.drawLine(topLineCoorOneX-fontPending, topLineCoorOney, topLineCoorTwoX+fontPending, topLineCoorOney);    // 用于放 步数和热量
+        Sys.println("topLineCoorOneX:"+topLineCoorOneX+",topLineCoorOney:"+topLineCoorOney+"topLineCoorTwoX:"+topLineCoorTwoX);
+
+        var bottomLineCoorOneX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(-lineDegress),r);
+        var bottomLineCoorOney = radiansUtils.convertCoorY(radiansUtils.degreesToRadians(-lineDegress),r);
+        var bottomLineCoorTwoX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(-line1Degress),r);
+        dc.drawLine(bottomLineCoorOneX-fontPending, bottomLineCoorOney, bottomLineCoorTwoX+fontPending, bottomLineCoorOney);    // 用于放 步数和热量
+        Sys.println("bottomLineCoorOneX:"+bottomLineCoorOneX+",bottomLineCoorOney:"+bottomLineCoorOney+"bottomLineCoorTwoX:"+bottomLineCoorTwoX);
+
+        // var line2CoorX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(-30),r);
+        // var line2Coory = radiansUtils.convertCoorY(radiansUtils.degreesToRadians(-30),r);
+        // var line2CoorX1 = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(-150),r);
+        // dc.drawLine(line2CoorX-fontPending, line2Coory, line2CoorX1+fontPending, line2Coory);    // 用于放 步数和热量
+        // Sys.println("line2CoorX:"+line2CoorX+",line2Coory:"+line2Coory+"line2CoorX1:"+line2CoorX1);
+
+
+        var subDistance = centerY - r;
+
+
         // 绘制圆弧
         // 绘制十字线标记中心
-        dc.drawLine(0, centerY, dc.getWidth(), centerY); // 水平线
-        dc.drawLine(centerX, 0, centerX, dc.getHeight()); // 垂直线
+        // dc.drawLine(0, centerY, dc.getWidth(), centerY); // 水平线
+        // dc.drawLine(0, 0.3*centerY, dc.getWidth(), 0.3*centerY);
+        // dc.drawLine(0, 0.3*centerY, dc.getWidth(), 0.3*centerY);
+
+        // dc.drawLine(centerX, 0, centerX, dc.getHeight()); // 垂直线
+
+
     }
 
     public function drawArc(dc as Dc) as Void {
@@ -80,10 +136,9 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
 
     }
 
-    public function drawText(dc as Dc) as Void {
+    public function drawText(dc as Dc) {
         var smallDigitalFont = WatchUi.loadResource(Rez.Fonts.smadigi);
         dc.drawText(centerX,centerY,smallDigitalFont,"QWER",Graphics.TEXT_JUSTIFY_CENTER);
-
     }
 
     public function dtrawIcon(dc as Dc) {
