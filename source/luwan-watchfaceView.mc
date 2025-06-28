@@ -49,30 +49,37 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         drawLine(dc);
         // drawCicle(dc);
         
-        // dc.drawLine(0, centerY, dc.getWidth()*0.2, centerY); // 水平线
 
-        dc.drawLine(centerX-55,arcPendWidth,centerX-55,dc.getHeight()-arcPendWidth);
 
         var luwanPic = WatchUi.loadResource(Rez.Drawables.luwanJPG);
         dc.drawBitmap(centerX-50,centerY-50,luwanPic);
 
-        
+        textIcon(dc, centerX-30, centerY-20, "s");
 
     }
+
+    function textIcon(dc, x, y, string) as Void {
+        var font = WatchUi.loadResource(Rez.Fonts.IconsFont);
+        dc.drawText(x, y, font, string, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+  }
 
 
     public function drawArcPenWidth(dc as Dc) {
         dc.setColor(Graphics.COLOR_DK_GRAY,Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(arcPendWidth);
+        // 上
         dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,arcSpacing + arcSpacingOffset,90 + arcSpacing - arcSpacingOffset);
+        // 左
         dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,90 + arcSpacing + arcSpacingOffset,180 + arcSpacing - arcSpacingOffset);
+        // 下
         dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,180 + arcSpacing + arcSpacingOffset,270 + arcSpacing - arcSpacingOffset);
+        // 右
         dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,270 + arcSpacing + arcSpacingOffset,360 + arcSpacing - arcSpacingOffset);
     
         // var radians = Math.toRadians(arcSpacing);
         // Sys.println("radians:"+radians);
         // var high = Math.sin(radians) * r;
-        // var smallDigitalFont = WatchUi.loadResource(Rez.Fonts.smadigi);
+        // var smallDigitalFont = WatchUi.loadResource(Rez.Fonts.xbigdigigarmin);
         // dc.drawText(centerX + r - fontPending,centerY+high/2,smallDigitalFont,"0",Graphics.TEXT_JUSTIFY_CENTER);
         // dc.drawText(0,0,smallDigitalFont,"100",Graphics.TEXT_JUSTIFY_CENTER);
 
@@ -82,38 +89,81 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
     public function drawLine(dc as Dc) as Void {
         dc.setPenWidth(2);
 
-        var lineDegress = -(arcSpacing+arcSpacingOffset);
-        var line1Degress = lineDegress - 180;
         var radiansUtils = new RadiansUtils();
-        var topLineCoorOneX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(lineDegress),r);
-        var topLineCoorOney = radiansUtils.convertCoorY(radiansUtils.degreesToRadians(lineDegress),r);
-        var topLineCoorTwoX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(line1Degress),r);
-        dc.drawLine(topLineCoorOneX-fontPending, topLineCoorOney, topLineCoorTwoX+fontPending, topLineCoorOney);    // 用于放 步数和热量
-        Sys.println("topLineCoorOneX:"+topLineCoorOneX+",topLineCoorOney:"+topLineCoorOney+"topLineCoorTwoX:"+topLineCoorTwoX);
+        // 右上角的 x、y 坐标值
+        var topDegress = radiansUtils.degreesToRadians(-45);
+        var upperRightX = radiansUtils.convertCoorX(topDegress,r);
+        var upperRightY = radiansUtils.convertCoorY(topDegress,r);
+        // 左上角的 x、y 坐标值
+        var upperLeftAngle = radiansUtils.degreesToRadians(-135);
+        var upperLeftX = radiansUtils.convertCoorX(upperLeftAngle,r);
+        var upperLeftY = radiansUtils.convertCoorY(upperLeftAngle,r);
+        // 右下角的 x、y 坐标值
+        var lowerRightAngle = radiansUtils.degreesToRadians(45);
+        var lowerRightX = radiansUtils.convertCoorX(lowerRightAngle,r);
+        var lowerRightY = radiansUtils.convertCoorY(lowerRightAngle,r);
+        // 左下角的 x、y 坐标值
+        var lowerLeftAngle = radiansUtils.degreesToRadians(135);
+        var lowerLeftX = radiansUtils.convertCoorX(lowerLeftAngle,r);
+        var lowerLeftY = radiansUtils.convertCoorY(lowerLeftAngle,r);
 
-        var bottomLineCoorOneX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(-lineDegress),r);
-        var bottomLineCoorOney = radiansUtils.convertCoorY(radiansUtils.degreesToRadians(-lineDegress),r);
-        var bottomLineCoorTwoX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(-line1Degress),r);
-        dc.drawLine(bottomLineCoorOneX-fontPending, bottomLineCoorOney, bottomLineCoorTwoX+fontPending, bottomLineCoorOney);    // 用于放 步数和热量
-        Sys.println("bottomLineCoorOneX:"+bottomLineCoorOneX+",bottomLineCoorOney:"+bottomLineCoorOney+"bottomLineCoorTwoX:"+bottomLineCoorTwoX);
+        // x、y 的中间点偏移量
+        var centerYOffset = (centerY - upperLeftY) / 2;
+        var centerXOffset = (centerX - upperLeftX) / 2;
 
-        // var line2CoorX = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(-30),r);
-        // var line2Coory = radiansUtils.convertCoorY(radiansUtils.degreesToRadians(-30),r);
-        // var line2CoorX1 = radiansUtils.convertCoorX(radiansUtils.degreesToRadians(-150),r);
-        // dc.drawLine(line2CoorX-fontPending, line2Coory, line2CoorX1+fontPending, line2Coory);    // 用于放 步数和热量
-        // Sys.println("line2CoorX:"+line2CoorX+",line2Coory:"+line2Coory+"line2CoorX1:"+line2CoorX1);
+        // 左 上中点的 x、y 坐标值
+        var leftUpperCenterX = upperLeftX;
+        var leftUpperCenterY = upperLeftY + centerYOffset;
+        // 右 上中点的 x、y 坐标值
+        var rightUpperCenterX = upperRightX;
+        var rightUpperCenterY = upperRightY + centerYOffset;
+
+        // 左 下中点的 x、y 坐标值
+        var leftLowerCenterX = upperLeftX;
+        var leftLowerCenterY = centerY + centerYOffset;
+        // 右 下中点的 x、y 坐标值
+        var rightLowerCenterX = upperRightX;
+        var rightLowerCenterY = leftLowerCenterY;
+
+        // 上 左中点的 x、y 坐标值
+        var upperLeftCenterX = centerX - centerXOffset;
+        var upperLeftCenterY = upperLeftY;
+        // 下 左中点的 x、y 坐标值
+        var lowerLeftCenterX = upperLeftCenterX;
+        var lowerLeftCenterY = lowerLeftY;
+
+        // 上 右中的 x、y 坐标值
+        var upperRightCenterX = centerX + centerXOffset;
+        var upperRightCenterY = upperRightY;
+        // 下 右中的 x、y 坐标值
+        var lowerRightCenterX = upperRightCenterX;
+        var lowerRightCenterY = lowerRightY;
 
 
-        var subDistance = centerY - r;
+
+        // 中水平线
+        dc.drawLine(upperLeftX, centerY, upperRightX, centerY);
+        // 中垂直线
+        dc.drawLine(centerX, upperRightY-centerYOffset, centerX, lowerRightY);
+        // 上水平线
+        dc.drawLine(upperRightX,upperRightY,upperLeftX,upperLeftY);
+        // 下水平线
+        dc.drawLine(lowerRightX,lowerRightY,lowerLeftX,lowerLeftY);
+        // 右垂直线
+        dc.drawLine(upperRightX,upperRightY,lowerRightX,lowerRightY);
+        // 左垂直线
+        dc.drawLine(upperLeftX,upperLeftY,lowerLeftX,lowerLeftY);
+        // 上与中水平线
+        dc.drawLine(leftUpperCenterX,leftUpperCenterY,rightUpperCenterX,rightUpperCenterY);
+        // 中与下水平线
+        dc.drawLine(leftLowerCenterX,leftLowerCenterY,rightLowerCenterX,rightLowerCenterY);
+        // 左与中垂直线
+        dc.drawLine(upperLeftCenterX,upperLeftCenterY,lowerLeftCenterX,lowerLeftCenterY);
+        // 右与中垂直线
+        dc.drawLine(upperRightCenterX,upperRightCenterY,lowerRightCenterX,lowerRightCenterY);
 
 
-        // 绘制圆弧
-        // 绘制十字线标记中心
-        // dc.drawLine(0, centerY, dc.getWidth(), centerY); // 水平线
-        // dc.drawLine(0, 0.3*centerY, dc.getWidth(), 0.3*centerY);
-        // dc.drawLine(0, 0.3*centerY, dc.getWidth(), 0.3*centerY);
-
-        // dc.drawLine(centerX, 0, centerX, dc.getHeight()); // 垂直线
+        Sys.println("r:"+r+"centerXOffset:"+centerXOffset+",centerYOffset:"+centerYOffset);
 
 
     }
@@ -137,14 +187,14 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
     }
 
     public function drawText(dc as Dc) {
-        var smallDigitalFont = WatchUi.loadResource(Rez.Fonts.smadigi);
-        dc.drawText(centerX,centerY,smallDigitalFont,"QWER",Graphics.TEXT_JUSTIFY_CENTER);
+        // var smallDigitalFont = WatchUi.loadResource(Rez.Fonts.smadigi);
+        // dc.drawText(centerX,centerY,smallDigitalFont,"QWER",Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     public function dtrawIcon(dc as Dc) {
-        var weatherFont = WatchUi.loadResource(Rez.Fonts.weather);
-        var icon = "";
-        dc.drawText(centerX, centerY+50, weatherFont,icon, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+        // var weatherFont = WatchUi.loadResource(Rez.Fonts.weather);
+        // var icon = "";
+        // dc.drawText(centerX, centerY+50, weatherFont,icon, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     		
     }
 
