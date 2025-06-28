@@ -11,6 +11,9 @@ var fontPending = 5;    // 宽度
 var arcPendWidth = 8;    // 宽度
 var arcSpacingOffset = 10;  // 圆弧角度偏移量
 
+// 刻度长度
+var secondScaleLineLength = 5;
+
 
 class luwan_watchfaceApp extends Application.AppBase {
 

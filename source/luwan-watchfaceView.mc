@@ -7,6 +7,7 @@ import Toybox.WatchUi;
 using Toybox.System as Sys;
 using Toybox.Time.Gregorian as Date;
 
+
 class luwan_watch_faceView extends WatchUi.WatchFace {
 
 
@@ -33,30 +34,93 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         // 取x与y的中心点
         centerX = dc.getWidth() / 2;
         centerY = dc.getHeight() / 2;
-        r = 0.95*centerX;
+        r = centerX;
 
 
         // 画下四周的圆弧
         drawArcPenWidth(dc);
         
 
-        System.println("centerX:" + centerX);
-        System.println("centerY:" + centerY);
+        System.println("centerX:" + centerX + "centerY:"+centerY);
 
 
-        // drawLine(dc);
-        // drawArc(dc);
         drawLine(dc);
-        // drawCicle(dc);
-        
+        drawSecondScale(dc);
+        // drawDataField(dc);
 
 
         var luwanPic = WatchUi.loadResource(Rez.Drawables.luwanJPG);
         dc.drawBitmap(centerX-50,centerY-50,luwanPic);
 
-        textIcon(dc, centerX-30, centerY-20, "s");
+        
+        textIcon(dc, centerX-30, centerY-20, "m");
+    }
+
+    public function drawDataField(dc as Dc) {
+        // 绘制电池
+        
+        var dataFieldIcons = new DataFieldIcons();
+        dataFieldIcons.drawBattery(dc,centerX-30,centerY-20,10,10,10);
+    }
+
+    function drawSecondScale(dc as Dc) {
+        // 刻度数量
+        var secondScale = 60;
+        // 起始弧度
+        var startDegress = 0;
+        // 刻度值
+        var secondValue = 15;
+
+        // 刻度值字体
+        var scaleFont = WatchUi.loadResource(Rez.Fonts.MeridiemFont);
+        var radiansUtils = new RadiansUtils();
+        for (var index = 0; index < secondScale; index++) {
+            var scaleR = secondValue % 5 == 0 ? 0.98 * r : r;
+            var radians = radiansUtils.degreesToRadians(startDegress);
+
+            var outerRingX = radiansUtils.convertCoorX(radians,scaleR);
+            var outerRingY = radiansUtils.convertCoorY(radians,scaleR);
+
+            var interRingX = radiansUtils.convertCoorX(radians,scaleR-secondScaleLineLength);
+            var interRingY = radiansUtils.convertCoorY(radians,scaleR-secondScaleLineLength);
+            // 绘制刻度
+            if(secondValue % 5 != 0){
+                var lineScaleColor = Graphics.createColor(255,50,50,50);
+                dc.setColor(lineScaleColor,Graphics.COLOR_TRANSPARENT);
+                dc.drawLine(outerRingX,outerRingY,interRingX,interRingY);
+            } else {
+                // 绘制文本 
+                if (Graphics.Dc has :getVectorFont){
+                    drawSecondText(secondValue,radians,dc);
+                } else {
+                    var textX = (outerRingX + interRingX) / 2;
+                    var textY = (outerRingY + interRingY) / 2 ;
+                    dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+                    dc.drawText(textX,textY,scaleFont,secondValue,Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                }
+            }
+
+              
+            secondValue++;
+            secondValue = secondValue % 60;
+            startDegress += 6;
+        }
+    }
+
+
+
+    public function drawSecondText(secondValue,angle,dc as Dc) as Void {
+        var font = Graphics.getVectorFont({
+                :face => ["RobotoCondensedBold"],
+                :size => 10.0
+        });
+        // var font = WatchUi.loadResource(Rez.Fonts.IconsFont);
+        // dc.drawRadialText(centerX,centerY,font,"test",Graphics.TEXT_JUSTIFY_LEFT,30,0.8*centerX,Graphics.RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE); // 反方向
+        dc.drawRadialText(centerX,centerY,font,secondValue.toString(),Graphics.TEXT_JUSTIFY_CENTER,angle,r,Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE);  // 正方向
 
     }
+
+
 
     function textIcon(dc, x, y, string) as Void {
         var font = WatchUi.loadResource(Rez.Fonts.IconsFont);
@@ -67,22 +131,16 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
     public function drawArcPenWidth(dc as Dc) {
         dc.setColor(Graphics.COLOR_DK_GRAY,Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(arcPendWidth);
-        // 上
-        dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,arcSpacing + arcSpacingOffset,90 + arcSpacing - arcSpacingOffset);
-        // 左
-        dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,90 + arcSpacing + arcSpacingOffset,180 + arcSpacing - arcSpacingOffset);
-        // 下
-        dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,180 + arcSpacing + arcSpacingOffset,270 + arcSpacing - arcSpacingOffset);
-        // 右
-        dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,270 + arcSpacing + arcSpacingOffset,360 + arcSpacing - arcSpacingOffset);
-    
-        // var radians = Math.toRadians(arcSpacing);
-        // Sys.println("radians:"+radians);
-        // var high = Math.sin(radians) * r;
-        // var smallDigitalFont = WatchUi.loadResource(Rez.Fonts.xbigdigigarmin);
-        // dc.drawText(centerX + r - fontPending,centerY+high/2,smallDigitalFont,"0",Graphics.TEXT_JUSTIFY_CENTER);
-        // dc.drawText(0,0,smallDigitalFont,"100",Graphics.TEXT_JUSTIFY_CENTER);
 
+        var arcR = r-secondScaleLineLength-arcPendWidth - 5;
+        // 上
+        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,arcSpacing + arcSpacingOffset,90 + arcSpacing - arcSpacingOffset);
+        // 左
+        // dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,90 + arcSpacing + arcSpacingOffset,180 + arcSpacing - arcSpacingOffset);
+        // 下
+        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,180 + arcSpacing + arcSpacingOffset,270 + arcSpacing - arcSpacingOffset);
+        // 右
+        // dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,270 + arcSpacing + arcSpacingOffset,360 + arcSpacing - arcSpacingOffset);
     }
 
 
@@ -144,15 +202,15 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         // 中水平线
         dc.drawLine(upperLeftX, centerY, upperRightX, centerY);
         // 中垂直线
-        dc.drawLine(centerX, upperRightY-centerYOffset, centerX, lowerRightY);
+        dc.drawLine(centerX, upperRightY, centerX, lowerRightY);
         // 上水平线
-        dc.drawLine(upperRightX,upperRightY,upperLeftX,upperLeftY);
+        // dc.drawLine(upperRightX,upperRightY,upperLeftX,upperLeftY);
         // 下水平线
-        dc.drawLine(lowerRightX,lowerRightY,lowerLeftX,lowerLeftY);
+        // dc.drawLine(lowerRightX,lowerRightY,lowerLeftX,lowerLeftY);
         // 右垂直线
-        dc.drawLine(upperRightX,upperRightY,lowerRightX,lowerRightY);
+        // dc.drawLine(upperRightX,upperRightY,lowerRightX,lowerRightY);
         // 左垂直线
-        dc.drawLine(upperLeftX,upperLeftY,lowerLeftX,lowerLeftY);
+        // dc.drawLine(upperLeftX,upperLeftY,lowerLeftX,lowerLeftY);
         // 上与中水平线
         dc.drawLine(leftUpperCenterX,leftUpperCenterY,rightUpperCenterX,rightUpperCenterY);
         // 中与下水平线
