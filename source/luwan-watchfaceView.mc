@@ -10,9 +10,6 @@ using Toybox.Time.Gregorian as Date;
 
 class luwan_watch_faceView extends WatchUi.WatchFace {
 
-
-    var luwan_draw;
-
     function initialize() {
         WatchFace.initialize();
     }
@@ -46,21 +43,62 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
 
         drawLine(dc);
         drawSecondScale(dc);
-        // drawDataField(dc);
+        drawDataField(dc);
 
 
         var luwanPic = WatchUi.loadResource(Rez.Drawables.luwanJPG);
         dc.drawBitmap(centerX-50,centerY-50,luwanPic);
 
         
-        textIcon(dc, centerX-30, centerY-20, "m");
     }
 
     public function drawDataField(dc as Dc) {
+        var dataFieldInfo = new DataFieldInfo();
+
         // 绘制电池
+        drawBattery(dc,dataFieldInfo);
+
+        // 绘制蓝牙
+        drawBluetoothConnection(dc);
+        // 绘制步数
+
         
+    }
+
+    function drawBluetoothConnection(dc as Dc) {
         var dataFieldIcons = new DataFieldIcons();
-        dataFieldIcons.drawBattery(dc,centerX-30,centerY-20,10,10,10);
+
+        var bluetoothX = secondScaleLineLength + arcPendWidth + 10;
+        var bluetoothY = centerY - 20;
+
+        if (Sys.getDeviceSettings().phoneConnected){
+            dc.setColor(Graphics.COLOR_BLUE,Graphics.COLOR_TRANSPARENT);
+            dataFieldIcons.drawBluetoothConnection(dc,bluetoothX+10,bluetoothY,10);
+        } else {
+            dataFieldIcons.drawNoBluetoothConnection(dc,bluetoothX+10,bluetoothY,10);
+        }
+
+    }
+
+    // 绘制电池
+    function drawBattery(dc as Dc,dataFieldInfo){
+        var dataFieldIcons = new DataFieldIcons();
+        dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+
+        var statsCharging = dataFieldInfo.getStatsCharging();
+        var currentBattery = dataFieldInfo.getBattery();
+
+        if (statsCharging) {
+            dataFieldIcons.drawBatteryLoading(dc,centerX-20,secondScaleLineLength + arcPendWidth + 20 ,10);
+        } else {
+            if (currentBattery >= 90) {
+                dataFieldIcons.drawBatteryFull(dc,centerX-20,secondScaleLineLength + arcPendWidth + 20 ,10);
+            } else if (currentBattery > 30 && currentBattery < 90) {
+                dataFieldIcons.drawBattery(dc,centerX-20,secondScaleLineLength + arcPendWidth + 20,10);
+            } else if (currentBattery <= 30) {
+                dataFieldIcons.drawBatteryLow(dc,centerX-20,secondScaleLineLength + arcPendWidth + 20 ,10);
+            }
+        }
     }
 
     function drawSecondScale(dc as Dc) {
@@ -102,7 +140,7 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
 
               
             secondValue++;
-            secondValue = secondValue % 60;
+            secondValue = secondValue > 60 ? secondValue % 60 : secondValue;
             startDegress += 6;
         }
     }
@@ -133,20 +171,26 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         dc.setPenWidth(arcPendWidth);
 
         var arcR = r-secondScaleLineLength-arcPendWidth - 5;
+        var upperStartAngle = arcSpacing + arcSpacingOffset;
+        var upperEndAngle = 90 + arcSpacing - arcSpacingOffset;
         // 上
-        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,arcSpacing + arcSpacingOffset,90 + arcSpacing - arcSpacingOffset);
+        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,upperStartAngle,upperEndAngle);
         // 左
         // dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,90 + arcSpacing + arcSpacingOffset,180 + arcSpacing - arcSpacingOffset);
         // 下
         dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,180 + arcSpacing + arcSpacingOffset,270 + arcSpacing - arcSpacingOffset);
         // 右
         // dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,270 + arcSpacing + arcSpacingOffset,360 + arcSpacing - arcSpacingOffset);
+
+        dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
+        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,(upperStartAngle + upperEndAngle) / 2,upperEndAngle);
+
     }
 
 
     public function drawLine(dc as Dc) as Void {
-        dc.setPenWidth(2);
-
+        dc.setPenWidth(1);
+        dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
         var radiansUtils = new RadiansUtils();
         // 右上角的 x、y 坐标值
         var topDegress = radiansUtils.degreesToRadians(-45);
