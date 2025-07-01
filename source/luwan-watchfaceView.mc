@@ -40,6 +40,8 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
 
         System.println("centerX:" + centerX + "centerY:"+centerY);
 
+        dc.setColor(Graphics.COLOR_BLUE,Graphics.COLOR_BLUE);
+        dc.fillRectangle(centerX,centerY,10,10);
 
         drawLine(dc);
         drawSecondScale(dc);
@@ -49,7 +51,9 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         var luwanPic = WatchUi.loadResource(Rez.Drawables.luwanJPG);
         dc.drawBitmap(centerX-50,centerY-50,luwanPic);
 
-        
+        // var bluetooth = WatchUi.loadResource(Rez.Drawables.bluetooth);
+        // dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_WHITE);
+        // dc.drawBitmap(centerX-80,centerY-80,bluetooth);
     }
 
     public function drawDataField(dc as Dc) {
