@@ -1,0 +1,1537 @@
+[ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [luwanJPG,9,27,35]; @symbol_type<0> = [ResourceId,9,39,49]; ]
+        var luwanJPG as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 10; @position = 27; initialized = true; @symbol_vardef = [id_charge,10,27,36]; @symbol_type<0> = [ResourceId,10,40,50]; ]
+        var id_charge as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 11; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,11,27,39]; @symbol_type<0> = [ResourceId,11,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 14; @symbol_moduledef = [Fonts,14,11,16]; ]
+    module Fonts {
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 14; ]
+        <init> {
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; @symbol_vardef = [IconsFont,15,27,36]; @symbol_type<0> = [ResourceId,15,40,50]; ]
+        var IconsFont as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 16; @position = 27; initialized = true; @symbol_vardef = [HoursFont,16,27,36]; @symbol_type<0> = [ResourceId,16,40,50]; ]
+        var HoursFont as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; @symbol_vardef = [MinutesFont,17,27,38]; @symbol_type<0> = [ResourceId,17,42,52]; ]
+        var MinutesFont as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; @symbol_vardef = [DateFont,18,27,35]; @symbol_type<0> = [ResourceId,18,39,49]; ]
+        var DateFont as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 19; @position = 27; initialized = true; @symbol_vardef = [PrimaryIndicatorFont,19,27,47]; @symbol_type<0> = [ResourceId,19,51,61]; ]
+        var PrimaryIndicatorFont as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 20; @position = 27; initialized = true; @symbol_vardef = [SecondaryIndicatorFont,20,27,49]; @symbol_type<0> = [ResourceId,20,53,63]; ]
+        var SecondaryIndicatorFont as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 21; @position = 27; initialized = true; @symbol_vardef = [MeridiemFont,21,27,39]; @symbol_type<0> = [ResourceId,21,43,53]; ]
+        var MeridiemFont as ResourceId;
+    }
+    [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 24; @symbol_moduledef = [JsonData,24,11,19]; ]
+    module JsonData {
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 25; @position = 27; initialized = true; @symbol_vardef = [hour_1_data,25,27,38]; @symbol_type<0> = [ResourceId,25,42,52]; ]
+        var hour_1_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 26; @position = 27; initialized = true; @symbol_vardef = [hour_2_data,26,27,38]; @symbol_type<0> = [ResourceId,26,42,52]; ]
+        var hour_2_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 27; @position = 27; initialized = true; @symbol_vardef = [hour_3_data,27,27,38]; @symbol_type<0> = [ResourceId,27,42,52]; ]
+        var hour_3_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 28; @position = 27; initialized = true; @symbol_vardef = [hour_4_data,28,27,38]; @symbol_type<0> = [ResourceId,28,42,52]; ]
+        var hour_4_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 29; @position = 27; initialized = true; @symbol_vardef = [hour_5_data,29,27,38]; @symbol_type<0> = [ResourceId,29,42,52]; ]
+        var hour_5_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 30; @position = 27; initialized = true; @symbol_vardef = [hour_6_data,30,27,38]; @symbol_type<0> = [ResourceId,30,42,52]; ]
+        var hour_6_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 31; @position = 27; initialized = true; @symbol_vardef = [minu_1_data,31,27,38]; @symbol_type<0> = [ResourceId,31,42,52]; ]
+        var minu_1_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 32; @position = 27; initialized = true; @symbol_vardef = [minu_2_data,32,27,38]; @symbol_type<0> = [ResourceId,32,42,52]; ]
+        var minu_2_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 33; @position = 27; initialized = true; @symbol_vardef = [minu_3_data,33,27,38]; @symbol_type<0> = [ResourceId,33,42,52]; ]
+        var minu_3_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; @symbol_vardef = [minu_4_data,34,27,38]; @symbol_type<0> = [ResourceId,34,42,52]; ]
+        var minu_4_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; @symbol_vardef = [minu_5_data,35,27,38]; @symbol_type<0> = [ResourceId,35,42,52]; ]
+        var minu_5_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; @symbol_vardef = [minu_6_data,36,27,38]; @symbol_type<0> = [ResourceId,36,42,52]; ]
+        var minu_6_data as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 37; @position = 27; initialized = true; @symbol_vardef = [bar_font_bottom,37,27,42]; @symbol_type<0> = [ResourceId,37,46,56]; ]
+        var bar_font_bottom as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 38; @position = 27; initialized = true; @symbol_vardef = [bar_pos_bottom,38,27,41]; @symbol_type<0> = [ResourceId,38,45,55]; ]
+        var bar_pos_bottom as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 39; @position = 27; initialized = true; @symbol_vardef = [bar_font_top,39,27,39]; @symbol_type<0> = [ResourceId,39,43,53]; ]
+        var bar_font_top as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 40; @position = 27; initialized = true; @symbol_vardef = [bar_pos_top,40,27,38]; @symbol_type<0> = [ResourceId,40,42,52]; ]
+        var bar_pos_top as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 41; @position = 27; initialized = true; @symbol_vardef = [theme_pallete,41,27,40]; @symbol_type<0> = [ResourceId,41,44,54]; ]
+        var theme_pallete as ResourceId;
+    }
+    [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 44; @symbol_moduledef = [Layouts,44,11,18]; ]
+    module Layouts {
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 44; ]
+        <init> {
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 45; @symbol_functiondef = [WatchFace,45,17,26]; @symbol_param<0> = [dc,45,27,29]; @symbol_param<0>_type<0> = [Graphics,45,33,41]; @symbol_param<0>_type<1> = [Dc,45,42,44]; @symbol_return<0> = [Array,45,49,54]; @symbol_return<1> = [WatchUi,45,55,62]; @symbol_return<2> = [Drawable,45,63,71]; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+d_monkeyC_proj_work_space_luwan_watchface_bin_gen_006_B3992_00_source_Rez_mcgen_45_73_47_8_start:
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 46 12 ]
+            %tmp.1 = newa 0 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.1 46 25 30 ];
+            symbol [ WatchUi %tmp.1 46 31 38 ];
+            symbol [ Drawable %tmp.1 46 39 47 ];
+            ret %tmp.1;
+d_monkeyC_proj_work_space_luwan_watchface_bin_gen_006_B3992_00_source_Rez_mcgen_45_73_47_8_stop:
+        }
+    }
+    [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 50; @symbol_moduledef = [Strings,50,11,18]; ]
+    module Strings {
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 50; ]
+        <init> {
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 51; @position = 27; initialized = true; @symbol_vardef = [ColorLightGray,51,27,41]; @symbol_type<0> = [ResourceId,51,45,55]; ]
+        var ColorLightGray as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 52; @position = 27; initialized = true; @symbol_vardef = [ColorBlue,52,27,36]; @symbol_type<0> = [ResourceId,52,40,50]; ]
+        var ColorBlue as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 53; @position = 27; initialized = true; @symbol_vardef = [ColorRed,53,27,35]; @symbol_type<0> = [ResourceId,53,39,49]; ]
+        var ColorRed as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 54; @position = 27; initialized = true; @symbol_vardef = [ForegroundColorTitle,54,27,47]; @symbol_type<0> = [ResourceId,54,51,61]; ]
+        var ForegroundColorTitle as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 55; @position = 27; initialized = true; @symbol_vardef = [BackgroundColorTitle,55,27,47]; @symbol_type<0> = [ResourceId,55,51,61]; ]
+        var BackgroundColorTitle as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 56; @position = 27; initialized = true; @symbol_vardef = [ColorDarkGray,56,27,40]; @symbol_type<0> = [ResourceId,56,44,54]; ]
+        var ColorDarkGray as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 57; @position = 27; initialized = true; @symbol_vardef = [MilitaryFormatTitle,57,27,46]; @symbol_type<0> = [ResourceId,57,50,60]; ]
+        var MilitaryFormatTitle as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 58; @position = 27; initialized = true; @symbol_vardef = [ColorBlack,58,27,37]; @symbol_type<0> = [ResourceId,58,41,51]; ]
+        var ColorBlack as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 59; @position = 27; initialized = true; @symbol_vardef = [ColorWhite,59,27,37]; @symbol_type<0> = [ResourceId,59,41,51]; ]
+        var ColorWhite as ResourceId;
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 60; @position = 27; initialized = true; @symbol_vardef = [AppName,60,27,34]; @symbol_type<0> = [ResourceId,60,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 63; @symbol_moduledef = [Styles,63,11,17]; ]
+    module Styles {
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 63; ]
+        <init> {
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 64; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,64,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 64; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 65; @position = 18; @symbol_constdef = [exclude,65,18,25]; @symbol_type<0> = [Boolean,65,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 68; @symbol_moduledef = [system_size__menu_header,68,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 68; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 69; @position = 18; @symbol_constdef = [width,69,18,23]; @symbol_type<0> = [Number,69,27,33]; ]
+            const width as Number = 260;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 70; @position = 18; @symbol_constdef = [height,70,18,24]; @symbol_type<0> = [Number,70,28,34]; ]
+            const height as Number = 81;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 73; @symbol_moduledef = [system_loc__hint_button_left_bottom,73,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 73; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 74; @position = 18; @symbol_constdef = [x,74,18,19]; @symbol_type<0> = [Number,74,23,29]; ]
+            const x as Number = 10;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [y,75,18,19]; @symbol_type<0> = [Number,75,23,29]; ]
+            const y as Number = 173;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 78; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,78,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 78; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [exclude,79,18,25]; @symbol_type<0> = [Boolean,79,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 82; @symbol_moduledef = [prompt_loc__body_no_title,82,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 82; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [x,83,18,19]; @symbol_type<0> = [Number,83,23,29]; ]
+            const x as Number = 26;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [y,84,18,19]; @symbol_type<0> = [Number,84,23,29]; ]
+            const y as Number = 26;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 87; @symbol_moduledef = [system_icon_dark__about,87,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 87; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [filename,88,18,26]; @symbol_type<0> = [String,88,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__about.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [compress,89,18,26]; @symbol_type<0> = [String,89,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 90; @position = 18; @symbol_constdef = [dithering,90,18,27]; @symbol_type<0> = [String,90,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 91; @position = 18; @symbol_constdef = [automaticPalette,91,18,34]; @symbol_type<0> = [String,91,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 94; @symbol_moduledef = [system_icon_light__question,94,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 94; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [filename,95,18,26]; @symbol_type<0> = [String,95,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__question.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 96; @position = 18; @symbol_constdef = [dithering,96,18,27]; @symbol_type<0> = [String,96,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 99; @symbol_moduledef = [system_loc__hint_button_left_top,99,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 99; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [exclude,100,18,25]; @symbol_type<0> = [Boolean,100,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 103; @symbol_moduledef = [prompt_font__title,103,15,33]; ]
+        module prompt_font__title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 103; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 104 18 ]
+                symbol [ Graphics %tmp.2 104 34 42 ];
+                %tmp.2 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.3 104 43 62 ];
+                %tmp.3 = getv %tmp.2 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.4 104 63 71 ];
+                %tmp.4 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.5 104 72 92 ];
+                %tmp.5 = getv %tmp.4 :TEXT_JUSTIFY_VCENTER;
+                %tmp.6 = bitor %tmp.3 %tmp.5;
+                putv self :justification %tmp.6;
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 105 18 ]
+                symbol [ Graphics %tmp.7 105 25 33 ];
+                %tmp.7 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.8 105 34 44 ];
+                %tmp.8 = getv %tmp.7 :FONT_XTINY;
+                putv self :font %tmp.8;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 104; @position = 18; @symbol_constdef = [justification,104,18,31]; ]
+            const justification;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 105; @position = 18; @symbol_constdef = [font,105,18,22]; ]
+            const font;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 108; @symbol_moduledef = [system_icon_dark__discard,108,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 108; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 109; @position = 18; @symbol_constdef = [filename,109,18,26]; @symbol_type<0> = [String,109,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__discard.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 110; @position = 18; @symbol_constdef = [compress,110,18,26]; @symbol_type<0> = [String,110,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 111; @position = 18; @symbol_constdef = [dithering,111,18,27]; @symbol_type<0> = [String,111,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 112; @position = 18; @symbol_constdef = [automaticPalette,112,18,34]; @symbol_type<0> = [String,112,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 115; @symbol_moduledef = [system_size__menu_item,115,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 115; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [width,116,18,23]; @symbol_type<0> = [Number,116,27,33]; ]
+            const width as Number = 260;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 117; @position = 18; @symbol_constdef = [height,117,18,24]; @symbol_type<0> = [Number,117,28,34]; ]
+            const height as Number = 68;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 120; @symbol_moduledef = [system_color_dark__text,120,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 120; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 122 18 ]
+                symbol [ Graphics %tmp.9 122 31 39 ];
+                %tmp.9 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.10 122 40 57 ];
+                %tmp.10 = getv %tmp.9 :COLOR_TRANSPARENT;
+                putv self :background %tmp.10;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 121; @position = 18; @symbol_constdef = [color,121,18,23]; @symbol_type<0> = [Number,121,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 122; @position = 18; @symbol_constdef = [background,122,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 125; @symbol_moduledef = [system_icon_destructive__discard,125,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 125; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 126; @position = 18; @symbol_constdef = [filename,126,18,26]; @symbol_type<0> = [String,126,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__discard.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 127; @position = 18; @symbol_constdef = [dithering,127,18,27]; @symbol_type<0> = [String,127,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 130; @symbol_moduledef = [system_icon_dark__hint_action_menu,130,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 130; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 131; @position = 18; @symbol_constdef = [filename,131,18,26]; @symbol_type<0> = [String,131,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 132; @position = 18; @symbol_constdef = [dithering,132,18,27]; @symbol_type<0> = [String,132,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 135; @symbol_moduledef = [prompt_size__title,135,15,33]; ]
+        module prompt_size__title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 135; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 136; @position = 18; @symbol_constdef = [width,136,18,23]; @symbol_type<0> = [Number,136,27,33]; ]
+            const width as Number = 208;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 137; @position = 18; @symbol_constdef = [height,137,18,24]; @symbol_type<0> = [Number,137,28,34]; ]
+            const height as Number = 48;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 140; @symbol_moduledef = [confirmation_font__body,140,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 140; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 141 18 ]
+                symbol [ Graphics %tmp.11 141 34 42 ];
+                %tmp.11 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.12 141 43 62 ];
+                %tmp.12 = getv %tmp.11 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.13 141 63 71 ];
+                %tmp.13 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.14 141 72 92 ];
+                %tmp.14 = getv %tmp.13 :TEXT_JUSTIFY_VCENTER;
+                %tmp.15 = bitor %tmp.12 %tmp.14;
+                putv self :justification %tmp.15;
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 142 18 ]
+                symbol [ Graphics %tmp.16 142 25 33 ];
+                %tmp.16 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.17 142 34 43 ];
+                %tmp.17 = getv %tmp.16 :FONT_TINY;
+                putv self :font %tmp.17;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 141; @position = 18; @symbol_constdef = [justification,141,18,31]; ]
+            const justification;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [font,142,18,22]; ]
+            const font;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 145; @symbol_moduledef = [system_color_dark__background,145,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 145; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 146; @position = 18; @symbol_constdef = [color,146,18,23]; @symbol_type<0> = [Number,146,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [background,147,18,28]; @symbol_type<0> = [Number,147,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 150; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,150,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 150; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 151; @position = 18; @symbol_constdef = [filename,151,18,26]; @symbol_type<0> = [String,151,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__hint_button_left_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 152; @position = 18; @symbol_constdef = [dithering,152,18,27]; @symbol_type<0> = [String,152,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 155; @symbol_moduledef = [system_size__launch_icon,155,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 155; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 156; @position = 18; @symbol_constdef = [scaleX,156,18,24]; @symbol_type<0> = [Number,156,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 157; @position = 18; @symbol_constdef = [scaleY,157,18,24]; @symbol_type<0> = [Number,157,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [scaleRelativeTo,158,18,33]; @symbol_type<0> = [String,158,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 161; @symbol_moduledef = [confirmation_input__confirm,161,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 161; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 162 18 ]
+                symbol [ WatchUi %tmp.18 162 27 34 ];
+                %tmp.18 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.19 162 35 44 ];
+                %tmp.19 = getv %tmp.18 :KEY_ENTER;
+                putv self :button %tmp.19;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 162; @position = 18; @symbol_constdef = [button,162,18,24]; ]
+            const button;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 165; @symbol_moduledef = [prompt_font__body_with_title,165,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 165; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 166 18 ]
+                symbol [ Graphics %tmp.20 166 34 42 ];
+                %tmp.20 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.21 166 43 62 ];
+                %tmp.21 = getv %tmp.20 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.21;
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 167 18 ]
+                symbol [ Graphics %tmp.22 167 25 33 ];
+                %tmp.22 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.23 167 34 43 ];
+                %tmp.23 = getv %tmp.22 :FONT_TINY;
+                putv self :font %tmp.23;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 166; @position = 18; @symbol_constdef = [justification,166,18,31]; ]
+            const justification;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 167; @position = 18; @symbol_constdef = [font,167,18,22]; ]
+            const font;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 170; @symbol_moduledef = [confirmation_loc__body,170,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 170; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 171; @position = 18; @symbol_constdef = [x,171,18,19]; @symbol_type<0> = [Number,171,23,29]; ]
+            const x as Number = 52;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 172; @position = 18; @symbol_constdef = [y,172,18,19]; @symbol_type<0> = [Number,172,23,29]; ]
+            const y as Number = 52;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 175; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,175,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 175; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 176; @position = 18; @symbol_constdef = [filename,176,18,26]; @symbol_type<0> = [String,176,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__hint_button_left_bottom.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 177; @position = 18; @symbol_constdef = [dithering,177,18,27]; @symbol_type<0> = [String,177,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 180; @symbol_moduledef = [prompt_color_dark__background,180,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 180; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 181; @position = 18; @symbol_constdef = [color,181,18,23]; @symbol_type<0> = [Number,181,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 182; @position = 18; @symbol_constdef = [background,182,18,28]; @symbol_type<0> = [Number,182,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 185; @symbol_moduledef = [system_icon_destructive__hint_action_menu,185,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 185; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 186; @position = 18; @symbol_constdef = [filename,186,18,26]; @symbol_type<0> = [String,186,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 187; @position = 18; @symbol_constdef = [dithering,187,18,27]; @symbol_type<0> = [String,187,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 190; @symbol_moduledef = [system_loc__hint_action_menu,190,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 190; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 191; @position = 18; @symbol_constdef = [x,191,18,19]; @symbol_type<0> = [Number,191,23,29]; ]
+            const x as Number = 227;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 192; @position = 18; @symbol_constdef = [y,192,18,19]; @symbol_type<0> = [Number,192,23,29]; ]
+            const y as Number = 53;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 195; @symbol_moduledef = [confirmation_icon__hint_confirm,195,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 195; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 196; @position = 18; @symbol_constdef = [filename,196,18,26]; @symbol_type<0> = [String,196,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_completion.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 197; @position = 18; @symbol_constdef = [dithering,197,18,27]; @symbol_type<0> = [String,197,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 200; @symbol_moduledef = [system_loc__hint_button_left_middle,200,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 200; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 201; @position = 18; @symbol_constdef = [x,201,18,19]; @symbol_type<0> = [Number,201,23,29]; ]
+            const x as Number = 1;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 202; @position = 18; @symbol_constdef = [y,202,18,19]; @symbol_type<0> = [Number,202,23,29]; ]
+            const y as Number = 109;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 205; @symbol_moduledef = [prompt_size__body_no_title,205,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 205; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 206; @position = 18; @symbol_constdef = [width,206,18,23]; @symbol_type<0> = [Number,206,27,33]; ]
+            const width as Number = 208;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 207; @position = 18; @symbol_constdef = [height,207,18,24]; @symbol_type<0> = [Number,207,28,34]; ]
+            const height as Number = 208;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 210; @symbol_moduledef = [system_icon_light__hint_button_left_top,210,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 210; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [filename,211,18,26]; @symbol_type<0> = [String,211,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__hint_button_left_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 212; @position = 18; @symbol_constdef = [dithering,212,18,27]; @symbol_type<0> = [String,212,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 215; @symbol_moduledef = [prompt_color_light__background,215,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 215; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [color,216,18,23]; @symbol_type<0> = [Number,216,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 217; @position = 18; @symbol_constdef = [background,217,18,28]; @symbol_type<0> = [Number,217,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 220; @symbol_moduledef = [confirmation_input__delete,220,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 220; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 221 18 ]
+                symbol [ WatchUi %tmp.24 221 27 34 ];
+                %tmp.24 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.25 221 35 44 ];
+                %tmp.25 = getv %tmp.24 :KEY_ENTER;
+                putv self :button %tmp.25;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 221; @position = 18; @symbol_constdef = [button,221,18,24]; ]
+            const button;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 224; @symbol_moduledef = [system_icon_dark__hint_button_left_top,224,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 224; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 225; @position = 18; @symbol_constdef = [filename,225,18,26]; @symbol_type<0> = [String,225,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [dithering,226,18,27]; @symbol_type<0> = [String,226,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 229; @symbol_moduledef = [system_input__action_menu,229,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 229; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 230 18 ]
+                symbol [ WatchUi %tmp.26 230 27 34 ];
+                %tmp.26 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.27 230 35 44 ];
+                %tmp.27 = getv %tmp.26 :KEY_ENTER;
+                putv self :button %tmp.27;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 230; @position = 18; @symbol_constdef = [button,230,18,24]; ]
+            const button;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 233; @symbol_moduledef = [system_icon_light__save,233,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 233; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 234; @position = 18; @symbol_constdef = [filename,234,18,26]; @symbol_type<0> = [String,234,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__save.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 235; @position = 18; @symbol_constdef = [dithering,235,18,27]; @symbol_type<0> = [String,235,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 238; @symbol_moduledef = [prompt_color_light__body,238,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 238; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 240 18 ]
+                symbol [ Graphics %tmp.28 240 31 39 ];
+                %tmp.28 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.29 240 40 57 ];
+                %tmp.29 = getv %tmp.28 :COLOR_TRANSPARENT;
+                putv self :background %tmp.29;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 239; @position = 18; @symbol_constdef = [color,239,18,23]; @symbol_type<0> = [Number,239,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 240; @position = 18; @symbol_constdef = [background,240,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 243; @symbol_moduledef = [system_loc__subwindow,243,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 243; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 244; @position = 18; @symbol_constdef = [exclude,244,18,25]; @symbol_type<0> = [Boolean,244,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 247; @symbol_moduledef = [system_icon_light__warning,247,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 247; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 248; @position = 18; @symbol_constdef = [filename,248,18,26]; @symbol_type<0> = [String,248,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__warning.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 249; @position = 18; @symbol_constdef = [dithering,249,18,27]; @symbol_type<0> = [String,249,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 252; @symbol_moduledef = [confirmation_color_light__body,252,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 252; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 254 18 ]
+                symbol [ Graphics %tmp.30 254 31 39 ];
+                %tmp.30 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.31 254 40 57 ];
+                %tmp.31 = getv %tmp.30 :COLOR_TRANSPARENT;
+                putv self :background %tmp.31;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 253; @position = 18; @symbol_constdef = [color,253,18,23]; @symbol_type<0> = [Number,253,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 254; @position = 18; @symbol_constdef = [background,254,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 257; @symbol_moduledef = [confirmation_icon_light__hint_keep,257,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 257; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 258; @position = 18; @symbol_constdef = [filename,258,18,26]; @symbol_type<0> = [String,258,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_keep.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 259; @position = 18; @symbol_constdef = [dithering,259,18,27]; @symbol_type<0> = [String,259,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 262; @symbol_moduledef = [activity_color_light__background,262,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 262; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 263; @position = 18; @symbol_constdef = [color,263,18,23]; @symbol_type<0> = [Number,263,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 264; @position = 18; @symbol_constdef = [background,264,18,28]; @symbol_type<0> = [Number,264,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 267; @symbol_moduledef = [system_icon_positive__hint_button_right_top,267,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 267; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 268; @position = 18; @symbol_constdef = [filename,268,18,26]; @symbol_type<0> = [String,268,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 269; @position = 18; @symbol_constdef = [dithering,269,18,27]; @symbol_type<0> = [String,269,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 272; @symbol_moduledef = [system_size__screen,272,15,34]; ]
+        module system_size__screen {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 272; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 273; @position = 18; @symbol_constdef = [width,273,18,23]; @symbol_type<0> = [Number,273,27,33]; ]
+            const width as Number = 260;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 274; @position = 18; @symbol_constdef = [height,274,18,24]; @symbol_type<0> = [Number,274,28,34]; ]
+            const height as Number = 260;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 277; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,277,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 277; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 278; @position = 18; @symbol_constdef = [filename,278,18,26]; @symbol_type<0> = [String,278,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 279; @position = 18; @symbol_constdef = [dithering,279,18,27]; @symbol_type<0> = [String,279,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 282; @symbol_moduledef = [system_color_light__background,282,15,45]; ]
+        module system_color_light__background {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 282; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 283; @position = 18; @symbol_constdef = [color,283,18,23]; @symbol_type<0> = [Number,283,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 284; @position = 18; @symbol_constdef = [background,284,18,28]; @symbol_type<0> = [Number,284,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 287; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,287,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 287; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 288; @position = 18; @symbol_constdef = [filename,288,18,26]; @symbol_type<0> = [String,288,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 289; @position = 18; @symbol_constdef = [dithering,289,18,27]; @symbol_type<0> = [String,289,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 292; @symbol_moduledef = [confirmation_loc__hint_confirm,292,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 292; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 293; @position = 18; @symbol_constdef = [x,293,18,19]; @symbol_type<0> = [Number,293,23,29]; ]
+            const x as Number = 205;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 294; @position = 18; @symbol_constdef = [y,294,18,19]; @symbol_type<0> = [Number,294,23,29]; ]
+            const y as Number = 50;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 297; @symbol_moduledef = [activity_color_dark__text,297,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 297; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 299 18 ]
+                symbol [ Graphics %tmp.32 299 31 39 ];
+                %tmp.32 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.33 299 40 57 ];
+                %tmp.33 = getv %tmp.32 :COLOR_TRANSPARENT;
+                putv self :background %tmp.33;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 298; @position = 18; @symbol_constdef = [color,298,18,23]; @symbol_type<0> = [Number,298,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [background,299,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 302; @symbol_moduledef = [confirmation_input__keep,302,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 302; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 303 18 ]
+                symbol [ WatchUi %tmp.34 303 27 34 ];
+                %tmp.34 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.35 303 35 43 ];
+                %tmp.35 = getv %tmp.34 :KEY_DOWN;
+                putv self :button %tmp.35;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 303; @position = 18; @symbol_constdef = [button,303,18,24]; ]
+            const button;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 306; @symbol_moduledef = [prompt_loc__body_with_title,306,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 306; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 307; @position = 18; @symbol_constdef = [x,307,18,19]; @symbol_type<0> = [Number,307,23,29]; ]
+            const x as Number = 26;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 308; @position = 18; @symbol_constdef = [y,308,18,19]; @symbol_type<0> = [Number,308,23,29]; ]
+            const y as Number = 78;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 311; @symbol_moduledef = [system_icon_dark__search,311,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 311; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 312; @position = 18; @symbol_constdef = [filename,312,18,26]; @symbol_type<0> = [String,312,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__search.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 313; @position = 18; @symbol_constdef = [compress,313,18,26]; @symbol_type<0> = [String,313,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 314; @position = 18; @symbol_constdef = [dithering,314,18,27]; @symbol_type<0> = [String,314,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 315; @position = 18; @symbol_constdef = [automaticPalette,315,18,34]; @symbol_type<0> = [String,315,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 318; @symbol_moduledef = [activity_color_light__text,318,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 318; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 320 18 ]
+                symbol [ Graphics %tmp.36 320 31 39 ];
+                %tmp.36 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.37 320 40 57 ];
+                %tmp.37 = getv %tmp.36 :COLOR_TRANSPARENT;
+                putv self :background %tmp.37;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 319; @position = 18; @symbol_constdef = [color,319,18,23]; @symbol_type<0> = [Number,319,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 320; @position = 18; @symbol_constdef = [background,320,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 323; @symbol_moduledef = [confirmation_icon__hint_keep,323,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 323; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [filename,324,18,26]; @symbol_type<0> = [String,324,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_keep.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 325; @position = 18; @symbol_constdef = [dithering,325,18,27]; @symbol_type<0> = [String,325,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 328; @symbol_moduledef = [system_icon_dark__save,328,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 328; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [filename,329,18,26]; @symbol_type<0> = [String,329,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__save.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [compress,330,18,26]; @symbol_type<0> = [String,330,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [dithering,331,18,27]; @symbol_type<0> = [String,331,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 332; @position = 18; @symbol_constdef = [automaticPalette,332,18,34]; @symbol_type<0> = [String,332,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 335; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,335,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 335; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 336; @position = 18; @symbol_constdef = [filename,336,18,26]; @symbol_type<0> = [String,336,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__hint_button_left_middle.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 337; @position = 18; @symbol_constdef = [dithering,337,18,27]; @symbol_type<0> = [String,337,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 340; @symbol_moduledef = [system_icon_light__search,340,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 340; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [filename,341,18,26]; @symbol_type<0> = [String,341,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__search.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 342; @position = 18; @symbol_constdef = [dithering,342,18,27]; @symbol_type<0> = [String,342,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 345; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,345,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 345; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 346; @position = 18; @symbol_constdef = [filename,346,18,26]; @symbol_type<0> = [String,346,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 347; @position = 18; @symbol_constdef = [dithering,347,18,27]; @symbol_type<0> = [String,347,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 350; @symbol_moduledef = [system_icon_positive__hint_button_left_top,350,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 350; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 351; @position = 18; @symbol_constdef = [filename,351,18,26]; @symbol_type<0> = [String,351,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_positive__hint_button_left_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 352; @position = 18; @symbol_constdef = [dithering,352,18,27]; @symbol_type<0> = [String,352,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 355; @symbol_moduledef = [system_loc__hint_button_right_bottom,355,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 355; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 356; @position = 18; @symbol_constdef = [x,356,18,19]; @symbol_type<0> = [Number,356,23,29]; ]
+            const x as Number = 224;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 357; @position = 18; @symbol_constdef = [y,357,18,19]; @symbol_type<0> = [Number,357,23,29]; ]
+            const y as Number = 172;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 360; @symbol_moduledef = [confirmation_icon_dark__hint_reject,360,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 360; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 361; @position = 18; @symbol_constdef = [filename,361,18,26]; @symbol_type<0> = [String,361,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_reject.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 362; @position = 18; @symbol_constdef = [dithering,362,18,27]; @symbol_type<0> = [String,362,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 365; @symbol_moduledef = [confirmation_color_dark__body,365,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 365; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 367 18 ]
+                symbol [ Graphics %tmp.38 367 31 39 ];
+                %tmp.38 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.39 367 40 57 ];
+                %tmp.39 = getv %tmp.38 :COLOR_TRANSPARENT;
+                putv self :background %tmp.39;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 366; @position = 18; @symbol_constdef = [color,366,18,23]; @symbol_type<0> = [Number,366,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 367; @position = 18; @symbol_constdef = [background,367,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 370; @symbol_moduledef = [confirmation_icon_light__hint_confirm,370,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 370; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 371; @position = 18; @symbol_constdef = [filename,371,18,26]; @symbol_type<0> = [String,371,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_completion.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 372; @position = 18; @symbol_constdef = [dithering,372,18,27]; @symbol_type<0> = [String,372,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 375; @symbol_moduledef = [prompt_color_dark__title,375,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 375; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 377 18 ]
+                symbol [ Graphics %tmp.40 377 31 39 ];
+                %tmp.40 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.41 377 40 57 ];
+                %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
+                putv self :background %tmp.41;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 376; @position = 18; @symbol_constdef = [color,376,18,23]; @symbol_type<0> = [Number,376,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 377; @position = 18; @symbol_constdef = [background,377,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 380; @symbol_moduledef = [system_icon_destructive__cancel,380,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 380; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 381; @position = 18; @symbol_constdef = [filename,381,18,26]; @symbol_type<0> = [String,381,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__cancel.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 382; @position = 18; @symbol_constdef = [dithering,382,18,27]; @symbol_type<0> = [String,382,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 385; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,385,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 385; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 386; @position = 18; @symbol_constdef = [filename,386,18,26]; @symbol_type<0> = [String,386,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [dithering,387,18,27]; @symbol_type<0> = [String,387,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 390; @symbol_moduledef = [prompt_loc__title,390,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 390; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 391; @position = 18; @symbol_constdef = [x,391,18,19]; @symbol_type<0> = [Number,391,23,29]; ]
+            const x as Number = 26;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [y,392,18,19]; @symbol_type<0> = [Number,392,23,29]; ]
+            const y as Number = 19;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 395; @symbol_moduledef = [confirmation_font_enhanced_readability__body,395,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 395; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 396; @position = 18; @symbol_constdef = [exclude,396,18,25]; @symbol_type<0> = [Boolean,396,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 399; @symbol_moduledef = [prompt_color_light__title,399,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 399; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 401 18 ]
+                symbol [ Graphics %tmp.42 401 31 39 ];
+                %tmp.42 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.43 401 40 57 ];
+                %tmp.43 = getv %tmp.42 :COLOR_TRANSPARENT;
+                putv self :background %tmp.43;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 400; @position = 18; @symbol_constdef = [color,400,18,23]; @symbol_type<0> = [Number,400,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 401; @position = 18; @symbol_constdef = [background,401,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 404; @symbol_moduledef = [system_icon_dark__hint_button_right_top,404,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 404; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 405; @position = 18; @symbol_constdef = [filename,405,18,26]; @symbol_type<0> = [String,405,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 406; @position = 18; @symbol_constdef = [dithering,406,18,27]; @symbol_type<0> = [String,406,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 409; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,409,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 409; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 410; @position = 18; @symbol_constdef = [filename,410,18,26]; @symbol_type<0> = [String,410,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 411; @position = 18; @symbol_constdef = [dithering,411,18,27]; @symbol_type<0> = [String,411,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 414; @symbol_moduledef = [confirmation_icon_dark__hint_keep,414,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 414; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 415; @position = 18; @symbol_constdef = [filename,415,18,26]; @symbol_type<0> = [String,415,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_keep.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 416; @position = 18; @symbol_constdef = [dithering,416,18,27]; @symbol_type<0> = [String,416,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 419; @symbol_moduledef = [system_icon_light__cancel,419,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 419; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 420; @position = 18; @symbol_constdef = [filename,420,18,26]; @symbol_type<0> = [String,420,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__cancel.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 421; @position = 18; @symbol_constdef = [dithering,421,18,27]; @symbol_type<0> = [String,421,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 424; @symbol_moduledef = [confirmation_icon_light__hint_reject,424,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 424; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 425; @position = 18; @symbol_constdef = [filename,425,18,26]; @symbol_type<0> = [String,425,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_reject.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [dithering,426,18,27]; @symbol_type<0> = [String,426,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 429; @symbol_moduledef = [system_icon_light__about,429,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 429; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 430; @position = 18; @symbol_constdef = [filename,430,18,26]; @symbol_type<0> = [String,430,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__about.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 431; @position = 18; @symbol_constdef = [dithering,431,18,27]; @symbol_type<0> = [String,431,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 434; @symbol_moduledef = [system_size__toast_icon,434,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 434; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 435; @position = 18; @symbol_constdef = [scaleX,435,18,24]; @symbol_type<0> = [Number,435,28,34]; ]
+            const scaleX as Number = 21;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [scaleY,436,18,24]; @symbol_type<0> = [Number,436,28,34]; ]
+            const scaleY as Number = 21;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 437; @position = 18; @symbol_constdef = [scaleRelativeTo,437,18,33]; @symbol_type<0> = [String,437,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 440; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,440,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 440; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 441; @position = 18; @symbol_constdef = [exclude,441,18,25]; @symbol_type<0> = [Boolean,441,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 444; @symbol_moduledef = [confirmation_icon__hint_reject,444,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 444; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 445; @position = 18; @symbol_constdef = [filename,445,18,26]; @symbol_type<0> = [String,445,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_reject.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 446; @position = 18; @symbol_constdef = [dithering,446,18,27]; @symbol_type<0> = [String,446,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 449; @symbol_moduledef = [system_icon_light__hint_action_menu,449,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 449; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 450; @position = 18; @symbol_constdef = [filename,450,18,26]; @symbol_type<0> = [String,450,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 451; @position = 18; @symbol_constdef = [dithering,451,18,27]; @symbol_type<0> = [String,451,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 454; @symbol_moduledef = [system_icon_light__hint_button_right_middle,454,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 454; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 455; @position = 18; @symbol_constdef = [exclude,455,18,25]; @symbol_type<0> = [Boolean,455,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 458; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,458,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 458; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 459; @position = 18; @symbol_constdef = [exclude,459,18,25]; @symbol_type<0> = [Boolean,459,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 462; @symbol_moduledef = [confirmation_loc__hint_reject,462,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 462; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [x,463,18,19]; @symbol_type<0> = [Number,463,23,29]; ]
+            const x as Number = 13;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 464; @position = 18; @symbol_constdef = [y,464,18,19]; @symbol_type<0> = [Number,464,23,29]; ]
+            const y as Number = 174;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 465; @position = 18; @symbol_constdef = [horizontalJustification,465,18,41]; @symbol_type<0> = [String,465,45,51]; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 468; @symbol_moduledef = [confirmation_icon_dark__hint_delete,468,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 468; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 469; @position = 18; @symbol_constdef = [filename,469,18,26]; @symbol_type<0> = [String,469,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_delete.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 470; @position = 18; @symbol_constdef = [dithering,470,18,27]; @symbol_type<0> = [String,470,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 473; @symbol_moduledef = [activity_color_dark__background,473,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 473; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 474; @position = 18; @symbol_constdef = [color,474,18,23]; @symbol_type<0> = [Number,474,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 475; @position = 18; @symbol_constdef = [background,475,18,28]; @symbol_type<0> = [Number,475,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 478; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,478,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 478; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 479; @position = 18; @symbol_constdef = [filename,479,18,26]; @symbol_type<0> = [String,479,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 480; @position = 18; @symbol_constdef = [dithering,480,18,27]; @symbol_type<0> = [String,480,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 483; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,483,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 483; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 484; @position = 18; @symbol_constdef = [filename,484,18,26]; @symbol_type<0> = [String,484,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_positive__hint_button_left_middle.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 485; @position = 18; @symbol_constdef = [dithering,485,18,27]; @symbol_type<0> = [String,485,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 488; @symbol_moduledef = [system_size__menu_icon,488,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 488; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 489; @position = 18; @symbol_constdef = [scaleX,489,18,24]; @symbol_type<0> = [Number,489,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 490; @position = 18; @symbol_constdef = [scaleY,490,18,24]; @symbol_type<0> = [Number,490,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 491; @position = 18; @symbol_constdef = [scaleRelativeTo,491,18,33]; @symbol_type<0> = [String,491,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 494; @symbol_moduledef = [system_icon_destructive__warning,494,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 494; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 495; @position = 18; @symbol_constdef = [filename,495,18,26]; @symbol_type<0> = [String,495,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_destructive__warning.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 496; @position = 18; @symbol_constdef = [dithering,496,18,27]; @symbol_type<0> = [String,496,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 499; @symbol_moduledef = [system_loc__hint_button_right_middle,499,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 499; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 500; @position = 18; @symbol_constdef = [exclude,500,18,25]; @symbol_type<0> = [Boolean,500,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 503; @symbol_moduledef = [system_icon_dark__cancel,503,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 503; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [filename,504,18,26]; @symbol_type<0> = [String,504,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__cancel.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 505; @position = 18; @symbol_constdef = [compress,505,18,26]; @symbol_type<0> = [String,505,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 506; @position = 18; @symbol_constdef = [dithering,506,18,27]; @symbol_type<0> = [String,506,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 507; @position = 18; @symbol_constdef = [automaticPalette,507,18,34]; @symbol_type<0> = [String,507,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 510; @symbol_moduledef = [prompt_size__body_with_title,510,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 510; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 511; @position = 18; @symbol_constdef = [width,511,18,23]; @symbol_type<0> = [Number,511,27,33]; ]
+            const width as Number = 208;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 512; @position = 18; @symbol_constdef = [height,512,18,24]; @symbol_type<0> = [Number,512,28,34]; ]
+            const height as Number = 156;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 515; @symbol_moduledef = [system_loc__hint_button_right_top,515,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 515; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 516; @position = 18; @symbol_constdef = [x,516,18,19]; @symbol_type<0> = [Number,516,23,29]; ]
+            const x as Number = 224;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 517; @position = 18; @symbol_constdef = [y,517,18,19]; @symbol_type<0> = [Number,517,23,29]; ]
+            const y as Number = 50;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 520; @symbol_moduledef = [system_color_light__text,520,15,39]; ]
+        module system_color_light__text {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 520; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 522 18 ]
+                symbol [ Graphics %tmp.44 522 31 39 ];
+                %tmp.44 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.45 522 40 57 ];
+                %tmp.45 = getv %tmp.44 :COLOR_TRANSPARENT;
+                putv self :background %tmp.45;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 521; @position = 18; @symbol_constdef = [color,521,18,23]; @symbol_type<0> = [Number,521,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 522; @position = 18; @symbol_constdef = [background,522,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 525; @symbol_moduledef = [system_icon_light__check,525,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 525; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [filename,526,18,26]; @symbol_type<0> = [String,526,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__check.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [dithering,527,18,27]; @symbol_type<0> = [String,527,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 530; @symbol_moduledef = [confirmation_input__reject,530,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 530; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 531 18 ]
+                symbol [ WatchUi %tmp.46 531 27 34 ];
+                %tmp.46 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.47 531 35 43 ];
+                %tmp.47 = getv %tmp.46 :KEY_DOWN;
+                putv self :button %tmp.47;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 531; @position = 18; @symbol_constdef = [button,531,18,24]; ]
+            const button;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 534; @symbol_moduledef = [system_icon_light__revert,534,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 534; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 535; @position = 18; @symbol_constdef = [filename,535,18,26]; @symbol_type<0> = [String,535,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__revert.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 536; @position = 18; @symbol_constdef = [dithering,536,18,27]; @symbol_type<0> = [String,536,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 539; @symbol_moduledef = [system_size__subwindow,539,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 539; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 540; @position = 18; @symbol_constdef = [exclude,540,18,25]; @symbol_type<0> = [Boolean,540,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 543; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,543,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 543; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [filename,544,18,26]; @symbol_type<0> = [String,544,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_positive__hint_button_left_bottom.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [dithering,545,18,27]; @symbol_type<0> = [String,545,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 548; @symbol_moduledef = [system_icon_dark__check,548,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 548; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 549; @position = 18; @symbol_constdef = [filename,549,18,26]; @symbol_type<0> = [String,549,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__check.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 550; @position = 18; @symbol_constdef = [compress,550,18,26]; @symbol_type<0> = [String,550,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 551; @position = 18; @symbol_constdef = [dithering,551,18,27]; @symbol_type<0> = [String,551,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 552; @position = 18; @symbol_constdef = [automaticPalette,552,18,34]; @symbol_type<0> = [String,552,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 555; @symbol_moduledef = [confirmation_loc__hint_keep,555,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 555; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [x,556,18,19]; @symbol_type<0> = [Number,556,23,29]; ]
+            const x as Number = 13;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 557; @position = 18; @symbol_constdef = [y,557,18,19]; @symbol_type<0> = [Number,557,23,29]; ]
+            const y as Number = 174;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 558; @position = 18; @symbol_constdef = [horizontalJustification,558,18,41]; @symbol_type<0> = [String,558,45,51]; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 561; @symbol_moduledef = [confirmation_loc__hint_delete,561,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 561; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 562; @position = 18; @symbol_constdef = [x,562,18,19]; @symbol_type<0> = [Number,562,23,29]; ]
+            const x as Number = 208;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 563; @position = 18; @symbol_constdef = [y,563,18,19]; @symbol_type<0> = [Number,563,23,29]; ]
+            const y as Number = 50;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 566; @symbol_moduledef = [system_icon_positive__hint_action_menu,566,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 566; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 567; @position = 18; @symbol_constdef = [filename,567,18,26]; @symbol_type<0> = [String,567,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [dithering,568,18,27]; @symbol_type<0> = [String,568,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 571; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,571,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 571; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 572; @position = 18; @symbol_constdef = [exclude,572,18,25]; @symbol_type<0> = [Boolean,572,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 575; @symbol_moduledef = [system_icon_light__hint_button_left_middle,575,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 575; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 576; @position = 18; @symbol_constdef = [filename,576,18,26]; @symbol_type<0> = [String,576,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__hint_button_left_middle.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 577; @position = 18; @symbol_constdef = [dithering,577,18,27]; @symbol_type<0> = [String,577,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 580; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,580,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 580; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 581; @position = 18; @symbol_constdef = [filename,581,18,26]; @symbol_type<0> = [String,581,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 582; @position = 18; @symbol_constdef = [dithering,582,18,27]; @symbol_type<0> = [String,582,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 585; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,585,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 585; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [filename,586,18,26]; @symbol_type<0> = [String,586,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 587; @position = 18; @symbol_constdef = [dithering,587,18,27]; @symbol_type<0> = [String,587,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 590; @symbol_moduledef = [system_icon_dark__revert,590,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 590; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [filename,591,18,26]; @symbol_type<0> = [String,591,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__revert.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [compress,592,18,26]; @symbol_type<0> = [String,592,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 593; @position = 18; @symbol_constdef = [dithering,593,18,27]; @symbol_type<0> = [String,593,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 594; @position = 18; @symbol_constdef = [automaticPalette,594,18,34]; @symbol_type<0> = [String,594,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 597; @symbol_moduledef = [confirmation_icon_light__hint_delete,597,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 597; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 598; @position = 18; @symbol_constdef = [filename,598,18,26]; @symbol_type<0> = [String,598,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_delete.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 599; @position = 18; @symbol_constdef = [dithering,599,18,27]; @symbol_type<0> = [String,599,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 602; @symbol_moduledef = [system_icon_dark__question,602,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 602; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 603; @position = 18; @symbol_constdef = [filename,603,18,26]; @symbol_type<0> = [String,603,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__question.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [compress,604,18,26]; @symbol_type<0> = [String,604,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 605; @position = 18; @symbol_constdef = [dithering,605,18,27]; @symbol_type<0> = [String,605,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 606; @position = 18; @symbol_constdef = [automaticPalette,606,18,34]; @symbol_type<0> = [String,606,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 609; @symbol_moduledef = [system_icon_light__discard,609,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 609; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 610; @position = 18; @symbol_constdef = [filename,610,18,26]; @symbol_type<0> = [String,610,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__discard.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 611; @position = 18; @symbol_constdef = [dithering,611,18,27]; @symbol_type<0> = [String,611,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 614; @symbol_moduledef = [device_info,614,15,26]; ]
+        module device_info {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 614; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 616 18 ]
+                symbol [ Toybox %tmp.49 616 32 38 ];
+                %tmp.49 = getv ? :Toybox;
+                symbol [ System %tmp.50 616 39 45 ];
+                %tmp.50 = getv %tmp.49 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.51 616 46 64 ];
+                %tmp.51 = getv %tmp.50 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.51;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 615; @position = 18; @symbol_constdef = [screenWidth,615,18,29]; @symbol_type<0> = [Number,615,33,39]; ]
+            const screenWidth as Number = 260;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 616; @position = 18; @symbol_constdef = [screenShape,616,18,29]; ]
+            const screenShape;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 617; @position = 18; @symbol_constdef = [hasNightMode,617,18,30]; @symbol_type<0> = [Boolean,617,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [hasGpu,618,18,24]; @symbol_type<0> = [Boolean,618,28,35]; ]
+            const hasGpu as Boolean = false;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [screenHeight,619,18,30]; @symbol_type<0> = [Number,619,34,40]; ]
+            const screenHeight as Number = 260;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [hasTouchScreen,620,18,32]; @symbol_type<0> = [Boolean,620,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,621,18,44]; @symbol_type<0> = [Boolean,621,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 624; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,624,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 624; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 625; @position = 18; @symbol_constdef = [filename,625,18,26]; @symbol_type<0> = [String,625,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_completion.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [dithering,626,18,27]; @symbol_type<0> = [String,626,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 629; @symbol_moduledef = [prompt_font__body_no_title,629,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 629; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 630 18 ]
+                symbol [ Graphics %tmp.52 630 34 42 ];
+                %tmp.52 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.53 630 43 62 ];
+                %tmp.53 = getv %tmp.52 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.54 630 63 71 ];
+                %tmp.54 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.55 630 72 92 ];
+                %tmp.55 = getv %tmp.54 :TEXT_JUSTIFY_VCENTER;
+                %tmp.56 = bitor %tmp.53 %tmp.55;
+                putv self :justification %tmp.56;
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 631 18 ]
+                symbol [ Graphics %tmp.57 631 25 33 ];
+                %tmp.57 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.58 631 34 43 ];
+                %tmp.58 = getv %tmp.57 :FONT_TINY;
+                putv self :font %tmp.58;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 630; @position = 18; @symbol_constdef = [justification,630,18,31]; ]
+            const justification;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 631; @position = 18; @symbol_constdef = [font,631,18,22]; ]
+            const font;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 634; @symbol_moduledef = [prompt_size__title_icon,634,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 634; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [scaleX,635,18,24]; @symbol_type<0> = [Float,635,28,33]; ]
+            const scaleX as Float = 0.1539;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [scaleRelativeTo,636,18,33]; @symbol_type<0> = [String,636,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 639; @symbol_moduledef = [system_icon_dark__warning,639,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 639; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [filename,640,18,26]; @symbol_type<0> = [String,640,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_dark__warning.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 641; @position = 18; @symbol_constdef = [compress,641,18,26]; @symbol_type<0> = [String,641,30,36]; ]
+            const compress as String = "true";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 642; @position = 18; @symbol_constdef = [dithering,642,18,27]; @symbol_type<0> = [String,642,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 643; @position = 18; @symbol_constdef = [automaticPalette,643,18,34]; @symbol_type<0> = [String,643,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 646; @symbol_moduledef = [prompt_loc__title_icon,646,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 646; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 647; @position = 18; @symbol_constdef = [x,647,18,19]; @symbol_type<0> = [Number,647,23,29]; ]
+            const x as Number = 130;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 648; @position = 18; @symbol_constdef = [y,648,18,19]; @symbol_type<0> = [Number,648,23,29]; ]
+            const y as Number = 39;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 649; @position = 18; @symbol_constdef = [horizontalJustification,649,18,41]; @symbol_type<0> = [String,649,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [verticalJustification,650,18,39]; @symbol_type<0> = [String,650,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 653; @symbol_moduledef = [prompt_font_enhanced_readability__title,653,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 653; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 654; @position = 18; @symbol_constdef = [exclude,654,18,25]; @symbol_type<0> = [Boolean,654,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 657; @symbol_moduledef = [prompt_color_dark__body,657,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 657; ]
+            <init> {
+[ "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen" 659 18 ]
+                symbol [ Graphics %tmp.59 659 31 39 ];
+                %tmp.59 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.60 659 40 57 ];
+                %tmp.60 = getv %tmp.59 :COLOR_TRANSPARENT;
+                putv self :background %tmp.60;
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 658; @position = 18; @symbol_constdef = [color,658,18,23]; @symbol_type<0> = [Number,658,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 659; @position = 18; @symbol_constdef = [background,659,18,28]; ]
+            const background;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 662; @symbol_moduledef = [confirmation_icon__hint_delete,662,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 662; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 663; @position = 18; @symbol_constdef = [filename,663,18,26]; @symbol_type<0> = [String,663,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\confirmation_icon__hint_delete.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [dithering,664,18,27]; @symbol_type<0> = [String,664,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 667; @symbol_moduledef = [system_icon_light__hint_button_right_top,667,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 667; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 668; @position = 18; @symbol_constdef = [filename,668,18,26]; @symbol_type<0> = [String,668,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 669; @position = 18; @symbol_constdef = [dithering,669,18,27]; @symbol_type<0> = [String,669,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 672; @symbol_moduledef = [confirmation_size__body,672,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 672; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 673; @position = 18; @symbol_constdef = [width,673,18,23]; @symbol_type<0> = [Number,673,27,33]; ]
+            const width as Number = 156;
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 674; @position = 18; @symbol_constdef = [height,674,18,24]; @symbol_type<0> = [Number,674,28,34]; ]
+            const height as Number = 156;
+        }
+        [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 677; @symbol_moduledef = [system_icon_positive__check,677,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 677; ]
+            <init> {
+            }
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 678; @position = 18; @symbol_constdef = [filename,678,18,26]; @symbol_type<0> = [String,678,30,36]; ]
+            const filename as String = "C:\\Users\\13008\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr255\\system_icon_positive__check.svg";
+            [ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 679; @position = 18; @symbol_constdef = [dithering,679,18,27]; @symbol_type<0> = [String,679,31,37]; ]
+            const dithering as String = "none";
+        }
+    }
+}
+[ @file = "d:\monkeyC\proj_work_space\luwan-watchface\bin\gen\006-B3992-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

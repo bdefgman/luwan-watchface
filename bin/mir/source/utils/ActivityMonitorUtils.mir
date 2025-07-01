@@ -1,0 +1,410 @@
+[ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [SensorHistory,2,14,27]; ]
+import Toybox.SensorHistory;
+[ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 5; @symbol_classdef = [ActivityMonitorUtils,5,6,26]; ]
+class ActivityMonitorUtils {
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 8; @symbol_functiondef = [getCurStepOfDay,8,13,28]; ]
+    function getCurStepOfDay() {
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_8_31_11_4_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 9 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_8_31_11_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_8_31_11_4_stop" ]
+        %currentStep.1 = local;
+        symbol [ currentStep %currentStep.1 9 12 23 ];
+        symbol [ ActivityMonitor %tmp.2 9 26 41 ];
+        %tmp.2 = getv ? :ActivityMonitor;
+        symbol [ getInfo %tmp.3 9 42 49 ];
+        %tmp.3 = getv function %tmp.2 :getInfo;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ steps %tmp.5 9 52 57 ];
+        %tmp.5 = getv %tmp.4 :steps;
+        lputv %currentStep.1 %tmp.5;
+        symbol [ currentStep %currentStep.1 9 12 23 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 10 8 ]
+        %tmp.6 = lgetv %currentStep.1;
+        symbol [ currentStep %tmp.6 10 15 26 ];
+        symbol [ toString %tmp.7 10 27 35 ];
+        %tmp.7 = getv function %tmp.6 :toString;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        ret %tmp.8;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_8_31_11_4_stop:
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 14; @symbol_functiondef = [getCurActiveMiniutesDay,14,13,36]; ]
+    function getCurActiveMiniutesDay() {
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_14_39_17_4_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 15 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_14_39_17_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_14_39_17_4_stop" ]
+        %activeMinutesDay.1 = local;
+        symbol [ activeMinutesDay %activeMinutesDay.1 15 12 28 ];
+        symbol [ ActivityMonitor %tmp.2 15 31 46 ];
+        %tmp.2 = getv ? :ActivityMonitor;
+        symbol [ getInfo %tmp.3 15 47 54 ];
+        %tmp.3 = getv function %tmp.2 :getInfo;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ activeMinutesDay %tmp.5 15 57 73 ];
+        %tmp.5 = getv %tmp.4 :activeMinutesDay;
+        lputv %activeMinutesDay.1 %tmp.5;
+        symbol [ activeMinutesDay %activeMinutesDay.1 15 12 28 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 16 8 ]
+        %tmp.6 = lgetv %activeMinutesDay.1;
+        symbol [ activeMinutesDay %tmp.6 16 15 31 ];
+        symbol [ toString %tmp.7 16 32 40 ];
+        %tmp.7 = getv function %tmp.6 :toString;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        ret %tmp.8;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_14_39_17_4_stop:
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 20; @symbol_functiondef = [getCaloriesOfDay,20,20,36]; ]
+    public
+    function getCaloriesOfDay() {
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_20_39_23_4_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 21 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_20_39_23_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_20_39_23_4_stop" ]
+        %calories.1 = local;
+        symbol [ calories %calories.1 21 12 20 ];
+        symbol [ ActivityMonitor %tmp.2 21 23 38 ];
+        %tmp.2 = getv ? :ActivityMonitor;
+        symbol [ getInfo %tmp.3 21 39 46 ];
+        %tmp.3 = getv function %tmp.2 :getInfo;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ calories %tmp.5 21 49 57 ];
+        %tmp.5 = getv %tmp.4 :calories;
+        lputv %calories.1 %tmp.5;
+        symbol [ calories %calories.1 21 12 20 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 22 8 ]
+        %tmp.6 = lgetv %calories.1;
+        symbol [ calories %tmp.6 22 15 23 ];
+        ret %tmp.6;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_20_39_23_4_stop:
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 26; @symbol_functiondef = [getCurMetersClimbed,26,20,39]; ]
+    public
+    function getCurMetersClimbed() {
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_26_42_29_4_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 27 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_26_42_29_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_26_42_29_4_stop" ]
+        %metersClimbed.1 = local;
+        symbol [ metersClimbed %metersClimbed.1 27 12 25 ];
+        symbol [ ActivityMonitor %tmp.2 27 28 43 ];
+        %tmp.2 = getv ? :ActivityMonitor;
+        symbol [ getInfo %tmp.3 27 44 51 ];
+        %tmp.3 = getv function %tmp.2 :getInfo;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ metersClimbed %tmp.5 27 54 67 ];
+        %tmp.5 = getv %tmp.4 :metersClimbed;
+        lputv %metersClimbed.1 %tmp.5;
+        symbol [ metersClimbed %metersClimbed.1 27 12 25 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 28 8 ]
+        %tmp.6 = lgetv %metersClimbed.1;
+        symbol [ metersClimbed %tmp.6 28 15 28 ];
+        symbol [ toString %tmp.7 28 29 37 ];
+        %tmp.7 = getv function %tmp.6 :toString;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        ret %tmp.8;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_26_42_29_4_stop:
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 32; @symbol_functiondef = [getCurTimeToRecovery,32,20,40]; ]
+    public
+    function getCurTimeToRecovery() {
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_32_43_35_4_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 33 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_32_43_35_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_32_43_35_4_stop" ]
+        %timeToRecovery.1 = local;
+        symbol [ timeToRecovery %timeToRecovery.1 33 12 26 ];
+        symbol [ ActivityMonitor %tmp.2 33 29 44 ];
+        %tmp.2 = getv ? :ActivityMonitor;
+        symbol [ getInfo %tmp.3 33 45 52 ];
+        %tmp.3 = getv function %tmp.2 :getInfo;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ timeToRecovery %tmp.5 33 55 69 ];
+        %tmp.5 = getv %tmp.4 :timeToRecovery;
+        lputv %timeToRecovery.1 %tmp.5;
+        symbol [ timeToRecovery %timeToRecovery.1 33 12 26 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 34 8 ]
+        %tmp.6 = lgetv %timeToRecovery.1;
+        symbol [ timeToRecovery %tmp.6 34 15 29 ];
+        ret %tmp.6;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_32_43_35_4_stop:
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 38; @symbol_functiondef = [getCurHeartRate,38,20,35]; ]
+    public
+    function getCurHeartRate() {
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_38_38_48_4_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 39 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_38_38_48_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_38_38_48_4_stop" ]
+        %hrIterator.1 = local;
+        symbol [ hrIterator %hrIterator.1 39 12 22 ];
+        symbol [ ActivityMonitor %tmp.2 39 25 40 ];
+        %tmp.2 = getv ? :ActivityMonitor;
+        symbol [ getHeartRateHistory %tmp.3 39 41 60 ];
+        %tmp.3 = getv function %tmp.2 :getHeartRateHistory;
+        %tmp.4 = null;
+        %tmp.5 = false;
+        %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+        lputv %hrIterator.1 %tmp.6;
+        symbol [ hrIterator %hrIterator.1 39 12 22 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 40 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_38_38_48_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_38_38_48_4_stop" ]
+        %sample.2 = local;
+        symbol [ sample %sample.2 40 12 18 ];
+        %tmp.7 = lgetv %hrIterator.1;
+        symbol [ hrIterator %tmp.7 40 21 31 ];
+        symbol [ next %tmp.8 40 32 36 ];
+        %tmp.8 = getv function %tmp.7 :next;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %sample.2 %tmp.9;
+        symbol [ sample %sample.2 40 12 18 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 41 8 ]
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_41_8_46_8_if_stmt:
+        %tmp.10 = null;
+        %tmp.11 = lgetv %sample.2;
+        symbol [ sample %tmp.11 41 20 26 ];
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        bf %tmp.12 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_41_8_46_8_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_41_8_46_8_if_true:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_41_28_46_8_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 42 12 ]
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_12_45_12_if_stmt:
+        %tmp.13 = lgetv %sample.2;
+        symbol [ sample %tmp.13 42 16 22 ];
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ heartRate %tmp.15 42 23 32 ];
+        %tmp.15 = getv %tmp.14 :heartRate;
+        symbol [ ActivityMonitor %tmp.17 42 36 51 ];
+        %tmp.17 = getv ? :ActivityMonitor;
+        symbol [ INVALID_HR_SAMPLE %tmp.18 42 52 69 ];
+        %tmp.18 = getv %tmp.17 :INVALID_HR_SAMPLE;
+        %tmp.19 = ne %tmp.15 %tmp.18;
+        bf %tmp.19 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_12_45_12_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_12_45_12_if_true:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_71_45_12_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 43 16 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_71_45_12_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_71_45_12_stop" ]
+        %curHearRate.3 = local;
+        symbol [ curHearRate %curHearRate.3 43 20 31 ];
+        %tmp.20 = lgetv %sample.2;
+        symbol [ sample %tmp.20 43 34 40 ];
+        %tmp.21 = as %tmp.20 { (!Null) };
+        symbol [ heartRate %tmp.22 43 41 50 ];
+        %tmp.22 = getv %tmp.21 :heartRate;
+        lputv %curHearRate.3 %tmp.22;
+        symbol [ curHearRate %curHearRate.3 43 20 31 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 44 16 ]
+        %tmp.23 = lgetv %curHearRate.3;
+        symbol [ curHearRate %tmp.23 44 23 34 ];
+        symbol [ toString %tmp.24 44 35 43 ];
+        %tmp.24 = getv function %tmp.23 :toString;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        ret %tmp.25;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_71_45_12_stop:
+        goto @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_12_45_12_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_42_12_45_12_if_end:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_41_28_46_8_stop:
+        goto @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_41_8_46_8_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_41_8_46_8_if_end:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 47 8 ]
+        %tmp.26 = 0;
+        symbol [ toString %tmp.27 47 17 25 ];
+        %tmp.27 = getv function %tmp.26 :toString;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        ret %tmp.28;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_38_38_48_4_stop:
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 51; @symbol_functiondef = [getPreviousHeartRate,51,20,40]; ]
+    public
+    function getPreviousHeartRate() {
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_51_43_62_4_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 52 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_51_43_62_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_51_43_62_4_stop" ]
+        %hrIterator.1 = local;
+        symbol [ hrIterator %hrIterator.1 52 12 22 ];
+        symbol [ ActivityMonitor %tmp.2 52 25 40 ];
+        %tmp.2 = getv ? :ActivityMonitor;
+        symbol [ getHeartRateHistory %tmp.3 52 41 60 ];
+        %tmp.3 = getv function %tmp.2 :getHeartRateHistory;
+        %tmp.4 = null;
+        %tmp.5 = false;
+        %tmp.6 = invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+        lputv %hrIterator.1 %tmp.6;
+        symbol [ hrIterator %hrIterator.1 52 12 22 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 53 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_51_43_62_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_51_43_62_4_stop" ]
+        %previous.2 = local;
+        symbol [ previous %previous.2 53 12 20 ];
+        %tmp.7 = lgetv %hrIterator.1;
+        symbol [ hrIterator %tmp.7 53 23 33 ];
+        symbol [ next %tmp.8 53 34 38 ];
+        %tmp.8 = getv function %tmp.7 :next;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %previous.2 %tmp.9;
+        symbol [ previous %previous.2 53 12 20 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 54 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_51_43_62_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_51_43_62_4_stop" ]
+        %sample.3 = local;
+        symbol [ sample %sample.3 54 12 18 ];
+        %tmp.10 = lgetv %hrIterator.1;
+        symbol [ hrIterator %tmp.10 54 21 31 ];
+        symbol [ next %tmp.11 54 32 36 ];
+        %tmp.11 = getv function %tmp.10 :next;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %sample.3 %tmp.12;
+        symbol [ sample %sample.3 54 12 18 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 55 8 ]
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_55_8_60_8_if_stmt:
+        %tmp.13 = null;
+        %tmp.14 = lgetv %sample.3;
+        symbol [ sample %tmp.14 55 20 26 ];
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_55_8_60_8_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_55_8_60_8_if_true:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_55_28_60_8_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 56 12 ]
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_12_59_12_if_stmt:
+        %tmp.16 = lgetv %previous.2;
+        symbol [ previous %tmp.16 56 16 24 ];
+        symbol [ heartRate %tmp.17 56 25 34 ];
+        %tmp.17 = getv %tmp.16 :heartRate;
+        symbol [ ActivityMonitor %tmp.19 56 38 53 ];
+        %tmp.19 = getv ? :ActivityMonitor;
+        symbol [ INVALID_HR_SAMPLE %tmp.20 56 54 71 ];
+        %tmp.20 = getv %tmp.19 :INVALID_HR_SAMPLE;
+        %tmp.21 = ne %tmp.17 %tmp.20;
+        bf %tmp.21 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_12_59_12_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_12_59_12_if_true:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_73_59_12_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 57 16 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_73_59_12_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_73_59_12_stop" ]
+        %previousHeartRate.4 = local;
+        symbol [ previousHeartRate %previousHeartRate.4 57 20 37 ];
+        %tmp.22 = lgetv %previous.2;
+        symbol [ previous %tmp.22 57 40 48 ];
+        symbol [ heartRate %tmp.23 57 49 58 ];
+        %tmp.23 = getv %tmp.22 :heartRate;
+        lputv %previousHeartRate.4 %tmp.23;
+        symbol [ previousHeartRate %previousHeartRate.4 57 20 37 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 58 16 ]
+        %tmp.24 = lgetv %previousHeartRate.4;
+        symbol [ previousHeartRate %tmp.24 58 23 40 ];
+        symbol [ toString %tmp.25 58 41 49 ];
+        %tmp.25 = getv function %tmp.24 :toString;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        ret %tmp.26;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_73_59_12_stop:
+        goto @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_12_59_12_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_56_12_59_12_if_end:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_55_28_60_8_stop:
+        goto @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_55_8_60_8_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_55_8_60_8_if_end:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 61 8 ]
+        %tmp.27 = 0;
+        symbol [ toString %tmp.28 61 17 25 ];
+        %tmp.28 = getv function %tmp.27 :toString;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        ret %tmp.29;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_51_43_62_4_stop:
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 65; @symbol_functiondef = [getBodyBattery,65,20,34]; ]
+    public
+    function getBodyBattery() {
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_65_37_78_4_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 66 8 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_65_37_78_4_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_65_37_78_4_stop" ]
+        %bodyBattery.1 = local;
+        symbol [ bodyBattery %bodyBattery.1 66 12 23 ];
+        %tmp.1 = null;
+        lputv %bodyBattery.1 %tmp.1;
+        symbol [ bodyBattery %bodyBattery.1 66 12 23 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 68 8 ]
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_8_71_8_if_stmt:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_12_68_67_begin:
+        symbol [ Toybox %tmp.3 68 12 18 ];
+        %tmp.3 = getv ? :Toybox;
+        %tmp.5 = const :SensorHistory;
+        symbol [ SensorHistory %tmp.5 68 24 37 const ];
+        %tmp.6 = canhazplz %tmp.3 %tmp.5;
+        bf %tmp.6 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_8_71_8_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_41_68_67_true:
+        symbol [ Toybox %tmp.8 68 41 47 ];
+        %tmp.8 = getv ? :Toybox;
+        %tmp.9 = as %tmp.8 { (interface { var SensorHistory; }) };
+        symbol [ SensorHistory %tmp.10 68 48 61 ];
+        %tmp.10 = getv %tmp.9 :SensorHistory;
+        %tmp.12 = const :getBodyBatteryHistory;
+        symbol [ getBodyBatteryHistory %tmp.12 68 67 88 const ];
+        %tmp.13 = canhazplz %tmp.10 %tmp.12;
+        push %tmp.13;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_41_68_67_end:
+        %tmp.14 = phi [%tmp.6 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_12_68_67_begin] [%tmp.13 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_41_68_67_true] [%tmp.14 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_41_68_67_end];
+        bf %tmp.14 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_8_71_8_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_8_71_8_if_true:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_90_71_8_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 69 12 ]
+        [ "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_90_71_8_start" "D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_90_71_8_stop" ]
+        %iter.2 = local;
+        symbol [ iter %iter.2 69 16 20 ];
+        symbol [ SensorHistory %tmp.15 69 23 36 ];
+        %tmp.15 = getm $.Toybox.SensorHistory;
+        symbol [ getBodyBatteryHistory %tmp.16 69 37 58 ];
+        %tmp.16 = getv function %tmp.15 :getBodyBatteryHistory;
+        %tmp.17 = newd 1;
+        %tmp.19 = const :period;
+        symbol [ period %tmp.19 69 62 68 const ];
+        %tmp.20 = 1;
+        %tmp.21 = dup %tmp.17;
+        %tmp.22 = aputv %tmp.21 %tmp.19 %tmp.20;
+        %tmp.23 = invoke %tmp.15 %tmp.16(%tmp.22);
+        lputv %iter.2 %tmp.23;
+        symbol [ iter %iter.2 69 16 20 ];
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 70 12 ]
+        %tmp.24 = lgetv %iter.2;
+        symbol [ iter %tmp.24 70 26 30 ];
+        symbol [ next %tmp.25 70 31 35 ];
+        %tmp.25 = getv function %tmp.24 :next;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        lputv %bodyBattery.1 %tmp.26;
+        symbol [ bodyBattery %bodyBattery.1 70 12 23 ];
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_90_71_8_stop:
+        goto @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_8_71_8_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_68_8_71_8_if_end:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 72 8 ]
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_72_8_76_8_if_stmt:
+        %tmp.27 = lgetv %bodyBattery.1;
+        symbol [ bodyBattery %tmp.27 72 12 23 ];
+        %tmp.28 = null;
+        %tmp.29 = eq %tmp.27 %tmp.28;
+        bf %tmp.29 @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_72_8_76_8_if_else_false;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_72_8_76_8_if_true:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_72_33_74_8_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 73 12 ]
+        %tmp.30 = 0;
+        lputv %bodyBattery.1 %tmp.30;
+        symbol [ bodyBattery %bodyBattery.1 73 12 23 ];
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_72_33_74_8_stop:
+        goto @D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_72_8_76_8_if_end;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_72_8_76_8_if_else_false:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_74_15_76_8_start:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 75 12 ]
+        %tmp.31 = lgetv %bodyBattery.1;
+        symbol [ bodyBattery %tmp.31 75 26 37 ];
+        %tmp.32 = as %tmp.31 { (!Null) };
+        symbol [ data %tmp.33 75 38 42 ];
+        %tmp.33 = getv %tmp.32 :data;
+        lputv %bodyBattery.1 %tmp.33;
+        symbol [ bodyBattery %bodyBattery.1 75 12 23 ];
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_74_15_76_8_stop:
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_72_8_76_8_if_end:
+[ "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc" 77 8 ]
+        %tmp.34 = lgetv %bodyBattery.1;
+        symbol [ bodyBattery %tmp.34 77 15 26 ];
+        ret %tmp.34;
+D_monkeyC_proj_work_space_luwan_watchface_source_utils_ActivityMonitorUtils_mc_65_37_78_4_stop:
+    }
+}
+[ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityMonitorUtils.mc"; @line = 2; ]
+<init> {
+}
