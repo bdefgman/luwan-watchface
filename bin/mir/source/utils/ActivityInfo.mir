@@ -1,0 +1,13 @@
+[ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 3; @symbol_classdef = [ActivityInfo,3,6,18]; ]
+class ActivityInfo {
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+}
+[ @file = "D:\monkeyC\proj_work_space\luwan-watchface\source\utils\ActivityInfo.mc"; @line = 3; ]
+<init> {
+}
