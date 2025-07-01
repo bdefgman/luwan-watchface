@@ -6,52 +6,44 @@ using Toybox.Graphics as Gfx;
 
 module Rez {
     module Drawables {
-        (:initialized) var Background_Img as ResourceId;
+        (:initialized) var luwanJPG as ResourceId;
+        (:initialized) var id_charge as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
-
-        class Smiley extends WatchUi.Drawable {
-
-            function initialize() {
-                Drawable.initialize({});
-            }
-
-            function draw(dc as Graphics.Dc) as Void {
-                if (self has :isVisible) {
-                    if (!self.isVisible) {
-                        return;
-                    }
-                }
-
-
-                dc.setColor(0xfb7906, Graphics.COLOR_TRANSPARENT);
-                dc.fillRectangle(((0 + 0) + (((260 - 0) / 2) - (((260 - 0) * (100 / 100.0)) / 2))) + 0, ((0 + 0) + ((260 - 0) * (75 / 100.0))) + 0, ((260 - 0) * (100 / 100.0)) - (2 * 0), ((260 - 0) * (2 / 100.0)) - (2 * 0));
-            }
-        }
     } // Drawables
+
+    module Fonts {
+        (:initialized) var IconsFont as ResourceId;
+        (:initialized) var HoursFont as ResourceId;
+        (:initialized) var MinutesFont as ResourceId;
+        (:initialized) var DateFont as ResourceId;
+        (:initialized) var PrimaryIndicatorFont as ResourceId;
+        (:initialized) var SecondaryIndicatorFont as ResourceId;
+        (:initialized) var MeridiemFont as ResourceId;
+    } // Fonts
+
+    module JsonData {
+        (:initialized) var hour_1_data as ResourceId;
+        (:initialized) var hour_2_data as ResourceId;
+        (:initialized) var hour_3_data as ResourceId;
+        (:initialized) var hour_4_data as ResourceId;
+        (:initialized) var hour_5_data as ResourceId;
+        (:initialized) var hour_6_data as ResourceId;
+        (:initialized) var minu_1_data as ResourceId;
+        (:initialized) var minu_2_data as ResourceId;
+        (:initialized) var minu_3_data as ResourceId;
+        (:initialized) var minu_4_data as ResourceId;
+        (:initialized) var minu_5_data as ResourceId;
+        (:initialized) var minu_6_data as ResourceId;
+        (:initialized) var bar_font_bottom as ResourceId;
+        (:initialized) var bar_pos_bottom as ResourceId;
+        (:initialized) var bar_font_top as ResourceId;
+        (:initialized) var bar_pos_top as ResourceId;
+        (:initialized) var theme_pallete as ResourceId;
+    } // JsonData
 
     module Layouts {
         function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_custom_drawable_11939594661139614796 = new Background();
-
-            var rez_cmp_local_bitmap_Background_Img = new WatchUi.Bitmap({:identifier=>"Background_Img", :rezId=>$.Rez.Drawables.Background_Img, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
-            rez_cmp_local_bitmap_Background_Img.setLocation(((260 - rez_cmp_local_bitmap_Background_Img.width) * 0.5), ((260 - rez_cmp_local_bitmap_Background_Img.height) * 0.5));
-
-            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (35 / 100.0)), :locY=>(260 * (45 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_HOT});
-
-            var rez_cmp_local_text_DaysOfWeek = new WatchUi.Text({:identifier=>"DaysOfWeek", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (74 / 100.0)), :locY=>(260 * (50 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
-
-            var rez_cmp_local_text_Day = new WatchUi.Text({:identifier=>"Day", :color=>Graphics.COLOR_WHITE, :locX=>(260 * (75 / 100.0)), :locY=>(260 * (54 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_MILD});
-
-            var rez_cmp_local_custom_drawable_Smiley = new $.Rez.Drawables.Smiley();
-            if (rez_cmp_local_custom_drawable_Smiley.identifier == null) {
-                rez_cmp_local_custom_drawable_Smiley.identifier = "Smiley";
-            }
-
-            var rez_cmp_local_text_Step = new WatchUi.Text({:identifier=>"Step", :color=>0x42e049, :locX=>(260 * (35 / 100.0)), :locY=>(260 * (80 / 100.0)), :text=>"STEP", :font=>Graphics.FONT_XTINY});
-
-            var rez_cmp_local_text_StepCount = new WatchUi.Text({:identifier=>"StepCount", :backgroundColor=>0x42e049, :color=>Graphics.COLOR_BLACK, :locX=>(260 * (80 / 100.0)), :locY=>(260 * (80 / 100.0)), :text=>"  30000                       ", :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
-
-            return [rez_cmp_local_custom_drawable_11939594661139614796, rez_cmp_local_bitmap_Background_Img, rez_cmp_local_text_TimeLabel, rez_cmp_local_text_DaysOfWeek, rez_cmp_local_text_Day, rez_cmp_local_custom_drawable_Smiley, rez_cmp_local_text_Step, rez_cmp_local_text_StepCount] as Array<WatchUi.Drawable>;
+            return [] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 

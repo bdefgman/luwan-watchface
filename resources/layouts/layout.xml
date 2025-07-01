@@ -1,20 +1,2 @@
 <layout id="WatchFace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
-    <drawable class="Background" />
-    <bitmap id="Background_Img" x="center" y="center" filename ="luwan_black_green_255_y40.png" />
-    <!-- <label id="windAndRain" text="风里雨里" x="30%" y="75%"  color="0x42e049" /> -->
-    <!-- <label id="luwanWaitYou" text="卢湾等你" x="70%" y="75%"  color="0x42e049" /> -->
-    <label id="TimeLabel" x="35%" y="45%" font="Graphics.FONT_NUMBER_HOT" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="DaysOfWeek" x="74%" y="50%" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="Day"  x="75%" y="54%" font="Graphics.FONT_NUMBER_MILD" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-
-    <!-- <drawable id="aBarDisplay" class="Complication">	             
-        <param name="line">123123</param>
-    </drawable> -->
-    <!-- <drawable-list id="shapes" background="Graphics.COLOR_TRANSPARENT">
-        <shape type="circle" x="78" y="160" radius="8" color="Graphics.COLOR_RED" />
-        <shape type="rectangle" x="51" y="137" width="76" height="20" color="Graphics.COLOR_BLUE" />
-    </drawable-list> -->
-    <drawable id="Smiley"/>
-    <label id="Step" text="STEP" x="35%" y="80%"  font="Graphics.FONT_XTINY"  color="0x42e049"/>
-    <label id="StepCount" text="  30000                       " x="80%" y="80%" font="Graphics.FONT_XTINY" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" background="0x42e049"/>
 </layout>
