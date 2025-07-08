@@ -1,5 +1,6 @@
 <drawables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <bitmap id="LauncherIcon" filename="launcher_icon.svg" dithering="none" />
-    <bitmap id="luwanJPG" filename="luwan_100.jpg" />
-    <bitmap id="bluetooth" filename="bluetooth.svg" />
+    <bitmap id="luwan50" filename="luwan_50.jpg" />
+    <bitmap id="luwan80" filename="luwan_80.jpg" />
+    <bitmap id="luwan100" filename="luwan_100.jpg" />
 </drawables>

@@ -6,7 +6,10 @@ import Toybox.WatchUi;
 
 using Toybox.System as Sys;
 using Toybox.Time.Gregorian as Date;
+using Toybox.Position;
+using Toybox.Time.Gregorian;
 
+var sunset;
 
 class luwan_watch_faceView extends WatchUi.WatchFace {
 
@@ -33,6 +36,8 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         centerY = dc.getHeight() / 2;
         r = centerX;
 
+        var luwanPic = WatchUi.loadResource(Rez.Drawables.luwan50);
+        dc.drawBitmap(centerX-25,secondScaleLineLength,luwanPic);
 
         // 画下四周的圆弧
         drawArcPenWidth(dc);
@@ -43,13 +48,13 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_BLUE,Graphics.COLOR_BLUE);
         dc.fillRectangle(centerX,centerY,10,10);
 
-        drawLine(dc);
+        // drawLine(dc);
         drawSecondScale(dc);
         drawDataField(dc);
 
 
-        var luwanPic = WatchUi.loadResource(Rez.Drawables.luwanJPG);
-        dc.drawBitmap(centerX-50,centerY-50,luwanPic);
+        onPosition();
+        // testLocation();
 
         // var bluetooth = WatchUi.loadResource(Rez.Drawables.bluetooth);
         // dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_WHITE);
@@ -59,14 +64,81 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
     public function drawDataField(dc as Dc) {
         var dataFieldInfo = new DataFieldInfo();
 
+        // 绘制心率
+        drawHeartRate(dc,dataFieldInfo);
         // 绘制电池
-        drawBattery(dc,dataFieldInfo);
+        // drawBattery(dc,dataFieldInfo);
 
         // 绘制蓝牙
-        drawBluetoothConnection(dc);
+        // drawBluetoothConnection(dc);
         // 绘制步数
 
         
+    }
+    function startGPS() {
+        // Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:onPosition));
+        
+    }
+
+    public function onPosition() {
+        var info = Toybox.Position.getInfo();
+        var myLocation = info.position.toDegrees();
+        System.println("Latitude: " + myLocation[0]); // e.g. 38.856147
+        System.println("Longitude: " + myLocation[1]); // e.g -94.800953
+
+        var options = {
+            :year   => 2025,
+            :month  => 7,
+            :day    => 2,
+            :hour   => 23,
+            :minute => 53
+        };
+        var now = Gregorian.moment(options);
+        
+        
+        var myLocation2 = new Position.Location(
+            {
+                :latitude => 38.856147,
+                :longitude => -94.800953,
+                :format => :degrees
+            }
+        );
+
+        sunset = Toybox.Weather.getSunset(myLocation2,Time.now());
+
+        
+
+        // 报错
+        // var loc = Toybox.Activity.getActivityInfo().currentLocation;
+        // sunset = Toybox.Weather.getSunset(loc,now);
+        System.println("sunset: " + sunset.value()); // e.g -94.800953
+
+
+    }
+    
+    function getWeather() {
+        
+    }
+
+
+    function drawHeartRate(dc,dataFieldInfo) {
+                //load custom font
+        var font = WatchUi.loadResource( Rez.Fonts.HoursFont );
+
+        //draw filled rectangle to represent text's color
+        var width = 100;
+        var height = 100;
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.fillRectangle(centerX-40, centerY-35, 80, 70);
+
+        //draw filled rectangle to represent water level
+        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLUE);
+        dc.fillRectangle(centerX-40, centerY, 80, 35);
+
+        //create and draw the clipping mask
+        dc.setColor(Graphics.COLOR_TRANSPARENT, Graphics.COLOR_BLACK);
+        dc.drawText(centerX, centerY, font, "12", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
     }
 
     function drawBluetoothConnection(dc as Dc) {
@@ -106,6 +178,8 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
     }
 
     function drawSecondScale(dc as Dc) {
+        dc.setPenWidth(1);
+        dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
         // 刻度数量
         var secondScale = 60;
         // 起始弧度
@@ -174,21 +248,28 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_DK_GRAY,Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(arcPendWidth);
 
-        var arcR = r-secondScaleLineLength-arcPendWidth - 5;
+        arcR = r-secondScaleLineLength-arcPendWidth - 5;
         var upperStartAngle = arcSpacing + arcSpacingOffset;
         var upperEndAngle = 90 + arcSpacing - arcSpacingOffset;
+
+        var leftStartAngle = 90 + arcSpacing + arcSpacingOffset;
+        var leftEndAngle = 180 + arcSpacing - arcSpacingOffset;
+
+        var rightStartAngle = 270 + arcSpacing + arcSpacingOffset;
+        var rightEndAngle = 360 + arcSpacing - arcSpacingOffset;
         // 上
-        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,upperStartAngle,upperEndAngle);
+        // dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,upperStartAngle,upperEndAngle);
         // 左
-        // dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,90 + arcSpacing + arcSpacingOffset,180 + arcSpacing - arcSpacingOffset);
+        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,leftStartAngle,leftEndAngle);
         // 下
-        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,180 + arcSpacing + arcSpacingOffset,270 + arcSpacing - arcSpacingOffset);
+        // dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,180 + arcSpacing + arcSpacingOffset,270 + arcSpacing - arcSpacingOffset);
         // 右
-        // dc.drawArc(centerX,centerY,r,Graphics.ARC_COUNTER_CLOCKWISE,270 + arcSpacing + arcSpacingOffset,360 + arcSpacing - arcSpacingOffset);
+        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,rightStartAngle,rightEndAngle);
 
         dc.setColor(Graphics.COLOR_WHITE,Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,(upperStartAngle + upperEndAngle) / 2,upperEndAngle);
+        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,(leftStartAngle + leftEndAngle) / 2,leftEndAngle);
 
+        dc.drawArc(centerX,centerY,arcR,Graphics.ARC_COUNTER_CLOCKWISE,rightStartAngle,(rightStartAngle + rightEndAngle) / 2);
     }
 
 
@@ -250,11 +331,11 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         // 中水平线
         dc.drawLine(upperLeftX, centerY, upperRightX, centerY);
         // 中垂直线
-        dc.drawLine(centerX, upperRightY, centerX, lowerRightY);
+        // dc.drawLine(centerX, upperRightY, centerX, lowerRightY);
         // 上水平线
         // dc.drawLine(upperRightX,upperRightY,upperLeftX,upperLeftY);
         // 下水平线
-        // dc.drawLine(lowerRightX,lowerRightY,lowerLeftX,lowerLeftY);
+        dc.drawLine(lowerRightX,lowerRightY,lowerLeftX,lowerLeftY);
         // 右垂直线
         // dc.drawLine(upperRightX,upperRightY,lowerRightX,lowerRightY);
         // 左垂直线
@@ -264,10 +345,14 @@ class luwan_watch_faceView extends WatchUi.WatchFace {
         // 中与下水平线
         dc.drawLine(leftLowerCenterX,leftLowerCenterY,rightLowerCenterX,rightLowerCenterY);
         // 左与中垂直线
-        dc.drawLine(upperLeftCenterX,upperLeftCenterY,lowerLeftCenterX,lowerLeftCenterY);
+        // dc.drawLine(upperLeftCenterX,upperLeftCenterY,lowerLeftCenterX,lowerLeftCenterY);
         // 右与中垂直线
-        dc.drawLine(upperRightCenterX,upperRightCenterY,lowerRightCenterX,lowerRightCenterY);
+        // dc.drawLine(upperRightCenterX,upperRightCenterY,lowerRightCenterX,lowerRightCenterY);
 
+
+        var lineHeight = arcR + arcPendWidth;
+
+        
 
         Sys.println("r:"+r+"centerXOffset:"+centerXOffset+",centerYOffset:"+centerYOffset);
 

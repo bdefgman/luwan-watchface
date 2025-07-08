@@ -2,6 +2,7 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
+using Toybox.Position;
 
 var centerX = 0;        // 中心点 x坐标
 var centerY = 0;        // 中心点 y坐标
@@ -13,6 +14,8 @@ var arcSpacingOffset = 10;  // 圆弧角度偏移量
 
 // 刻度长度
 var secondScaleLineLength = 5;
+// 圆弧半径
+var arcR;
 
 
 class luwan_watchfaceApp extends Application.AppBase {
@@ -37,6 +40,10 @@ class luwan_watchfaceApp extends Application.AppBase {
     // New app settings have been received so trigger a UI update
     function onSettingsChanged() as Void {
         WatchUi.requestUpdate();
+    }
+
+    public function _initializeSettings() {
+        // Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, method(:onPosition));
     }
 
 }
